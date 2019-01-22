@@ -1,0 +1,36 @@
+/*#main_notice .cont_line{
+	height:1px;
+	border-top:1px #dedede solid;
+	margin:20px 0 0 0;
+}
+#main_notice .cont_bbs{
+	width:220px;
+	margin: 18px auto 0;
+}
+#main_notice .cont_bbs .cont_txt > p {
+	font-size: 17px;
+	color: #fff;
+	line-height: 26px;
+}
+#main_notice .cont_bbs .cont_txt > p > a {
+	color: inherit;
+}
+#main_notice .cont_bbs .cont_txt > p > a span {
+	color: #580000;
+	background: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	width: 14px; height: 14px;
+	line-height: 14px;
+	text-indent: 2px;
+	text-align: center;
+	font-size: 13px;
+}
+#main_notice .cont_suttle .num { 
+
+}
+#main_notice .cont_bbs .more{
+	position: absolute;
+	right: 20px;
+	top: 95px;
+}*/

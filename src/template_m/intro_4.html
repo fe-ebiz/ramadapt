@@ -1,0 +1,139 @@
+@@include('./include/_head.html', {
+    "page": ""
+})
+
+</head>
+<body class="Intro">
+    <div id="page">
+        @@include('./include/_header.html')
+
+        <div id="content" class="sub_content">
+            <div class="centerThis">
+                <div id="pg_title">
+                    <h2>찾아오시는길</h2>
+                    <!--//#rocation-->
+                </div>
+                <!--//#pg_title-->
+                <div id="company01">
+                    <div class="cp_map">
+
+                        <div class="loca_map">
+                            <!-- * Daum 지도 - 지도퍼가기 -->
+                            <!-- 1. 지도 노드 -->
+                            <div id="daumRoughmapContainer1489646254821" class="root_daum_roughmap root_daum_roughmap_landing" style="width: 310px;"></div>
+                            <!--
+						2. 설치 스크립트
+						* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+						-->
+                            <script charset="UTF-8" class="daum_roughmap_loader_script" src="http://dmaps.daum.net/map_js_init/roughmapLoader.js"></script>
+
+                            <!-- 3. 실행 스크립트 -->
+                            <script charset="UTF-8">
+                                new daum.roughmap.Lander({
+                                 		"timestamp" : "1489646254821",
+                                 		"key" : "gkp5",
+                                 		"mapWidth" : "310",
+                                 		"mapHeight" : "180"
+                                 	}).render();
+                            </script>
+                        </div>
+
+                        <br>
+
+                        <p class="cont_title">호텔 인근 대중교통</p>
+                        <table class="df_tb">
+                            <colgroup>
+                                <col width="85px">
+                                    <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>도보</th>
+                                    <td style="text-align:left;">평택항 호텔 정류장 하자 - 도보 200m</td>
+                                </tr>
+                                <tr>
+                                    <th>버스</th>
+                                    <td style="text-align:left;">좌석버스 810 / 일반버스 81-1, 302</td>
+                                </tr>
+                                <tr>
+                                    <th>도로명주소</th>
+                                    <td style="text-align:left;">경기도 평택시 포승읍 평택항로 184번길 3-10</td>
+                                </tr>
+                                <tr>
+                                    <th>지번주소</th>
+                                    <td style="text-align:left;">경기도 평택시 포승읍 만호리 574-3번지</td>
+                                </tr>
+                                <tr>
+                                    <th>대표번호</th>
+                                    <td style="text-align:left;" class="cred">031-229-3600</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <br>
+                        <p class="cont_title">김포국제공항에서 오시는 길</p>
+                        <ul class="ol_list">
+                            <li>
+                                <strong class="tt">경로1</strong>
+지하철9호선 김포공항역 → 지하철3호선 고속터미널역 → 시외버스 8154(서울남부터미널) → 기업은행 정류장 하차
+                                <p class="cred">지하철역 23개, 버스정류장 10개 : 소요시간 약 3시간 11분(도보 11분) - 1,550원 소요(시외버스 제외)</p>
+                            </li>
+                            <li>
+                                <strong class="tt">경로2</strong>
+지하철5호선 김포공항역 → 지하철1호선 신길역 → 좌석버스 810(지제역) → 평택항호텔 정류장 하차
+                                <p class="cred">지하철역 39개, 버스정류장 53개 : 소요시간 약 3시간 47분(도보 13분) - 4,150원 소요</p>
+                            </li>
+                            <li>
+                                <strong class="tt">경로3</strong>
+지하철5호선 김포공항역 → 지하철1호선 신길역 → 일반버스 302(서정리역) → 평택항호텔 정류장 하차
+                                <p class="cred">지하철역 38개, 버스정류장 62개 : 소요시간 약 4시간 1분(도보 13분) - 3,350원 소요</p>
+                            </li>
+                        </ul>
+
+                        <br>
+                        <p class="cont_title">인천국제공항에서 오시는 길</p>
+                        <ul class="ol_list">
+                            <li>
+                                <strong class="tt">경로1</strong>
+인천국제공항역 → 지하철4호선 서울역 → 지하철3호선 충무로역 → 시외버스 8154(서울남부터미널) → 기업은행 정류장 하차
+                                <p class="cred">지하철역 24개, 버스정류장 10개 : 소요시간 약 3시간 42분(도보 7분) - 4,450원 소요(시외버스 제외)</p>
+                            </li>
+                            <li>
+                                <strong class="tt">경로2</strong>
+공항버스 8834(인천국제공항 1층 입국장) → 시외버스 8154(송탄버스터미널입구) → 기업은행 정류장 하차
+                                <p class="cred">버스정류장 11개 : 소요시간 약 3시간 4분(도보 5분)</p>
+                            </li>
+                            <li>
+                                <strong class="tt">경로3</strong>
+인천국제공항역 → 지하철2호선 홍대입구역 → 지하철1호선 신도림역 → 좌석버스 810(지제역) → 평택항호텔 정류장 하차
+                                <p class="cred">지하철역 38개, 버스정류장 53개 : 소요시간 약 4시간 23분(도보 9분) - 7,050원 소요</p>
+                            </li>
+                            <li>
+                                <strong class="tt">경로4</strong>
+인천국제공항역 → 지하철2호선 홍대입구역 → 지하철1호선 신도림역 → 일반버스 302(서정리역) → 평택항호텔 정류장 하차
+                                <p class="cred">지하철역 37개, 버스정류장 62개 : 소요시간 약 4시간 37분(도보 9분) - 6,250원 소요</p>
+                            </li>
+                            <li>
+                                <strong class="tt">경로5</strong>
+공항버스 8822(인천국제공항 1층 입국장) → 일반버스 81-1(안중공용터미널) → 평택항호텔 정류장 하차
+                                <p class="cred">버스정류장 35개 : 소요시간 약 3시간 34분(도보 5분) - 1,250원 소요(공항버스 제외)</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//.cp_map-->
+
+
+
+
+                </div>
+                <!--//#company01-->
+            </div>
+            <!--//.centerThis-->
+        </div>
+        <!-- //#content-->
+
+        @@include('./include/_footer.html')
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+@@include('./include/_head.html', {
+    "page": ""
+})
+    <!-- 예약페이지 별도 Css 가져오기 -->
+    <link rel="stylesheet" type="text/css" href="http://static.hotelgangneung.kr/css/layout2.css">
+    <link rel="stylesheet" href="http://static.go.co.kr/css/totalweb.css" type="text/css">
+
+</head>
+<body class="Booking">
+    <div id="Contents">
+        @@include('./include/_header.html')
+
+        <div id="content">
+            @@include('./include/_subVisual.html')
+        </div>
+        <!-- //#content-->
+
+        <!-- 예약페이지 가져오기 , 아래 부분은 개발단에서 작업 -->
+		<h3 class="tit-bkConfirm">예약내역조회</h3>
+
+        <div id="wrapper">
+			<div id="container">
+				<div class="sub_wrap">
+					<script type="text/javascript">
+						function res_search() {
+							if($("input[name='name']").val() == "") {
+								alert("주문자명을 입력해주세요");
+								$("input[name='name']").focus();
+							} else if($("input[name='tel']").val() == "") {
+								alert("연락처를 입력해주세요");
+								$("input[name='tel']").focus();
+							} else {
+								$("#res_form").submit();
+							}
+						}
+					</script>
+					<div>
+					<!--<form action="" method="GET" id="res_form">
+						<input type="hidden" name="dd" value="Sws5TzdVKnwuEURGGSlN" />
+						<input type="text" name="name" placeholder="주문자명" value="" />
+						<input type="text" name="tel" placeholder="연락처" value="" />
+						<input type="hidden" name="tgubun" value="SBIs" />
+						<input type="button" value="검 색" onclick="res_search();" style="" />
+					</form>-->
+					</div>
+					<div class="reservation_list">
+
+						<!--<ul class="tab">
+							<li class="on"onclick="location.href='http://www.bscondo.co.kr/reservation/?dd=Sws5TzdVKnwuEURGGSlN&tgubun=SBIs'">전체</li>
+							<li  onclick="location.href='http://www.bscondo.co.kr/reservation/?dd=Sws5TzdVKnwuEURGGSlN&tgubun=QBAn'">
+								예약 진행중인 상품
+							</li>
+							<li onclick="location.href='http://www.bscondo.co.kr/reservation/?dd=Sws5TzdVKnwuEURGGSlN&tgubun=Sh8uQDtK'">
+								예약불가 및 취소상품
+
+							</li>
+						</ul>-->
+
+						<!--<ul class="period">
+							<li><a href="http://www.bscondo.co.kr/reservation/?dd=Sws5TzdVKnwuEURGGSlN&period=year&tgubun=SBIs" title="1년"><img src="http://img.go.co.kr/btn_period4.jpg" alt="1년" id="year"></a></li>
+							<li><a href="http://www.bscondo.co.kr/reservation/?dd=Sws5TzdVKnwuEURGGSlN&period=6month&tgubun=SBIs"><img src="http://img.go.co.kr/btn_period3.jpg" alt="6개월" id="6month"></a></li>
+							<li><a href="http://www.bscondo.co.kr/reservation/?dd=Sws5TzdVKnwuEURGGSlN&period=3month&tgubun=SBIs" title="3개월"><img src="http://img.go.co.kr/btn_period2.jpg" alt="3개월" id="3month"></a></li>
+							<li><a href="http://www.bscondo.co.kr/reservation/?dd=Sws5TzdVKnwuEURGGSlN&period=all&tgubun=SBIs"><img src="http://img.go.co.kr/btn_period1.jpg" alt="전체" id="all"></a></li>
+						</ul>-->
+
+						<table class="member_info_t">
+							<colgroup>
+								<col width="150">
+								<col width="350">
+								<col width="180">
+								<col width="150">
+								<col width="150">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>접수일자</th>
+									<th>숙소명</th>
+									<th>투숙일</th>
+									<th>예약상태</th>
+									<th>출력하기</th>
+								</tr>
+																	<tr>
+									<td colspan="5">예약/구매 내용이 없습니다.</td>
+								</tr>
+																</tbody>
+						</table>
+
+						<div id="number2" style="margin-bottom:60px">
+													<span><img alt="첫 페이지" src="http://img.go.co.kr/btn_pre02.jpg"></span>
+						<span style="margin-right: 10px;"><img alt="이전 페이지" src="http://img.go.co.kr/btn_pre01.jpg"></span>
+						<span class="page_ov">&nbsp;1&nbsp;</span> 							<span style="margin-left: 10px;"><img alt="다음 페이지" src="http://img.go.co.kr/btn_next01.jpg"></span>
+						<span><img alt="끝 페이지" src="http://img.go.co.kr/btn_next02.jpg"></span>
+												</div>
+
+
+
+
+
+
+					</div>
+				</div>
+			</div>
+			<!-- container 끝-->
+		</div>
+        <!-- //#wrapper -->
+
+        @@include('./include/_footer.html')
+    </div>
+</body>
+
+</html>

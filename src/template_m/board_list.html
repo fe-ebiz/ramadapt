@@ -1,0 +1,126 @@
+@@include('./include/_head.html', {
+    "page": ""
+})
+
+</head>
+<body class="Board">
+    <div id="page">
+        @@include('./include/_header.html')
+
+        <div id="content" class="sub_content">
+            <div class="centerThis">
+                <div id="pg_title">
+                    <h2>공지사항</h2>
+                    <!--//#rocation-->
+                </div>
+                <!--//#pg_title-->
+                <div id="board_header" class="group">
+                    <div class="list_text">
+                        총 <strong class="strong">7건</strong>의 게시물이 있습니다.
+                    </div>
+                    <!--//.list_text-->
+                    <form name="frm" id="frm" method="get" action="#">
+                        <input type="hidden" name="code" id="code" value="notice" />
+                        <div class="board_search">
+                            <select name="search_cd" id="search_cd">
+                                <option value="1">제목</option>
+                                <option value="2">작성자</option>
+                            </select>
+                            <input type="text" name="search_ct" id="search_ct" value="" size="30" style="width:45%">
+                            <button type="submit" class="board_btn">
+                                검색
+                            </button>
+                        </div>
+                    </form>
+                    <!--//.board_search-->
+                </div>
+                <!--//board_header-->
+                <table class="df_tb tc">
+                    <colgroup>
+                        <col width="*">
+                    </colgroup>
+                    <!--<thead>
+                            <tr>
+                                <th>제목</th>
+                            </tr>
+                        </thead>-->
+                    <tbody>
+                        <tr>
+                            <!--<td>7</td>-->
+                            <td class="tl"><a href="board_read.html" style="cursor: pointer;" class="tfix">★ United States Forces Korea, Benefit★ </a>
+                            </td>
+                            <!--<td>관리자</td>-->
+                            <!--<td>2018-04-25</td>-->
+                            <!--<td>714</td>-->
+                        </tr>
+                        <tr>
+                            <!--<td>6</td>-->
+                            <td class="tl"><a href="board_view2b8a.html?no=2428" style="cursor: pointer;" class="tfix">* SHUTTLE SERVICE * </a>
+                            </td>
+                            <!--<td>관리자</td>-->
+                            <!--<td>2018-04-25</td>-->
+                            <!--<td>519</td>-->
+                        </tr>
+                        <tr>
+                            <!--<td>5</td>-->
+                            <td class="tl">
+                                <a href="board_view15c2.html?no=2412" style="cursor: pointer;" class="tfix">
+                                    < 법인 기업체 예약 문의>
+                                </a>
+                            </td>
+                            <!--<td>관리자</td>-->
+                            <!--<td>2018-04-25</td>-->
+                            <!--<td>456</td>-->
+                        </tr>
+                        <tr>
+                            <!--<td>4</td>-->
+                            <td class="tl"><a href="board_view892b.html?no=2426" style="cursor: pointer;" class="tfix">★ Car Company , Benefits ★ </a>
+                            </td>
+                            <!--<td>관리자</td>-->
+                            <!--<td>2018-04-25</td>-->
+                            <!--<td>395</td>-->
+                        </tr>
+                        <tr>
+                            <!--<td>3</td>-->
+                            <td class="tl"><a href="board_view55cf.html?no=2388" style="cursor: pointer;" class="tfix">라마다앙코르평택 조식관련 안내입니다.  </a>
+                            </td>
+                            <!--<td>관리자</td>-->
+                            <!--<td>2018-04-25</td>-->
+                            <!--<td>416</td>-->
+                        </tr>
+                        <tr>
+                            <!--<td>2</td>-->
+                            <td class="tl"><a href="board_view78e2.html?no=2404" style="cursor: pointer;" class="tfix">라마다 앙코르 평택 위치 안내드립니다. </a>
+                            </td>
+                            <!--<td>관리자</td>-->
+                            <!--<td>2017-12-15</td>-->
+                            <!--<td>299</td>-->
+                        </tr>
+                        <tr>
+                            <!--<td>1</td>-->
+                            <td class="tl"><a href="board_view539f.html?no=88" style="cursor: pointer;" class="tfix">라마다앙코르평택입니다.</a>
+                            </td>
+                            <!--<td>관리자</td>-->
+                            <!--<td>2017-04-21</td>-->
+                            <!--<td>512</td>-->
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 페이징 시작 -->
+                <div id="paging">
+                    <ul class="paging_list">
+                        <li class='active'><a href='#'>1</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 페이징 끝 -->
+            </div>
+            <!-- //#centerThis -->
+        </div>
+        <!-- //#content-->
+
+        @@include('./include/_footer.html')
+    </div>
+</body>
+
+</html>

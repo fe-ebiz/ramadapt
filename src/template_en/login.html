@@ -1,0 +1,74 @@
+@@include('./include/_head.html', {
+    "page": ""
+})
+
+</head>
+<body class="Member">
+    <div id="Contents">
+        @@include('./include/_header.html')
+
+        <div id="content">
+            @@include('./include/_subVisual.html')
+        </div>
+        <!-- //#content-->
+
+        <section class="main-contents">
+    		<div class="login-outer">
+    			<div class="login-box clr">
+    				<div class="naverLogin">
+    					<div class="h4 show-md">간단하게 로그인</div>
+    					<ul class="snsLarge clr">
+    						<li class="naver">
+    							<a href="javascript:n_login2()"><img src="http://img.go.co.kr/mobile/n_logo.jpg">&nbsp;&nbsp;<span>네이버 아이디로 로그인</span></a>
+    						</li>
+    						<li class="kakao">
+    							<a href="javascript:javascript:kakaologin();"><img src="http://img.go.co.kr/mobile/k2_logo.jpg">&nbsp;&nbsp;<span>카카오톡 아이디로 로그인</span></a>
+    						</li>
+    						<!--<li class="daum">
+    							<a href="javascript:total_login('daum')"><img src="http://img.go.co.kr/mobile/daum_logo.jpg">&nbsp;&nbsp;<span>다음 아이디로 로그인</span></a>
+    						</li>-->
+    						<li class="google">
+    							<a href="javascript:g_login()"><img src="http://img.go.co.kr/mobile/g_logo.jpg" width="25">&nbsp;&nbsp;<span>구글 아이디로 로그인</span></a>
+    						</li>
+    						<li class="facebook">
+    							<a href="javascript:f_login()"><img src="http://img.go.co.kr/mobile/f_logo.jpg">&nbsp;&nbsp;<span>페이스북 아이디로 로그인</span></a>
+    						</li>
+    					</ul>
+    				</div>
+    				<div id="beforeLogin">
+    				<form action="http://www.bscondo.co.kr/member/state.php" method="POST" id="login_form">
+    					<input type="hidden" name="mode" value="buy_login">
+    					<table class="login_box" id="member_div">
+    						<colgroup>
+    							<col width="70%">
+    							<col width="30%">
+    						</colgroup>
+    						<tbody>
+    							<tr>
+    								<td colspan="2" height="20"><h3><img src="http://img.go.co.kr/mobile/icon_join.jpg" width="17">비회원 주문조회</h3></td>
+    							</tr>
+    									<tr>
+    								<td class="border"><input type="text" id="userid" name="userid" class="int" maxlength="40" tabindex="1" placeholder="주문자명을 입력하세요" validation="yes" title="아이디"></td>
+    								<td rowspan="2" class="btn_submit"><a href="javascript:reserve_login();">확인</a></td>
+    							</tr>
+    							<tr>
+    								<td class="border"><input type="number" id="passwd" name="passwd" class="int" maxlength="20" tabindex="2" placeholder="연락처를 입력하세요(-없이 입력)" validation="yes" title="비밀번호" onkeypress="if(event.keyCode==13) { reserve_login(); }" onkeyup="util.checktype('number','passwd')" oninput="maxLengthCheck(this)"></td>
+    							</tr>
+    							<tr>
+    								<td colspan="2" height="20"></td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</form>
+    				</div>
+    			</div>
+
+        	</div>
+        </section>
+        <!-- //.main-contents -->
+
+        @@include('./include/_footer.html')
+    </div>
+</body>
+
+</html>

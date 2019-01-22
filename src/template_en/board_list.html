@@ -1,0 +1,135 @@
+@@include('./include/_head.html', {
+    "page": ""
+})
+
+</head>
+<body class="Board">
+    <div id="Contents">
+        @@include('./include/_header.html')
+
+        <div id="content">
+            @@include('./include/_subVisual.html')
+            <div id="sub_content" class="group">
+                <div class="centerThis">
+                    <div id="right_content">
+                        <div id="pg_title">
+                            <h2>공지사항</h2>
+                            <div id="rocation">
+                                <span><a href="index.html"><img src="http://img.ramadapt.co.kr/icon_home.gif" class="img"></a></span> &gt; <span class="last"><strong>공지사항</strong></span>
+                            </div>
+                            <!--//#rocation-->
+                        </div>
+                        <!--//#title_box-->
+                        <div id="board_header" class="group">
+                            <div class="list_text">
+                                총 <strong class="cred">7건</strong>의 게시물이 있습니다.
+                            </div>
+                            <!--//.list_text-->
+                            <form name="frm" id="frm" method="get" action="#">
+                                <input type="hidden" name="code" id="code" value="notice" />
+                                <div class="board_search">
+                                    <select class="select_type" name="search_cd" id="search_cd">
+    									<option value="1" >제목</option>
+    									<option value="2" >작성자</option>
+    								</select>
+                                    <input type="text" name="search_ct" id="search_ct" size="30" value="">
+                                    <button type="submit" class="board_btn">
+    									검색
+    								</button>
+                                </div>
+                                <!--//.board_search-->
+                            </form>
+                        </div>
+                        <!--//board_header-->
+                        <table class="df_tb tc">
+                            <colgroup>
+                                <col width="60">
+                                <col width="*">
+                                <col width="100">
+                                <col width="100">
+                                <col width="70">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>제목</th>
+                                    <th>작성자</th>
+                                    <th>작성일</th>
+                                    <th>조회수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="tl"><a href="board_read.html" style="cursor: pointer;" class="text-max">★ United States Forces Korea, Benefit★ </a></td>
+                                    <td>관리자</td>
+                                    <td>2018-04-25</td>
+                                    <td>696</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td class="tl"><a href="" style="cursor: pointer;" class="text-max">* SHUTTLE SERVICE * </a></td>
+                                    <td>관리자</td>
+                                    <td>2018-04-25</td>
+                                    <td>501</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td class="tl"><a href="" style="cursor: pointer;" class="text-max"> &lt;법인 기업체 예약 문의&gt;</a></td>
+                                    <td>관리자</td>
+                                    <td>2018-04-25</td>
+                                    <td>446</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="tl"><a href="" style="cursor: pointer;" class="text-max">★ Car Company , Benefits ★ </a></td>
+                                    <td>관리자</td>
+                                    <td>2018-04-25</td>
+                                    <td>391</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="tl"><a href="" style="cursor: pointer;" class="text-max">라마다앙코르평택 조식관련 안내입니다.  </a></td>
+                                    <td>관리자</td>
+                                    <td>2018-04-25</td>
+                                    <td>411</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="tl"><a href="" style="cursor: pointer;" class="text-max">라마다 앙코르 평택 위치 안내드립니다. </a></td>
+                                    <td>관리자</td>
+                                    <td>2017-12-15</td>
+                                    <td>297</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="tl"><a href="" style="cursor: pointer;" class="text-max">라마다앙코르평택입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>2017-04-21</td>
+                                    <td>511</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- 페이징 시작 -->
+                        <div id="paging">
+                            <ul class="paging_list">
+                                <!-- <li class=''><a href='#'>&lt;</a></li> -->
+                                <li class='active'><a href='#'>1</a></li>
+                                <!-- <li class=''><a href='#'>&gt;</a></li> -->
+                            </ul>
+                        </div>
+                        <!-- 페이징 끝 -->
+                    </div>
+					<!--//#right_content-->
+                </div>
+                <!-- //.centerThis -->
+            </div>
+            <!-- //#sub_content -->
+        </div>
+        <!-- //#content-->
+
+        @@include('./include/_footer.html')
+    </div>
+</body>
+
+</html>
