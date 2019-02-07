@@ -2627,3 +2627,47 @@ body {
 	display: inline-block; width: 125px; height: 28px; box-shadow: none; border: 1px solid #bbb;
 	box-sizing: border-box; text-indent: 5px;
 }*/
+
+/* 날씨 정보 */
+#visual .mainVisual .weather {
+	z-index: 99;
+	position: absolute;
+	width: 1180px;
+	top: 75px;
+	left: 50%;
+	margin-left: -600px; 
+	line-height: 1.2;
+	text-align: left;}
+#visual .mainVisual .weather .area {
+	position: absolute;
+	right: 5px;
+	height: 96px;
+	padding-left: 20px;
+	box-sizing: border-box; }
+#visual .mainVisual .weather .area [class*=s-] {
+	display: block;
+	color: #fff;
+	font-size: 20px; }
+#visual .mainVisual .weather .area .inner {
+	position: relative;
+	float: right; }
+#visual .mainVisual .weather .area img {
+	position: relative;
+	float: right; }
+#visual .mainVisual .weather .area .s-1 {
+	line-height: 1; }
+#visual .mainVisual .weather .area .s-2 {
+	margin-top: 3px;
+	font-weight: 700; }
+#visual .mainVisual .weather .area .s-2 .t-1 {
+	position: relative;
+	top: -1px; }
+#visual .mainVisual .weather .area .s-3 {
+	font-size: 30px; }
+#visual .mainVisual .weather .area .s-4 {font-size: 16px !important; font-weight: 700; padding-left: 3px;}
+#visual .mainVisual .weather .area .s-4 > * {vertical-align: middle;}
+#visual .mainVisual .weather .area .s-4 img {position: relative !important; float: none !important;}
+#visual .mainVisual .weather .area .s-3 .big {
+	font-size: 44px; }
+#visual .mainVisual .weather .area .s-3 .c {
+	font-family: "Noto Sans KR"; }

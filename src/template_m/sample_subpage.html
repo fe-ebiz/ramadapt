@@ -3,26 +3,24 @@
 })
 
 </head>
-<body class="Gallery">
+<body class="Name">
 
-<div id="Contents">
-	@@include('./include/_header.html')
+	<div id="Page">
+		@@include('./include/_header.html')
 
-	<div id="content">
-		@@include('./include/_subVisual.html')
-		<div id="sub_content" class="group">
-            <div class="centerThis">
-            	@@include('./include/gallery/_lnb.html')
-            	
-				<!--//#right_content-->
-            </div>
-        </div>
-		
+		<div id="content">
+			<div id="sub_content" class="group">
+	            <div class="centerThis">
+	            	
+					<!--//#right_content-->
+	            </div>
+	        </div>
+			
+		</div>
+		<!-- //#content-->
+
+		@@include('./include/_footer.html') 
 	</div>
-	<!-- //#content-->
-
-	@@include('./include/_footer.html') 
-</div>
 
 </body>
 </html>
