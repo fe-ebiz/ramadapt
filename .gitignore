@@ -6,6 +6,7 @@ _work/
 _media/
 _tmp/
 img/
+.sass-cache/
 
 #fontFile
 *.ttf
