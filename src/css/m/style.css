@@ -445,7 +445,7 @@ input[type="radio"] {
 }
 .df_tb {
 	border-top: 1px solid #c51b1b;
-	margin-top: 24px;
+	margin-top: 22px;
 	font-size: 14px;
 }
 .df_tb td {
@@ -959,7 +959,7 @@ html.mmenu-right.mmenu-opening .mmenu-page, html.mmenu-right.mmenu-opening #mmen
 /* ----------------------------------------------------------------
  객실안내-detail_event
  -----------------------------------------------------------------*/
-#detail_event {padding: 6px 0; margin-top: -15px; margin-left: -13px; margin-right: -13px; background:#d5d4d2; text-align: left; letter-spacing:-0.3px}
+#detail_event {padding: 6px 0; margin-top: 16px; margin-left: -13px; margin-right: -13px; background:#d5d4d2; text-align: left; letter-spacing:-0.3px}
 #detail_event .evt-area {width:100%; padding: 20px 6px 15px; box-sizing:border-box;  background:#fffef1; text-align:left; font-size:13px}
 #detail_event .evt-area .evt-tit {font-size: 15px; line-height: 22px; letter-spacing: -0.5px; color: #ff610a;}
 #detail_event .evt-area .evt-tit img {width: auto; height: 22px; margin-bottom: 0; vertical-align: middle;}
@@ -1573,25 +1573,30 @@ html.mmenu-right.mmenu-opening .mmenu-page, html.mmenu-right.mmenu-opening #mmen
 }
 /* 배너사이즈와 위치 */
 #s_banner_wrap {width:100%; height:; position: relative; margin:0px 0;}
+#s_banner_wrap .bx-wrapper {margin-bottom: 5px;}
 
 .about {}
 .about dl { margin-bottom:30px}
 .about dt { margin-bottom:10px; padding:7px 0 5px 5px; font-size:18px; /* color:#fff; background:#c51b1b; */
 	color:#c51b1b; border-bottom: 1px solid #c51b1b;
 }
-.about dd {padding-left: 5px;}
+.about dd {padding-left: 5px; word-break: keep-all;}
 
 .page_copy {}
 .page_copy dl { margin-bottom: 0px;}
-.page_copy dt { margin-bottom: 0px; /* padding:0 0 5px 0px; */ font-size:22px; color:#c51b1b; letter-spacing:-2px;}
+.page_copy dt { margin-bottom: 3px; /* padding:0 0 5px 0px; */ font-size:22px; color:#c51b1b; letter-spacing:-2px;}
 .page_copy dd { font-size:22px; color:#272d34; letter-spacing:-1px;}
-.page_copy .room_info {font-size:18px; color:#272d34; letter-spacing:-1px;}
+.page_copy .room_info {font-size:18px; color:#272d34; letter-spacing:-1px; word-break: keep-all;}
 .page_copy .cmain {color:#272d34;}
 
 .tbl_comment { font-size:13px; line-height:18px; margin-top:15px;}
 
 #company01 .cont_title {
+    margin-top: 14px;
 	color:#c51b1b;
+}
+#company01 .cont_title + .df_tb {
+    margin-top: 5px;
 }
 #company01 .large_btn {
 	padding: 0;
@@ -2094,7 +2099,7 @@ h2.map_tt {
 .Group .br-t {border-top: 1px solid #dedede;}
 .Group .h3-tit {font-size: 18px; line-height: 20px; color: #545454; text-align: center; font-weight: 400;}
 .Group .h3-tit + .p0 {margin-top: 2px; font-size: 14px; text-align: center;}
-.Group .h4-sub-tit {margin: 3% auto 0; font-size: 14px; font-weight: 400; line-height: 20px; text-align: center; color: #545454;}
+.Group .h4-sub-tit {margin: 4% auto 0; font-size: 14px; font-weight: 400; line-height: 20px; text-align: center; color: #545454;}
 .Group .area-btn {}
 .Group .area-btn > a {position: relative; display: inline-block; width: 100%; height: 40px; color: #fff; font-size: 14px; text-align: center; background: #c7905f;}
 .Group .area-btn > a:after {content: ""; display: inline-block; height: 105%; vertical-align: middle;}
@@ -2190,7 +2195,7 @@ div.facil-sec {}
 }
 
 .Group div.form-sec {border-top: 0; color: #545454;}
-.Group .form-sec .d-cm {position: relative; margin-top: 5px; text-align: center; line-height: 1.3;}
+.Group .form-sec .d-cm {position: relative; margin-top: 5px; text-align: center; word-break: keep-all; line-height: 1.3;}
 .Group .form-sec .d-cm .p-0 {font-size: 17px;}
 .Group .form-sec .d-cm .p-1, .Group .form-sec .d-cm .p-2 {font-size: 12px; line-height: 1.5; margin-top: 3px; word-break: keep-all;}
 .Group .contact-pop {position: relative; width: 100%; top: 0; left: auto; background: #fff; font-size: 14px; text-align: left; z-index: 100; width: 100%; margin-top: 10px;}
@@ -2298,3 +2303,16 @@ div.facil-sec {}
 .tbn-area .tbn-box .bn-box img {position: relative; width: 100%; /*max-width: 640px;*/ vertical-align: middle;}
 
 .tbn-area .tbn-box.group {background: #e3dbcd;}
+
+/* 190124 텍스트 간격 조정 */
+/* 객실예약 */
+#room_w #room_infogo h4 {margin-top: 18px;}
+
+/* 장단기숙박 */
+#product_info .info_title img {margin-top: 0 !important;}
+
+
+@media (max-device-width: 320px) {
+    .util {font-size: 13px}
+    .util li:first-child {padding-left: 15px;}
+}

@@ -1,0 +1,161 @@
+@@include('./include/_head.html', {
+    "page": ""
+})
+
+</head>
+<body class="Gallery">
+    <div id="Contents">
+        @@include('./include/_header.html')
+
+        <div id="content">
+            @@include('./include/_subVisual.html')
+            <div id="sub_content" class="group">
+                <div class="centerThis">
+                    @@include('./include/gallery/_lnb.html')
+
+                    <script src="http://static.ramadapt.co.kr/js/jquery.bxslider.min.js"></script>
+                    <link href="http://static.ramadapt.co.kr/css/jquery.bxslider.css" rel="stylesheet" />
+                    <script>
+                        $(document).ready(function() {
+                            var slider = $('.bxslider').bxSlider({
+                                auto: true,
+                                mode: 'fade',
+                            });
+                            var slider_01 = $('.bxslider_01').bxSlider({
+                                auto: true,
+                                autoControls: true,
+                                mode: 'vertical',
+                            });
+                            var slider_02 = $('.bxslider_02').bxSlider({
+                                auto: true,
+                                controls: false,
+                                pagerCustom: '#bx-pager1'
+                            });
+                            var slider_03 = $('.bxslider_03').bxSlider({
+                                auto: true,
+                                controls: false,
+                                pager: false,
+                                maxSlides: 3,
+                                moveSlides: 1,
+                                slideWidth: 100,
+                                slideMargin: 0,
+                                autoHover: true,
+                            });
+                            // 클릭시 멈춤 현상 해결 //
+                            $(document).on('click', '.bx-next, .bx-prev', function() {
+                                slider.stopAuto();
+                                slider.startAuto();
+                                slider_01.stopAuto();
+                                slider_01.startAuto();
+                            });
+                            $(document).on('mouseover', '.bx-pager, #bx-pager1', function() {
+                                slider.stopAuto();
+                                slider.startAuto();
+                                slider_01.stopAuto();
+                                slider_01.startAuto();
+                                slider_02.stopAuto();
+                                slider_02.startAuto();
+                            });
+                        });
+                    </script>
+                    <style>
+                        /* 배너사이즈와 위치 */
+                        #s_banner_wrap {width:750px; height:450px; position: relative; margin:0px 0;}
+                        .banner_01 {width:750px; height:450px; background:url("http://img.ramadapt.co.kr/gall_s1_01_01.jpg");}
+                        .banner_02 {width:750px; height:450px; background:url("http://img.ramadapt.co.kr/gall_s1_01_02.jpg");}
+                        .banner_03 {width:750px; height:450px; background:url("http://img.ramadapt.co.kr/gall_02_01_06.jpg");}
+                        .banner_04 {width:750px; height:450px; background:url("http://img.ramadapt.co.kr/gall_02_01_07.jpg");}
+                    </style>
+
+                    <div id="right_content">
+                        <div id="pg_title">
+                            <h2>デラックススーパーダブル</h2>
+                            <div id="rocation">
+                                <span><a href="/index.html"><img src="http://img.ramadapt.co.kr/icon_home.gif" class="img"></a> 客室案内 </span> &gt; <span class="last"><strong>デラックススーパーダブル</strong></span>
+                            </div>
+                            <!--//#rocation-->
+                        </div>
+                        <!--//#title_box-->
+                        <div id="s_banner_wrap">
+                            <ul class="bxslider">
+                                <li class="banner_01"></li>
+                                <li class="banner_02"></li>
+                                <li class="banner_03"></li>
+                                <li class="banner_04"></li>
+                            </ul>
+                        </div>
+
+                        <div class="acco_info">
+                            <p>これまで見たことのない圧倒的な2,200ベッドサイズ!　デラックススーパーダブルルームは、当ホテルの自慢です。(従来のベッド:クイーンサイズ1,400/キングサイズ1,500)</p>
+                        </div>
+
+                        <div id="acco_box">
+                            <div class="acco_tbl">
+                                <table class="df_tb">
+                                    <colgroup>
+                                        <col width="150">
+                                        <col width="*">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>ベッドタイプ</th>
+                                            <td>スーパーダブルベッドサイズ(2,200)　1台</td>
+                                        </tr>
+                                        <tr>
+                                            <th>客室ビュー</th>
+                                            <td>ハーバービュー / シティビュー(ランダムに割り当て)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>定員</th>
+                                            <td>
+                                                大人2~3名 / 大人2名に子供2名まで同伴可(小学校 3年生以下)<br>
+                                                - 枕4 + 布団2 提供(寝具を追加される場合、別途料金)<br>
+                                                - フェイスタオル4 / バスタオル4 / ミネラルウォーター4 / 歯ブラシ4 / カミソリ2　提供
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>広さ</th>
+                                            <td>46㎡</td>
+                                        </tr>
+                                        <tr>
+                                            <th>共通事項</th>
+                                            <td class="lh20">
+                                                1. 超高速無料インターネット及び wifi<br /> 
+                                                2. ウェルカムドリンク –ミネラルウォーター2本<br /> 
+                                                3. モーニングコール　サービス<br /> 
+                                                4. 最高級の浴室アメニティ<br /> 
+                                                5. 筆記具の提供
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>チェックイン</th>
+                                            <td>15:00から入室可能</td>
+                                        </tr>
+                                        <tr>
+                                            <th>チェックアウト</th>
+                                            <td>11:00までに退室</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="req_box">
+                                <p><a href="#none" target="_blank">客室案内</a></p>
+                            </div>
+
+                        </div>
+                        <!--//#acco_box-->
+                    </div>
+                    <!--//#right_content-->
+                </div>
+                <!--//.centerThis-->
+            </div>
+            <!--//#sub_content-->
+        </div>
+        <!-- //#content-->
+
+        @@include('./include/_footer.html')
+    </div>
+</body>
+
+</html>

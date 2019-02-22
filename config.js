@@ -18,7 +18,13 @@ module.exports = function() {
 			dest_m : development + '/views_m',
 			src_en  : source + '/template_en/**/!(_)*.html',
 			parts_en : source + '/template_en/**/_*.html',
-			dest_en : development + '/views_en'
+			dest_en : development + '/views_en',
+			src_jp  : source + '/template_jp/**/!(_)*.html',
+			parts_jp : source + '/template_jp/**/_*.html',
+			dest_jp : development + '/views_jp',
+			src_m_jp  : source + '/template_m_jp/**/!(_)*.html',
+			parts_m_jp : source + '/template_m_jp/**/_*.html',
+			dest_m_jp : development + '/views_m_jp'
 		},
 
 		// Sass 경로

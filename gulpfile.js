@@ -38,6 +38,8 @@ var del      = require('del'),
 gulp.task('default', ['browserSync', 'watch']);
 gulp.task('mobile', ['browserSync_m', 'watch_m']);
 gulp.task('en', ['browserSync_en', 'watch_en']);
+gulp.task('jp', ['browserSync_jp', 'watch_jp']);
+gulp.task('mjp', ['browserSync_m_jp', 'watch_m_jp']);
 gulp.task('prepare', ['preen', 'bower:copy']);
 
 gulp.task('browserSync', ['template', 'css', 'js'], function() {
@@ -55,6 +57,21 @@ gulp.task('browserSync_m', ['template_m', 'css', 'js'], function() {
 	});
 });
 gulp.task('browserSync_en', ['template_en', 'css', 'js'], function() {
+	return browerSync.init({
+		server: {
+			baseDir: './dist'
+		}
+	});
+});
+//jp추가
+gulp.task('browserSync_jp', ['template_jp', 'css', 'js'], function() {
+	return browerSync.init({
+		server: {
+			baseDir: './dist'
+		}
+	});
+});
+gulp.task('browserSync_m_jp', ['template_m_jp', 'css', 'js'], function() {
 	return browerSync.init({
 		server: {
 			baseDir: './dist'
@@ -105,6 +122,36 @@ gulp.task('watch_en', [], function(){
 		gulp.start('js');
 	});
 })
+
+//jp추가
+gulp.task('watch_jp', [], function(){
+	// HTML 템플릿 업무 관찰
+	watch([config.template.src_jp, config.template.parts_jp], function() {
+		gulp.start('template_jp');
+	});
+	// Sass 업무 관찰
+	watch(config.css.src, function() {
+		gulp.start('css');
+	});
+	// Js 업무 관찰
+	watch(config.js.src, function() {
+		gulp.start('js');
+	});
+});
+gulp.task('watch_m_jp', [], function(){
+	// HTML 템플릿 업무 관찰
+	watch([config.template.src_m_jp, config.template.parts_m_jp], function() {
+		gulp.start('template_m_jp');
+	});
+	// Sass 업무 관찰
+	watch(config.css.src, function() {
+		gulp.start('css');
+	});
+	// Js 업무 관찰
+	watch(config.js.src, function() {
+		gulp.start('js');
+	});
+});
 
 // 제거
 gulp.task('clean:all', function(){
@@ -177,6 +224,31 @@ gulp.task('template_en', function(){
 		.pipe( prettify( config.htmlPrettify) )
 		.pipe( gulp.dest( config.template.dest_en ) )
 		// .pipe( connect.reload() );
+		.pipe(browerSync.reload({stream: true}));
+});
+//jp추가
+gulp.task('template_jp', function(){
+	gulp.src(config.template.src_jp)
+		.pipe( plumber() )
+//		.pipe( jade() )
+		.pipe( fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.pipe( prettify( config.htmlPrettify) )
+		.pipe( gulp.dest( config.template.dest_jp ) )
+		// .pipe( connect.reload() );
+		.pipe(browerSync.reload({stream: true}));
+});
+gulp.task('template_m_jp', function(){
+	gulp.src(config.template.src_m_jp)
+		.pipe( plumber() )
+		.pipe( fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.pipe( prettify( config.htmlPrettify) )
+		.pipe( gulp.dest( config.template.dest_m_jp ) )
 		.pipe(browerSync.reload({stream: true}));
 });
 
