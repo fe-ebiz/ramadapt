@@ -4,9 +4,15 @@
 .gnbDiv .gnbWrap .gnb .one {width: 130px;}
 .gnbDiv .gnbWrap .gnb .two {width: 170px;}
 .gnbDiv .gnbWrap .gnb .three {width: 150px;}
-.gnbDiv .gnbWrap .gnb .three .oneDep {text-indent: 35px;}
+/*.gnbDiv .gnbWrap .gnb .three .oneDep {text-indent: 35px;}*/
 .gnbDiv .gnbWrap .gnb .five .oneDep {text-indent: 10px;}
 .gnbDiv .gnbWrap .evtTab {right: -180px;}
+
+/* footer */
+#footer, .Main #footer {padding: 30px 0 85px;}
+#footer .left_area {width: 500px;}
+#footer .right_area {width: 470px; padding-left: 20px;}
+
 #tour ul > li > p {min-height: 90px;}
 
 #main_notice [class*=cli0] {

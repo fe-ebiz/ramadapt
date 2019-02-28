@@ -36,6 +36,8 @@
     <link rel="stylesheet" type="text/css" href="http://static.hotelgangneung.kr/css/layout2.css">
     <link rel="stylesheet" href="http://static.ramadapt.co.kr/css/style.css">
     <link rel="stylesheet" href="http://static.ramadapt.co.kr/css/style_jp.css">
+    <!-- 190226 css 추가 -->
+    <link rel="stylesheet" href="http://static.ramadapt.co.kr/css/totalweb.css">
     <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
     <!--<link rel="stylesheet" href="../static/css/style_jp.css">-->
 
@@ -49,6 +51,8 @@
     <!--공통 Js-->
     <script src="http://static.ramadapt.co.kr/js/jquery.easing.1.3.js"></script>
     <script src="http://static.ramadapt.co.kr/js/common.js"></script>
+    <!-- 190226 js 추가 -->
+    <script src="http://static.ramadapt.co.kr/js/totalweb.js"></script>
     <!--무료숙박권 FAQ-->
     <script src="http://static.go.co.kr/js/faq.js"></script>
     <!-- <script src="../static/js/common.js"></script> -->
@@ -65,7 +69,9 @@
 
 <body class="Gallery">
     <div id="Contents">
-        <div id="header">
+
+        <!-- 190226 클래스 추가 -->
+        <div id="header" class="header-2">
             <div class="gnbDiv">
                 <div class="gnbWrap">
                     <h1>
@@ -73,6 +79,7 @@
 				<a href="index.html"><img src="http://img.ramadapt.co.kr/logo.png" alt="ラマダ アンコール ピョンテク ホテル"></a>
 
 			</h1>
+                    <!-- 190226 메뉴 변경 -->
                     <div class="gnb">
                         <ul>
                             <li class="one">
@@ -98,22 +105,29 @@
                             </li>
                             <li class="three">
                                 <div class="guideBg"></div>
-                                <a href="facil_1.html" class="oneDep">施設</a>
+                                <a href="facil_1.html" class="oneDep">ダイニング</a>
                                 <div class="twoDep">
                                     <a href="facil_1.html" class="off">レストラン</a>
-                                    <a href="facil_2.html" class="off">フィットネス</a>
-                                    <a href="facil_3.html" class="off">コンファレンスルーム</a>
-                                    <a href="facil_9.html" class="off">ビジネスルーム</a>
-                                    <a href="facil_5.html" class="off">ルームサービス</a>
-                                    <a href="facil_6.html" class="off">ペットホテル</a>
                                     <a href="facil_7.html" class="off">屋外テラス</a>
-                                    <a href="facil_8.html" class="off">ランドリールーム</a>
+                                    <!-- 룸서비스 주석처리 -->
+                                    <!--<a href="facil_5.html" class="off">ルームサービス</a>-->
                                 </div>
                             </li>
                             <li class="four">
                                 <div class="guideBg"></div>
-                                <a href="#none" target="_blank" class="oneDep">客室予約</a>
+                                <a href="facil_3.html" class="oneDep">バンケット&amp;施設</a>
+                                <div class="twoDep last">
+                                    <a href="facil_3.html" class="off">コンファレンスルーム</a>
+                                    <a href="facil_9.html" class="off">ビジネスルーム</a>
+                                    <a href="facil_2.html" class="off">フィットネス</a>
+                                    <a href="facil_6.html" class="off">ペットホテル</a>
+                                    <a href="facil_8.html" class="off">ランドリールーム</a>
+                                </div>
                             </li>
+                            <!--<li class="four">
+						<div class="guideBg"></div>
+						<a href="#none" target="_blank" class="oneDep">客室予約</a>
+					</li>-->
                             <li class="five">
                                 <div class="guideBg"></div>
                                 <a href="intro_4.html" class="oneDep">アクセス</a>
@@ -121,28 +135,36 @@
                         </ul>
                     </div>
                     <!--//gnb-->
-                    <ul class="util group">
-                        <li>
-                            <a href="http://www.ramadaencorepyeongtaek.com">KOR</a>
-                        </li>
-                        <li>
-                            <a href="http://en.ramadaencorepyeongtaek.com">ENG</a>
-                        </li>
-                        <li>
-                            <a href="http://cn.ramadaencorepyeongtaek.com">CHN</a>
-                        </li>
-                        <!-- 일문 추가 -->
-                        <li>
-                            <a href="#none">JPN</a>
-                        </li>
-                    </ul>
-                    <!-- //util -->
                 </div>
                 <!--// gnbWrap -->
                 <div class="twoDbg"></div>
                 <!--//gnb활성화시내려옴 -->
             </div>
             <!--// gnbDiv -->
+
+            <!-- 190226 및 언어 추가 -->
+            <div class="until-area clr">
+                <div class="util-box">
+                    <ul class="util-menu ic-bArrow">
+                        <li class=""><a href="#none">한국어</a>
+                        </li>
+                        <li class=""><a href="#none">English</a>
+                        </li>
+                        <li class=""><a href="#none">中國語</a>
+                        </li>
+                        <li class="on"><a href="#none">日本語</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 190226 예약하기 메뉴 추가 -->
+            <div class="bk-menu">
+                <a href="#none" class="btn-bk">予約</a>
+                <ul class="bk-list">
+                    <li class="item item-1 fst"><a href="#none">客室予約</a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
 
@@ -372,6 +394,19 @@
                         <span class="s_1 fz_16">団体のお問い合わせ</span>ワークショップ、学生、産業団体 / 団体利用に関するお問い合わせ　
                         <br>☎ <span class="fz_14">+82-10-8844-0409</span>
                         <br>(平日/週末 06時 ~ 02時)
+                    </div>
+                    <!-- 190226 언어메뉴 추가 -->
+                    <div class="util-box">
+                        <ul class="util-menu ic-bArrow">
+                            <li class=""><a href="#none">한국어</a>
+                            </li>
+                            <li class=""><a href="#none">English</a>
+                            </li>
+                            <li class="on"><a href="#none">中國語</a>
+                            </li>
+                            <li class=""><a href="#none">日本語</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -34,6 +34,8 @@
     <!--공통 Css-->
     <link rel="stylesheet" href="http://static.ramadapt.co.kr/css/style.css">
     <link rel="stylesheet" href="http://static.ramadapt.co.kr/css/style_en.css">
+    <!-- 190226 css 추가 -->
+    <link rel="stylesheet" href="http://static.ramadapt.co.kr/css/totalweb.css">
     <!-- <link rel="stylesheet" href="../static/css/style.css">
 	<link rel="stylesheet" href="../static/css/style_en.css"> -->
     <!--개별 Css-->
@@ -49,6 +51,8 @@
     <!--공통 Js-->
     <script src="http://static.ramadapt.co.kr/js/jquery.easing.1.3.js"></script>
     <script src="http://static.ramadapt.co.kr/js/common.js"></script>
+    <!-- 190226 js 추가 -->
+    <script src="http://static.ramadapt.co.kr/js/totalweb.js"></script>
     <!--무료숙박권 FAQ-->
     <script src="http://static.go.co.kr/js/faq.js"></script>
     <!-- <script src="../static/js/common.js"></script> -->
@@ -65,15 +69,20 @@
 
 <body class="Intro">
     <div id="Contents">
-        <div id="header">
+
+        <!-- 190226 클래스 추가 -->
+        <div id="header" class="header-2">
             <div class="gnbDiv">
                 <div class="gnbWrap">
                     <!-- <span class="evtTab">
 				<a class="faq-a" id="faq-a" href="#">고코투어 이벤트 당첨안내</a>
 			</span> -->
                     <h1>
+
 				<a href="/"><img src="http://img.ramadapt.co.kr/logo.png"></a>
+
 			</h1>
+                    <!-- 190226 메뉴 변경 -->
                     <div class="gnb">
                         <ul>
                             <li class="one">
@@ -101,24 +110,26 @@
                                 <a href="./facil_1.html" class="oneDep">Facilities</a>
                                 <div class="twoDep">
                                     <a href="/facil/?page=1" class="off">Restaurant</a>
-                                    <a href="/facil/?page=2" class="off">Fitness</a>
-                                    <a href="/facil/?page=3" class="off">Conference Room</a>
-                                    <a href="/facil/?page=4" class="off">Dry Sauna</a>
-                                    <a href="/facil/?page=5" class="off">Room Service</a>
-                                    <a href="/facil/?page=6" class="off">Pet Hotel</a>
                                     <a href="/facil/?page=7" class="off">Terrace Barbecue Party</a>
+                                    <!--<a href="/facil/?page=5" class="off">Room Service</a>-->
+                                </div>
+                            </li>
+                            <li class="four">
+                                <div class="guideBg"></div>
+                                <a href="./facil_1.html" class="oneDep">Banquet&amp;Facilities</a>
+                                <div class="twoDep last">
+                                    <a href="/facil/?page=3" class="off">Conference Room</a>
+                                    <a href="/facil/?page=4" class="off">Business Room</a>
+                                    <a href="/facil/?page=2" class="off">Fitness</a>
+                                    <a href="/facil/?page=6" class="off">Pet Hotel</a>
                                     <a href="/facil/?page=8" class="off">Laundry Room</a>
                                 </div>
                             </li>
-                            <li class="">
-                                <div class="guideBg"></div>
-                                <a href="https://www.agoda.com/ramada-encore-pyeongtaek/hotel/pyeongtaek-si-kr.html?checkin=2018-11-24&amp;los=1&amp;adults=2&amp;rooms=1&amp;cid=-1&amp;searchrequestid=c3aeee53-80cc-43fa-a706-2ffcdcdb7480&amp;tspTypes=8,4&amp;ssri=0&amp;tabbed=true"
-                                target="_blank" class="oneDep">Booking</a>
-                            </li>
-                            <!-- <li class="four">
-						<div class="guideBg"></div>
-						<a href="/board/" class="oneDep">News</a>
-					</li> -->
+                            <!--<li class="">
+                        <div class="guideBg"></div>
+                        <a href="https://www.agoda.com/ramada-encore-pyeongtaek/hotel/pyeongtaek-si-kr.html?checkin=2018-11-24&amp;los=1&amp;adults=2&amp;rooms=1&amp;cid=-1&amp;searchrequestid=c3aeee53-80cc-43fa-a706-2ffcdcdb7480&amp;tspTypes=8,4&amp;ssri=0&amp;tabbed=true"
+                            target="_blank" class="oneDep">Booking</a>
+                    </li>-->
                             <li class="five">
                                 <div class="guideBg"></div>
                                 <a href="./intro_4.html" class="oneDep">Location</a>
@@ -126,21 +137,36 @@
                         </ul>
                     </div>
                     <!--//gnb-->
-                    <ul class="util group">
-                        <li>
-                            <a href="http://www.ramadapt.co.kr">KOR</a>
-                        </li>
-                        <li>
-                            <a href="http://en.ramadapt.co.kr">ENG</a>
-                        </li>
-                    </ul>
-                    <!-- //util -->
                 </div>
                 <!--// gnbWrap -->
                 <div class="twoDbg"></div>
                 <!--//gnb활성화시내려옴 -->
             </div>
             <!--// gnbDiv -->
+
+            <!-- 190226 언어 추가 -->
+            <div class="until-area clr">
+                <div class="util-box">
+                    <ul class="util-menu ic-bArrow">
+                        <li class=""><a href="#none">한국어</a>
+                        </li>
+                        <li class="on"><a href="#none">English</a>
+                        </li>
+                        <li class=""><a href="#none">中國語</a>
+                        </li>
+                        <li class=""><a href="#none">日本語</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 190226 예약하기 메뉴 추가 -->
+            <div class="bk-menu">
+                <a href="#none" class="btn-bk">Reservations</a>
+                <ul class="bk-list">
+                    <li class="item item-1 fst"><a href="#none">Booking</a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
 
@@ -327,6 +353,19 @@
                         <span class="s_1 fz_16">Group inquiry</span> Workshop, students, industrial groups, and group use questions
                         <br>☎ <span class="fz_14">+82-10-4731-1079</span>
                         <br>(week days/weekend 06:00 ~ 14:00)
+                    </div>
+                    <!-- 190226 언어메뉴 추가 -->
+                    <div class="util-box">
+                        <ul class="util-menu ic-bArrow">
+                            <li class=""><a href="#none">한국어</a>
+                            </li>
+                            <li class="on"><a href="#none">English</a>
+                            </li>
+                            <li class=""><a href="#none">中國語</a>
+                            </li>
+                            <li class=""><a href="#none">日本語</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

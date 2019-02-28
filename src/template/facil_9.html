@@ -1,0 +1,115 @@
+@@include('./include/_head.html', {
+    "page": ""
+})
+
+</head>
+<body class="Facil">
+    <div id="Contents">
+        @@include('./include/_header.html')
+
+        <div id="content">
+            @@include('./include/_subVisual.html')
+            <div id="sub_content" class="group">
+                <div class="centerThis">
+                    @@include('./include/facil/_lnb2.html')
+                    <script src="http://static.ramadapt.co.kr/js/jquery.bxslider.min.js"></script>
+                    <link href="http://static.ramadapt.co.kr/css/jquery.bxslider.css" rel="stylesheet">
+                    <script>
+                    $(document).ready(function(){
+                    	var slider = $('.bxslider').bxSlider({
+                    			auto: true, mode:'fade',
+                    		});
+                    	var slider_01 =	$('.bxslider_01').bxSlider({
+                    			auto: true,autoControls: true, mode:'vertical',
+                    		});
+                    	var slider_02 =	$('.bxslider_02').bxSlider({
+                    			auto: true,controls:false,pagerCustom: '#bx-pager1'
+                    		});
+                    	var slider_03 =	$('.bxslider_03').bxSlider({
+                    			auto: true,controls:false,pager:false,maxSlides: 3,moveSlides:1,  slideWidth: 100,slideMargin:0,autoHover:true,
+                    		});
+                    		// 클릭시 멈춤 현상 해결 //
+                    		$(document).on('click','.bx-next, .bx-prev',function() {
+                    		slider.stopAuto();
+                    		slider.startAuto();
+                    		slider_01.stopAuto();
+                    		slider_01.startAuto();
+                    		});
+                    		$(document).on('mouseover','.bx-pager, #bx-pager1',function() {
+                    		slider.stopAuto();
+                    		slider.startAuto();
+                    		slider_01.stopAuto();
+                    		slider_01.startAuto();
+                    		slider_02.stopAuto();
+                    		slider_02.startAuto();
+                    		});
+                    });
+                    </script>
+                    <style>
+                    /* 배너사이즈와 위치 */
+                    #s_banner_wrap {width:750px; height:450px; position: relative; margin:0px 0;}
+                    .banner_01 {width:750px; height:450px; background:url("http://img.ramadapt.co.kr/gall_03_04_02.jpg");}
+                    </style>
+
+                    <div id="right_content">
+                        <div id="pg_title">
+                            <h2>비지니스 룸</h2>
+                            <div id="rocation">
+                                <span><a href="/index.html"><img src="http://img.ramadapt.co.kr/icon_home.gif" class="img"></a> 연회&amp;부대시설 </span> &gt; <span class="last"><strong>비지니스 룸</strong></span>
+                            </div>
+                            <!--//#rocation-->
+                        </div>
+                        <!--//#title_box-->
+                        <div id="s_banner_wrap">
+                            <ul class="bxslider">
+                                <li class="banner_01"></li>
+                            </ul>
+                        </div>
+
+                        <div class="faci_info"><p>"편안한 비즈니스지원" <br>라마다평택호텔 앙코르의 비즈니스룸에서 고객님의 업무를 편안히 처리하세요.</p></div>
+
+                        <br><br>
+                        <div id="company02">
+                            <p class="tb_title">
+                              이용 안내
+                            </p>
+                            <table class="df_tb">
+                                <colgroup>
+                                    <col width="150">
+                                    <col width="*">
+                                </colgroup>
+                                <tbody>
+									<tr>
+										<th>이용 시간</th>
+										<td>상시 이용가능(24시간 운영)</td>
+									</tr>
+									<tr>
+										<th>이용 문의</th>
+										<td>1층 프론트 문의(이용방법 안내와 비지니스룸 키발급)</td>
+									</tr>
+									<tr>
+										<th>위 치</th>
+										<td>3층 311호 비지니스 룸</td>
+									</tr>
+									<tr>
+										<th>기타안내</th>
+										<td>인터넷 및 워드작업 가능. 프린터 사용가능</td>
+									</tr>
+								</tbody>
+                            </table>
+
+                        </div>
+                    </div>
+					<!--//#right_content-->
+                </div>
+                <!-- //.centerThis -->
+            </div>
+            <!-- //#sub_content -->
+        </div>
+        <!-- //#content-->
+
+        @@include('./include/_footer.html')
+    </div>
+</body>
+
+</html>

@@ -452,6 +452,10 @@ input[type="radio"] {
 	padding: 9.5px 8px;
 	border-bottom: 1px solid #dedede;
 }
+.df_tb .fc-red {
+    color: #ea3433;
+}
+
 .df_tb th {
 	padding: 6px 8px;
 	border-bottom: 1px solid #dedede;
@@ -731,7 +735,7 @@ body {
 	line-height: 1em;
 	/* display: none; */
 }
-.evtFaqBtn img {position: relative;; vertical-align: middle; top: -1px; width: 16px; margin-right: 1px;}
+.evtFaqBtn img {position: relative; vertical-align: middle; top: -1px; width: 16px; margin-right: 1px;}
 
 .util {
 	z-index: 99999;
@@ -761,6 +765,15 @@ body {
 	color: #FFFFFF;
 }
 
+/* 190226 util 변경 */
+.util-menu {}
+.util-menu li {float: left; width: 25%; text-align: center; background: #ddd;}
+.util-menu li a {display: block; height: 30px; /*padding: 0 15px;*/ font-size: 13px; font-weight: 300; letter-spacing: -0.7px; line-height: 30px; color: #333; border-left: 1px solid #ccc;}
+.util-menu li:first-child a {border-left: 0;}
+.util-menu .last {}
+.util-menu + .bk-menu-m {margin-top: 12px;}
+
+
 
 /* ----------------------------------------------------------------
  nav
@@ -779,7 +792,8 @@ html.mmenu-opened body {
 }
 .mmenu {
 	display: none;
-	width: 100%;
+	/*width: 100%;*/
+    width: 80%;
 	height: 100%;
 	position: absolute;
 	top: 0;
@@ -829,7 +843,8 @@ html.mmenu-left.mmenu-opened .mmenu-page, html.mmenu-left.mmenu-opened #mmenu-bl
 	left: 0%;
 }
 html.mmenu-left.mmenu-opening .mmenu-page, html.mmenu-left.mmenu-opening #mmenu-blocker {
-	margin-left: -65px;
+    /*margin-left: -65px;*/
+    margin-left: -20%;
 	left: 100%;
 }
 html.mmenu-right.mmenu-opened .mmenu-page, html.mmenu-right.mmenu-opened #mmenu-blocker {
@@ -956,6 +971,7 @@ html.mmenu-right.mmenu-opening .mmenu-page, html.mmenu-right.mmenu-opening #mmen
 #main_event .evt-area .evt-box .evt-list {position: relative; display: inline-block;}
 #main_event .evt-area .evt-box .evt-list li {margin-top: 10px; font-size: 11px; line-height: 18px; letter-spacing: -1px; color: #fff;}
 #main_event .evt-area .evt-box .evt-list .evt-list-tit {color: #f5a800;}
+#main_event .evt-area .evt-box .evt-txt {margin-top: 10px; font-size: 11px; line-height: 18px; letter-spacing: -1px; color: #fff;}
 /* ----------------------------------------------------------------
  객실안내-detail_event
  -----------------------------------------------------------------*/
@@ -1534,6 +1550,18 @@ html.mmenu-right.mmenu-opening .mmenu-page, html.mmenu-right.mmenu-opening #mmen
 	width: 100%;
 	margin-bottom:10px
 }
+
+#company01 .banner-img {
+    position: relative;
+    width: 100%;
+    margin: 0 0 -7px;
+    padding: 0;
+}
+
+#company01 .banner-img img {
+    margin-bottom: 0;
+}
+
 #company01 h2 {
 	font-size: 18px;
 	color: #a3a3a3;

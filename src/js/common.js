@@ -13,8 +13,9 @@ jQuery(document).ready(function() {
 			if (oneNum != -1) {
 				jQuery(".gnb ul").children("li").eq(oneNum).removeClass("on");
 			}
+			jQuery('.twoDbg').addClass("on");
 			jQuery(".gnbDiv").stop().animate({
-				height : 312,
+				'height' : 312
 			}, 400, "easeOutCubic");
 			jQuery(this).addClass("on");
 		}).focusin(function() {
@@ -23,9 +24,12 @@ jQuery(document).ready(function() {
 
 		jQuery(this).mouseleave(function() {
 			jQuery(this).removeClass("on");
+            //header 높이값으로 gnbdiv 높이 지정
+            var gnbDivH = jQuery("#header").height();
 			jQuery(".gnbDiv").stop().animate({
-				height : 83,
-			}, 400, "easeOutCubic");
+				'height' : gnbDivH, //83
+			}, 400, "easeOutCubic", function(){});
+			jQuery('.twoDbg').removeClass("on");
 
 			if (oneNum != -1) {
 				activeSub()
@@ -42,10 +46,37 @@ jQuery(document).ready(function() {
 			})
 		})
 	})
+    
+    
+    //언어메뉴 클릭
+    jQuery('.util-box .util-menu a').on('click', function(){
+        var untilB = jQuery(this).parents('.util-box');
+        jQuery(this).parents('li').addClass('on').siblings().removeClass('on');
+        if( untilB.hasClass('on') ){
+            console.log('on')
+            untilB.stop().animate({
+                'height' : 26
+            }, 400, "easeOutCubic");
+            untilB.removeClass('on');
+        }else{
+            console.log('on2')
+            untilB.addClass('on');
+            untilB.stop().animate({
+                'height' : 131
+            }, 400, "easeOutCubic");
+        }
+        /*jQuery(this).parents('.util-box').removeClass('on');
+        jQuery(this).parents('.util-box').stop().animate({
+            'height' : 26
+        }, 400, "easeOutCubic");*/
+
+    });
+    
 })
 function activeSub() {
 	jQuery(".gnb ul").children("li").eq(oneNum).addClass("on");
 }
+
 
 /*-----------------
  * visual
