@@ -8,7 +8,7 @@ $(function() {
 function menuFn() {
     var bkMenu = $('.bk-menu');
     
-    bkMenu.find('.btn-bk').on('mouseover', function(){
+    bkMenu.find('a[class*="btn-bk"]').on('mouseover', function(){
         bkMenu.find('.bk-list').stop().slideDown();
     });
     

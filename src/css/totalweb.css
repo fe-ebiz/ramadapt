@@ -4,17 +4,33 @@
 /* 라마다 기준 */
 .bk-menu {z-index: 99999; position: absolute; box-sizing: border-box; width: 144px; top: 0; right: 0; text-align: center; background: #ea3433;}
 .bk-menu a {position: relative; display: block; line-height: 1; color: #fff;}
-.bk-menu .btn-bk {padding: 53px 0 26px; font-size: 18px; font-weight: 600; background: url(http://img.ramadapt.co.kr/common/ico_bk_menu.png) no-repeat center 22px; background-size: 22px auto;}
+.bk-menu a[class*='btn-bk'] {font-size: 18px; font-weight: 600; }
+.bk-menu .btn-bk {padding: 53px 0 26px; background: url(http://img.ramadapt.co.kr/common/ico_bk_menu.png) no-repeat center 22px; background-size: 22px auto;}
+.bk-menu .btn-bk2 {padding: 50px 0 23px; background: url(http://img.ramadapt.co.kr/common/ico_bk_menu2.png) no-repeat center 15px; background-size: 28px auto;}
 .bk-menu .bk-list {display: none;}
 .bk-menu .bk-list li {border-top: 1px solid #a41c1c;}
 .bk-menu .bk-list li a {padding: 21px 0 20px; font-size: 16px; font-weight: 500;}
 .bk-menu .bk-list li a:hover {background: #c51b1b;}
 
+/* BS */
+.bk-menu.bs {background: #ecb84a;}
+.bk-menu.bs a {color: #221e1f;}
+.bk-menu.bs .bk-list li {border-top-color: #a17138;}
+.bk-menu.bs .bk-list li a {padding: 33px 0 28px;}
+.bk-menu.bs .bk-list li a:hover {background: #d19338;}
+
+/* ocean */
+.bk-menu.ocean {background: #44a8ff;}
+.bk-menu.ocean .bk-list li {border-top-color: #fff;}
+.bk-menu.ocean .bk-list li a {padding: 32px 0 26.7px;}
+.bk-menu.ocean .bk-list li a:hover {background: #007be7;}
+
 
 /* 반응형용 */
 @media (max-width: 767px) {
+    .bk-menu {display: none;}
     /* 기본 */
-    .bk-menu-m {}
+    .bk-menu-m {box-sizing: border-box;}
     .bk-menu-m li {float: left; width: 50%; text-align: center; background: #ea3433;}
     .bk-menu-m li:first-child {background: #c51b1b;}
     .bk-menu-m li a {display: block; height: 40px; font-size: 16px; line-height: 40px;}
@@ -22,4 +38,29 @@
     /* 한개일때 */
     .bk-menu-m.only {}
     .bk-menu-m.only li {float: none; width: 100%;}
+    
+    /* BS */
+    .bk-menu-m.bs {padding: 8px 9px 11px;}
+    .bk-menu-m.bs li {background: #ecb84a;}
+    .bk-menu-m.bs li:first-child {background: #d09338;}
+    .bk-menu-m.bs li a {font-size: 15px;}
+    .bk-menu-m.bs li:first-child a {border-right-color: #a27139;}
+    
+}
+
+/* 오션투유 ocean */
+@media (max-width: 992px) {
+    .bk-menu {display: none;}
+    
+    .bk-menu-m {box-sizing: border-box; padding: 0 10px 10px;}
+    .bk-menu-m li {float: left; width: 50%; text-align: center; background: #44a8fe;}
+    .bk-menu-m li:first-child {background: #017be8;}
+    .bk-menu-m li a {display: block; height: 40px; font-size: 16px; line-height: 40px;}
+    .bk-menu-m li:first-child a {border-right: 1px solid #fff;}
+}
+
+@media (min-width: 992px) and (max-width: 1279px){
+    .bk-menu.ocean {width: 130px;}
+    .bk-menu.ocean a[class*='btn-bk'] {font-size: 16px;}
+    .bk-menu.ocean .bk-list li a {padding: 33px 0 28.2px; font-size: 14px;}
 }
