@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-.gnbDiv .gnbWrap .gnb {left: auto; right: 0;}
+.gnbDiv .gnbWrap .gnb {left: auto; right: auto; text-align: center;}
+.gnbDiv .gnbWrap .gnb ul {float: none; display: inline-block; margin-right: 0;}
 .gnbDiv .gnbWrap .gnb .one {width: 130px;}
 .gnbDiv .gnbWrap .gnb .two {width: 170px;}
 .gnbDiv .gnbWrap .gnb .three {width: 150px;}
