@@ -25,7 +25,15 @@
 .bk-menu.ocean .bk-list li a {padding: 32px 0 26.7px;}
 .bk-menu.ocean .bk-list li a:hover {background: #007be7;}
 
+/* ocean kendo */
+.bk-menu.brand-ld {background: #ff5933;}
+.bk-menu.brand-ld .btn-bk {padding: 57px 0 31px; background-position: center 26px;}
+.bk-menu.brand-ld .bk-list li {border-top-color: #fff;}
+.bk-menu.brand-ld .bk-list li a {padding: 31px 0 27px;}
+.bk-menu.brand-ld .bk-list li a:hover {background: #e43811;}
 
+    
+    
 /* 반응형용 */
 @media (max-width: 767px) {
     .bk-menu {display: none;}
@@ -46,17 +54,22 @@
     .bk-menu-m.bs li a {font-size: 15px;}
     .bk-menu-m.bs li:first-child a {border-right-color: #a27139;}
     
+    /* ocean kendo */
+    .bk-menu-m.brand-ld {position: absolute; width: 24%; min-width: 74px; right: 0; bottom: -1px;}
+    .bk-menu-m.brand-ld li {min-width: 74px; width: 100%; background: #ff5933;}
+    .bk-menu-m.brand-ld li a {height: 46px; font-size: 14px; line-height: 46px; color: #fff;}
+    .bk-menu-m.brand-ld li:first-child a {border-right: 0;}
 }
 
 /* 오션투유 ocean */
 @media (max-width: 992px) {
-    .bk-menu {display: none;}
+    .bk-menu.ocean {display: none;}
     
-    .bk-menu-m {box-sizing: border-box; padding: 0 10px 10px;}
-    .bk-menu-m li {float: left; width: 50%; text-align: center; background: #44a8fe;}
-    .bk-menu-m li:first-child {background: #017be8;}
-    .bk-menu-m li a {display: block; height: 40px; font-size: 16px; line-height: 40px;}
-    .bk-menu-m li:first-child a {border-right: 1px solid #fff;}
+    .bk-menu-m.ocean {box-sizing: border-box; padding: 0 10px 10px;}
+    .bk-menu-m.ocean li {float: left; width: 50%; text-align: center; background: #44a8fe;}
+    .bk-menu-m.ocean li:first-child {background: #017be8;}
+    .bk-menu-m.ocean li a {display: block; height: 40px; font-size: 16px; line-height: 40px;}
+    .bk-menu-m.ocean li:first-child a {border-right: 1px solid #fff;}
 }
 
 @media (min-width: 992px) and (max-width: 1279px){
