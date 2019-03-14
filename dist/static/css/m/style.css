@@ -2328,7 +2328,7 @@ div.facil-sec {}
 /* 이미지배너 */
 .tbn-area .tbn-box {display: block; width: 100%;}
 .tbn-area .tbn-box .bn-box {max-width: 100%;}
-.tbn-area .tbn-box .bn-box img {position: relative; width: 100%; /*max-width: 640px;*/ vertical-align: middle;}
+.tbn-area .tbn-box img {position: relative; width: 100%; /*max-width: 640px;*/ vertical-align: middle;}
 
 .tbn-area .tbn-box.group {background: #e3dbcd;}
 

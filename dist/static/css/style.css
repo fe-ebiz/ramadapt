@@ -2394,7 +2394,7 @@ body {
 .Group .h4-sub-tit {margin: 32px auto 0; font-size: 20px; font-weight: 400; line-height: 20px; text-align: center; color: #545454;}
 
 /* intro */
-.Group div.intro-sec {padding: 20px 0 30px; border-top: 0;}
+.Group div.intro-sec {padding: 30px 0 30px; border-top: 0;}
 .Group .intro-sec .br-t {margin-top: 15px;}
 .Group .intro-sec .d-map {position: relative; box-sizing: border-box; display: inline-block; float: right; width: 62%; height: 100%; text-align: right;}
 .Group .intro-sec .d-map img {position: relative;}
@@ -2589,6 +2589,9 @@ body {
 .tbn-area .tbn-box .bn-box img {position: relative; text-align: center;}
 
 .tbn-area .tbn-box.group {background: #e3dbcd;}
+
+/* 190314 배너 수정 */
+#pg_title + .tbn-area {margin-top: -5px;}
 
 /* 이미지 영역 */
 .rent-wrap .grid-wrap {background: #F6EDCE !important;}
