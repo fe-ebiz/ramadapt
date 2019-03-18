@@ -1615,7 +1615,38 @@ html.mmenu-right.mmenu-opening .mmenu-page, html.mmenu-right.mmenu-opening #mmen
 .page_copy dt { margin-bottom: 3px; /* padding:0 0 5px 0px; */ font-size:22px; color:#c51b1b; letter-spacing:-2px;}
 .page_copy dd { font-size:22px; color:#272d34; letter-spacing:-1px;}
 .page_copy .room_info {font-size:18px; color:#272d34; letter-spacing:-1px; word-break: keep-all;}
+.page_copy .room_info > p {font-size: 15px; line-height: 1.2;}
 .page_copy .cmain {color:#272d34;}
+.page_copy .fc-red {color: #d12525;}
+.page_copy .faci-info-box {
+    margin-top: 15px;
+	font-size: 13px;
+    line-height: 1.4;
+}
+.page_copy .faci-info-box .p-1 {
+	margin-bottom: 18px;
+}
+.page_copy .faci-info-list li {
+    position: relative;
+	padding-left: 10px;
+}
+.page_copy .faci-info-list li:before {
+	content: '';
+    display: inline-block;
+    position: absolute;
+    width: 5px;
+    height: 1px;
+    top: 7px;
+    left: 0;
+    background: #505050;
+}
+.page_copy .faci-txt-box {
+    position: relative;
+    margin-top: 15px;
+}
+.page_copy .faci-txt-box > span {
+	color: #d02626;
+}
 
 .tbl_comment { font-size:13px; line-height:18px; margin-top:15px;}
 

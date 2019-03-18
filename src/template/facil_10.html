@@ -1,0 +1,151 @@
+@@include('./include/_head.html', {
+    "page": ""
+})
+
+</head>
+<body class="Facil">
+    <div id="Contents">
+        @@include('./include/_header.html')
+
+        <div id="content">
+            @@include('./include/_subVisual.html')
+            <div id="sub_content" class="group">
+                <div class="centerThis">
+                    @@include('./include/facil/_lnb2.html')
+                    <script src="http://static.ramadapt.co.kr/js/jquery.bxslider.min.js"></script>
+                    <link href="http://static.ramadapt.co.kr/css/jquery.bxslider.css" rel="stylesheet">
+                    <script>
+                    $(document).ready(function(){
+                    	var slider = $('.bxslider').bxSlider({
+                    			auto: true, mode:'fade',
+                    		});
+                    	var slider_01 =	$('.bxslider_01').bxSlider({
+                    			auto: true,autoControls: true, mode:'vertical',
+                    		});
+                    	var slider_02 =	$('.bxslider_02').bxSlider({
+                    			auto: true,controls:false,pagerCustom: '#bx-pager1'
+                    		});
+                    	var slider_03 =	$('.bxslider_03').bxSlider({
+                    			auto: true,controls:false,pager:false,maxSlides: 3,moveSlides:1,  slideWidth: 100,slideMargin:0,autoHover:true,
+                    		});
+                    		// 클릭시 멈춤 현상 해결 //
+                    		$(document).on('click','.bx-next, .bx-prev',function() {
+                    		slider.stopAuto();
+                    		slider.startAuto();
+                    		slider_01.stopAuto();
+                    		slider_01.startAuto();
+                    		});
+                    		$(document).on('mouseover','.bx-pager, #bx-pager1',function() {
+                    		slider.stopAuto();
+                    		slider.startAuto();
+                    		slider_01.stopAuto();
+                    		slider_01.startAuto();
+                    		slider_02.stopAuto();
+                    		slider_02.startAuto();
+                    		});
+                    });
+                    </script>
+                    <style>
+                    /* 배너사이즈와 위치 */
+                    #s_banner_wrap {width:750px; height:450px; position: relative; margin:0px 0;}
+                    .banner_01 {width:750px; height:450px; background:url("http://img.ramadapt.co.kr/office_01.jpg");}
+                    .banner_02 {width:750px; height:450px; background:url("http://img.ramadapt.co.kr/office_02.jpg");}
+                    .banner_03 {width:750px; height:450px; background:url("http://img.ramadapt.co.kr/office_03.jpg");}
+                    </style>
+
+                    <div id="right_content">
+                        <div id="pg_title">
+                            <h2>가상오피스</h2>
+                            <div id="rocation">
+                                <span><a href="/index.html"><img src="http://img.ramadapt.co.kr/icon_home.gif" class="img"></a> 연회&amp;부대시설 </span> &gt; <span class="last"><strong>가상오피스</strong></span>
+                            </div>
+                            <!--//#rocation-->
+                        </div>
+                        <!--//#title_box-->
+                        <div id="s_banner_wrap">
+                            <ul class="bxslider">
+                                <li class="banner_01"></li>
+                                <li class="banner_02"></li>
+                                <li class="banner_03"></li>
+                            </ul>
+                        </div>
+
+                        <div class="faci_info">
+                            <p class="fc-red">
+                                "라마다의 품격을 더한 비즈니스 스타트업을 지원해 드립니다."<br>
+                                편리한 가상오피스(비상주 사무실)을 통해서 당신의 비즈니스를 실현하세요.
+                            </p>
+                            <div class="faci-info-box">
+                                <p class="p-1">가상오피스(비상주사무실)는 다음 분들께 꼭 필요한 서비스입니다.</p>
+                                <ul class="faci-info-list">
+                                    <li>사업자주소가 자택이 아닌 평택이 필요한 경우</li>
+                                    <li>평택에서 사업자 주소를 두고 영업이 필요한 경우</li>
+                                    <li>사업자주소 이전을 위해 잠시 주소가 필요한 경우</li>
+                                    <li>사업의 영업활동이 사무실 보다 외부 업무가 많은 업종</li>
+                                    <li>오프라인 보다 온라인의 영업활동이 많은 업종</li>
+                                    <li>전자상거래 업무가 위주인 업종</li>
+                                    <li>해외에 거주, 국내 사업을 위해 사업자등록증이 필요한 경우</li>
+                                    <li>프리랜서 및 투잡의 용도로 사업자등록이 필요한 경우</li>
+                                </ul>
+                                <div class="faci-txt-box">
+                                    <span>※ 코워킹스페이스(비지정석) 제공</span>
+                                    <ul class="faci-info-list">
+                                        <li>공동(공유)사무실로, 다양한 업무분야의 분들이 하나의 공간을 함께 사용</li>
+                                        <li>인터넷 제공 및 프린터 등의 사무 집기 이용가능우</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br><br>
+                        <div id="company02">
+                            <p class="tb_title">
+                              이용 안내
+                            </p>
+                            <table class="df_tb">
+                                <colgroup>
+                                    <col width="150">
+                                    <col width="*">
+                                </colgroup>
+                                <tbody>
+									<tr>
+										<th>이용 시간</th>
+										<td>상시 이용가능(24시간 운영)</td>
+									</tr>
+									<tr>
+										<th>이용 문의</th>
+										<td>010-4429-3019  /  onbiz@ebiznetworks.co.kr</td>
+									</tr>
+									<tr>
+										<th>홈페이지</th>
+										<td><a href="http://onbiz1.co.kr" target="_blank" title="온비즈오피스로 페이지 이동">http://onbiz1.co.kr</a></td>
+									</tr>
+									<tr>
+										<th>위치</th>
+										<td>가상오피스(비상주사무실) - 1층  /  코워킹스페이스(비지정석) - 2층</td>
+									</tr>
+									<tr>
+										<th>기타 안내</th>
+										<td>인터넷 및 워드작업, 프린터 사용가능</td>
+									</tr>
+								</tbody>
+                            </table>
+                        </div>
+
+                        <div class="req_box">
+                            <p><a href="http://onbiz1.co.kr" target="_blank" title="온비즈오피스로 페이지 이동">자세한 내용보기</a></p>
+                        </div>
+                    </div>
+					<!--//#right_content-->
+                </div>
+                <!-- //.centerThis -->
+            </div>
+            <!-- //#sub_content -->
+        </div>
+        <!-- //#content-->
+
+        @@include('./include/_footer.html')
+    </div>
+</body>
+
+</html>

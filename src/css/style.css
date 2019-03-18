@@ -460,6 +460,9 @@ input[type="radio"] {
 	border-top: 1px solid #272d34;
 	margin-top: 13px;
 }
+.df_tb a {
+    color: initial;
+}
 .df_tb th, .df_tb td {
 	padding: 10px 13px;
 	border-bottom: 1px solid #dedede;
@@ -1946,7 +1949,7 @@ body {
 #acco_box .acco_tbl{
 	width: 100%;
 }
-#acco_box .req_box{
+.req_box{
 	position:relative;
 }
 /* #acco_box .req_box h1{
@@ -1971,12 +1974,12 @@ body {
 	font-size:20px;
 	color:#ffffff;
 } */
-#acco_box .req_box p{
+.req_box p{
 	margin-top:45px;
 	font-size:20px;
 	text-align:center;
 }
-#acco_box .req_box a{
+.req_box a{
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 400;
 	color:#ffffff;
@@ -1984,16 +1987,61 @@ body {
 	display: inline-block;
 	padding: 15px 70px 16px;
 }
+
+#company02 + .req_box p {
+    margin-top: 35px;
+}
+#company02 + .req_box a {
+	padding: 19px 70px 20px;
+}
+
 .faci_info{
 	margin-top:30px;
+	padding-left:90px;
 	font-size:17px;
 	color:#272d34;
 	line-height:1.5em;
 	background:url("http://img.ramadapt.co.kr/bg_faci_info.gif")15px 10px no-repeat;
 }
-.faci_info p{
-	margin-left:90px;
+.faci_info > p{
 	min-height:80px;
+}
+.faci_info .fc-red {
+	color: #d12525;
+}
+.faci_info .faci-info-box {
+	font-size: 15px;
+    line-height: 1.4;
+}
+.faci_info .faci-info-box .p-1 {
+	margin-bottom: 22px;
+}
+.faci_info .faci-info-list {
+	
+}
+.faci_info .faci-info-list li {
+    position: relative;
+	padding-left: 14px;
+}
+.faci_info .faci-info-list li:before {
+	content: '';
+    display: inline-block;
+    position: absolute;
+    width: 8px;
+    height: 1px;
+    top: 11px;
+    left: 0;
+    background: #505050;
+}
+.faci_info .faci-txt-box {
+    position: relative;
+    margin-top: 20px;
+}
+.faci_info .faci-txt-box > span {
+	color: #d02626;
+}
+.faci_info .faci-txt-box .faci-info-list {
+	padding-left: 22px;
 }
 /* ----------------------------------------------------------------
  hsbox
