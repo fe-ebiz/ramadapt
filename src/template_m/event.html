@@ -1,0 +1,156 @@
+@@include('./include/_head.html', {
+    "page": ""
+})
+
+</head>
+<body class="Event">
+    <div id="Page">
+        @@include('./include/_header.html')
+
+        <div id="content" class="sub_content">
+           
+            <!-- 이벤트/축제 -->
+            <div class="centerThis">
+                <div id="pg_title" class="hidden">
+                    <h2>이벤트/축제</h2>
+                </div>
+                <!--//#rocation-->
+
+                <div id="eventSec">
+                    <!-- event js -->
+                    <link href="http://static.ramadapt.co.kr/css/m/jquery.bxslider.css" rel="stylesheet">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+                    <script>
+                        $(function() {
+                            sliderFn();
+                            // bx슬라이더
+                            $("div[id*=bxBox-] .bxS").bxSlider({
+                                mode : 'fade',
+                                auto : true,
+                                autoControls : false,
+                                pager : false,
+                                controls : false,
+                                speed : 500,
+                                duration : 6000
+                            });
+                            
+                            $(window).resize(function() {
+                                sliderFn();
+                            }).resize();
+                            
+                            function sliderFn(){
+                                var wd = $('.bxBox li').width();
+                                
+                                $('.bxBox li').css({'height' : (wd/2.5)+'px'});
+                            }
+                        });
+                    </script>
+
+                    <!-- 2019 장고항 실치 축제 -->
+                    <section class="evt-sec silch">
+                        <div class="bxBox" id="bxBox-1">
+                            <ul class="bxS">
+                                <li class="li-1"></li>
+                                <li class="li-2">
+                                    <div class="evt-bx-box">
+                                        <div class="evt-txt-box">
+                                            <p class="evt-bx-tit">2019 장고항 실치축제</p>
+                                            <p class="evt-bx-txt"> 
+                                                올해 4월 충남 당진 장고항에서 축하 공연 및 다양한 이벤트가 기다립니다.<br>
+                                                2019 장고항 실치축제는 서해의 별미 실치를 주인공으로 한 축제로<br>
+                                                매년 충남 당진시 석문면 장고항 일대에서 이벤트 행사가 펼쳐집니다. <br>
+                                                다양한 먹거리와 즐거운 행사를 절대 놓치지 마세요.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- 표 -->
+                        <div class="evt-tb-box">
+                            <ul class="evt-tb clr">
+                                <li class="nth-1 t-full">
+                                    <p class="p-lbl">행사명</p>
+                                    <p class="p-txt">2019 당진 장고항 실치축제</p>
+                                </li>
+                                <li class="nth-2 t-half">
+                                    <p class="p-lbl">일정</p>
+                                    <p class="p-txt">4월 말 예정 / 작년기준 4.28 (토) ~29(일)</p>
+                                </li>
+                                <li class="nth-3 t-half">
+                                    <p class="p-lbl">주최</p>
+                                    <p class="p-txt">당진시</p>
+                                </li>
+                                <li class="nth-4 t-half">
+                                    <p class="p-lbl">장소</p>
+                                    <p class="p-txt">충남 당진 장고항</p>
+                                </li>
+                                <li class="nth-5 t-half">
+                                    <p class="p-lbl">추가정보</p>
+                                    <p class="p-txt"><a href="" target="_blank" title="새창 열림">▷당진 장고항 실치축제</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- 제10회 해수부장관배 민물낚시대회 및 어린이 낚시 교실 -->
+                    <section class="evt-sec fish">
+                        <div class="bxBox" id="bxBox-1">
+                            <ul class="bxS">
+                                <li class="li-1"></li>
+                                <li class="li-2">
+                                    <div class="evt-bx-box">
+                                        <div class="evt-txt-box">
+                                            <p class="evt-bx-tit">제10회 해수부장관배 민물낚시대회 및 어린이 낚시 교실</p>
+                                            <p class="evt-bx-txt"> 
+                                                2019년 해수부 장관배 민물낚시 대회 및 어린이 낚시 교실이<br>
+                                                4월 7일 고잔 저수지(경기 평택)에서 열립니다.<br>
+                                                올해 대회는 낚시 대회뿐만 아니라 가족이 함께 즐길 수 있는<br>
+                                                가족형 이벤트와 퀴즈 등 다채로움이 가득합니다.<br>
+                                                봄 향기가 가득한 고잔 저수지에서 가족과 즐거운 추억도 낚아보시길 바랍니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- 표 -->
+                        <div class="evt-tb-box">
+                            <ul class="evt-tb clr">
+                                <li class="nth-1 t-full">
+                                    <p class="p-lbl">행사명</p>
+                                    <p class="p-txt">제10회 해수부장관배 민물낚시대회 및 어린이 낚시 교실</p>
+                                </li>
+                                <li class="nth-2 t-half">
+                                    <p class="p-lbl">일정</p>
+                                    <p class="p-txt">2019년 4월 7일 (일)</p>
+                                </li>
+                                <li class="nth-3 t-half">
+                                    <p class="p-lbl">주최</p>
+                                    <p class="p-txt">경기 평택 고잔저수지</p>
+                                </li>
+                                <li class="nth-4 t-half">
+                                    <p class="p-lbl">장소</p>
+                                    <p class="p-txt">해양수산부 / 한국낚시연합</p>
+                                </li>
+                                <li class="nth-5 t-half">
+                                    <p class="p-lbl">추가정보</p>
+                                    <p class="p-txt"><a href="" target="_blank" title="새창 열림">▷해수부장관배 전국 민물낚시대회</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- //.centerThis -->
+        </div>
+        <!-- //#content-->
+
+        @@include('./include/_footer.html')
+    </div>
+</body>
+
+</html>
