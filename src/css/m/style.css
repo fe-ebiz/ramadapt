@@ -2379,6 +2379,7 @@ div.facil-sec {}
 #eventSec .evt-sec + .evt-sec {margin-top: 22px;}
 #eventSec .evt-sec .bxBox {}
 #eventSec .evt-sec .bxBox .bx-wrapper {margin-bottom: 0;}
+/*#eventSec .evt-sec .bxBox .bx-controls {display: none;}*/
 #eventSec .evt-sec .bxS {}
 #eventSec .evt-sec .bxS li {position: relative; width: 100%; min-height: 140px;}
 #eventSec .evt-sec .bxS .li-2 {}

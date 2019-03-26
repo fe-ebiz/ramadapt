@@ -2804,7 +2804,7 @@ body {
 #eventSec .evt-sec .evt-tb-box .evt-tb .t-full {width: 100%;}
 #eventSec .evt-sec .evt-tb-box .evt-tb .t-half {float: left; width: 50%;}
 #eventSec .evt-sec .evt-tb-box .evt-tb li p {position: relative; box-sizing: border-box; display: table-cell; font-size: 14px; color: #000;}
-#eventSec .evt-sec .evt-tb-box .evt-tb li p a {color: initial;}
+#eventSec .evt-sec .evt-tb-box .evt-tb li p a {color: inherit;}
 #eventSec .evt-sec .evt-tb-box .evt-tb li .p-lbl {padding: 10px 0; width: 98px; text-align: center; background: #f6f6f6;}
 #eventSec .evt-sec .evt-tb-box .evt-tb li .p-txt {padding: 10px 15px; text-align: left;}
 
