@@ -65,11 +65,11 @@
 @media (max-width: 992px) {
     .bk-menu.ocean {display: none;}
     
-    .bk-menu-m.ocean {box-sizing: border-box; padding: 0 10px 10px;}
-    .bk-menu-m.ocean li {float: left; width: 50%; text-align: center; background: #44a8fe;}
-    .bk-menu-m.ocean li:first-child {background: #017be8;}
+    .bk-menu-m.ocean {box-sizing: border-box; padding: 0;}
+    .bk-menu-m.ocean li {float: left; width: 50%; text-align: center; background: #4073dc;}
+    .bk-menu-m.ocean li:first-child {background: #2757b8;}
     .bk-menu-m.ocean li a {display: block; height: 40px; font-size: 16px; line-height: 40px;}
-    .bk-menu-m.ocean li:first-child a {border-right: 1px solid #fff;}
+    .bk-menu-m.ocean li:first-child a {border-right: 2px solid #244b98;}
 }
 
 @media (min-width: 992px) and (max-width: 1279px){
