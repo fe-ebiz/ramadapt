@@ -2813,3 +2813,6 @@ body {
 
 /* 해수부장관배 민물낚시대회 및 어린이 낚시 교실 fish */
 #eventSec .evt-sec.fish .bxS li {background: url(http://img.ramadapt.co.kr/banner/event_fish_01.jpg) no-repeat; background-size: cover;}
+
+/* 여자야구 페스티벌 2019 wmball */
+#eventSec .evt-sec.wmball .bxS li {background: url(http://img.ramadapt.co.kr/banner/event_wbaseball_01.jpg) no-repeat; background-size: cover;}
