@@ -2818,4 +2818,5 @@ body {
 #eventSec .evt-sec.wmball .bxS li {background: url(http://img.ramadapt.co.kr/banner/event_wbaseball_01.jpg) no-repeat; background-size: cover;}
 
 /* 2019 제58회 아산성웅 이순신축제 */
-#eventSec .evt-sec.leesoonshin .bxS li {background: url(http://img.ramadapt.co.kr/banner/leesoonshin_01.jpg) no-repeat; background-size: cover;}
+#eventSec .evt-sec.leesoonshin .bxS li {background: url(http://img.ramadapt.co.kr/banner/event_leesoonshin_01.jpg) no-repeat; background-size: cover;}
+#eventSec .evt-sec.leesoonshin .evt-tb li.nth-4 .p-txt {font-size: 12.5px;}
