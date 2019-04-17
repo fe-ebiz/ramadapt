@@ -32,6 +32,32 @@
 .bk-menu.brand-ld .bk-list li a {padding: 31px 0 27px;}
 .bk-menu.brand-ld .bk-list li a:hover {background: #e43811;}
 
+/* 190417 좌측 예약상담 배너 */
+.lWing-wrap {position: absolute; left: 50%; margin-left: -690px; z-index: 21;}
+.lWing-wrap .lw-area {position: relative; margin-top: 16px;}
+.lWing-wrap .lw-area .consult-box {position: relative; box-sizing: border-box; width: 160px; padding: 16px 16px 15px 16px; border-radius: 10px; background: #ffcece;}
+.lWing-wrap .lw-area .consult-box:before {content: ''; display: block; position: absolute; width: 48px; height: 55px; top: -16px; right: -2px; background: url(http://img.ocean2you.co.kr/renew/reservation/img_rsvt_consult.png) no-repeat; background-size: 48px auto;}
+.lWing-wrap .lw-area .consult-box div[class*='cst-box-'] {position: relative; box-sizing: border-box;}
+.lWing-wrap .lw-area .consult-box .cst-box-1 {}
+.lWing-wrap .lw-area .consult-box .cst-box-2 {display: none; margin-top: 14px; padding-top: 4px; border-top: 1px solid #dc8585;}
+.lWing-wrap .lw-area .consult-box .cst-box-2.on {display: block;}
+.lWing-wrap .lw-area .consult-box p {position: relative; font-size: 14px; text-align: left; letter-spacing: -1.2px; line-height: 19px; word-break: keep-all; color: #474747;}
+.lWing-wrap .lw-area .consult-box .p-0 {}
+.lWing-wrap .lw-area .consult-box .p-1 {padding: 5px 0 0;}
+.lWing-wrap .lw-area .consult-box .p-1 span {display: block; color: #dd2c00;}
+.lWing-wrap .lw-area .consult-box .p-box {}
+.lWing-wrap .lw-area .consult-box .p-box .s-lbl {cursor: default; display: block; padding: 5px 0 2px;}
+.lWing-wrap .lw-area .consult-box .p-box .ip-wd {position: relative; box-sizing: border-box; /*width: 122px*/width: 100%; padding: 0 9px;}
+.lWing-wrap .lw-area .consult-box .p-box .ip-wd::-webkit-input-placeholder {color: #7b7b7b;}
+.lWing-wrap .lw-area .consult-box .p-box .ip-wd::-ms-input-placeholder {color: #7b7b7b;}
+/* 버튼 */
+.lWing-wrap .lw-area .consult-box .cst-box-1 .btn-cst {margin-top: 8px;}
+.lWing-wrap .lw-area .consult-box .cst-box-2 .btn-cst {margin-top: 13px;}
+.lWing-wrap .lw-area .consult-box .btn-cst {cursor: pointer; position: relative; box-sizing: border-box; display: block; width: 100%; /*width: 125px;*/ height: 30px; font-size: 16px; text-align: center; line-height: 28px; letter-spacing: -0.7px; font-weight: bold; color: #fff; border: 0; border-radius: 20px; background: #dc8585;}
+.lWing-wrap .lw-area .consult-box .btn-cst.open {}
+.lWing-wrap .lw-area .consult-box .btn-cst.off {display: none;}
+
+
     
     
 /* 반응형용 */
