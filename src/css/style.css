@@ -2432,6 +2432,7 @@ body {
 /* aside wing */
 .rWing {position: fixed; top: 315px; z-index: 9; left: 50%; margin-left: 530px;}
 .rWing img {display:block; margin-bottom:1px;}
+.rWing img + img {margin-top: 10px;}
 
 .Group {position: relative;}
 .Group #groupSec {position: relative; box-sizing: border-box;}
@@ -2641,6 +2642,8 @@ body {
 /* 190314 배너 수정 */
 #pg_title + .tbn-area {margin-top: -5px;}
 
+/* 장기/단기 숙박 */
+#contents {width: 100%; margin-top: 0;}
 /* 이미지 영역 */
 .rent-wrap .grid-wrap {background: #F6EDCE !important;}
 .rent-wrap {padding: 0px 0 !important;}
