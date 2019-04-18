@@ -47,7 +47,7 @@
 .lWing-wrap .lw-area .consult-box .p-1 span {display: block; color: #dd2c00;}
 .lWing-wrap .lw-area .consult-box .p-box {}
 .lWing-wrap .lw-area .consult-box .p-box .s-lbl {cursor: default; display: block; padding: 5px 0 2px;}
-.lWing-wrap .lw-area .consult-box .p-box .ip-wd {position: relative; box-sizing: border-box; /*width: 122px*/width: 100%; padding: 0 9px;}
+.lWing-wrap .lw-area .consult-box .p-box .ip-wd {position: relative; box-sizing: border-box; /*width: 122px*/width: 100%; height: 30px; padding: 3px 9px;}
 .lWing-wrap .lw-area .consult-box .p-box .ip-wd::-webkit-input-placeholder {color: #7b7b7b;}
 .lWing-wrap .lw-area .consult-box .p-box .ip-wd::-ms-input-placeholder {color: #7b7b7b;}
 /* 버튼 */
