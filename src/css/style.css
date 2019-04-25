@@ -1922,6 +1922,9 @@ body {
 	position: absolute;
 	left: 0;
 }
+.map_box p .dot-img { 
+	padding: 15px 0;
+}
 .gall_box{
 	background:#efefef;
 }
