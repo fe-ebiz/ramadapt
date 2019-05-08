@@ -2482,6 +2482,7 @@ body {
 .facil-sec .ul-list {margin-top: 5px; text-align: center;}
 .facil-sec .ul-list .li-item {position: relative; display: block; float: left; /*width: 25%;*/ width: 234px; height: 234px; margin: 21px 21px 0 0;}
 /*.Group .facil-sec .ul-list .li-item:nth-child(4n) {margin-right: 0;}*/
+.facil-sec .ul-list li:nth-child(4n),
 .facil-sec .ul-list .nth-4, .facil-sec .ul-list .nth-8, .facil-sec .ul-list .nth-12 {margin-right: 0;}
 .facil-sec .ul-list .li-item figure {position: relative; width: 100%; height: 100%;}
 .facil-sec .ul-list .li-item figure > img {position: relative; width: 100%; height: 100%;}
