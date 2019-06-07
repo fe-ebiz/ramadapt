@@ -17,18 +17,18 @@ var del      = require('del'),
 	// preen		 = require('preen'),
 	// connect  = require('gulp-connect-multi')(),
 	gulp     = require('gulp'),
-	gulpif   = require('gulp-if'),
-	rename   = require('gulp-rename'),
 	fileinclude = require('gulp-file-include'),
-	//sourcemaps = require('gulp-sourcemaps'),
 	sass	 = require('gulp-sass'),
+	sourcemaps = require('gulp-sourcemaps'),
 	plumber  = require('gulp-plumber'),
 	watch    = require('gulp-watch'),
-	prettify = require('gulp-html-prettify'),
+	htmlbeautify  = require('gulp-html-beautify'),
 	browerSync = require('browser-sync').create(), // browser-sync 호출
 
 	// 환경설정 ./config.js
 	config   = require('./config')();
+
+	sass.compiler = require('node-sass');
 	
 /**
  * Gulp 업무(Tasks) 정의
@@ -173,7 +173,7 @@ gulp.task('template', function(){
 			prefix: '@@',
 			basepath: '@file'
 		}))
-		.pipe( prettify( config.htmlPrettify) )
+		.pipe( htmlbeautify( config.htmlbeautify) )
 		.pipe( gulp.dest( config.template.dest ) )
 		// .pipe( connect.reload() );
 		.pipe(browerSync.reload({stream: true}));
@@ -185,7 +185,7 @@ gulp.task('template_m', function(){
 			prefix: '@@',
 			basepath: '@file'
 		}))
-		.pipe( prettify( config.htmlPrettify) )
+		.pipe( htmlbeautify( config.htmlbeautify) )
 		.pipe( gulp.dest( config.template.dest_m ) )
 		// .pipe( connect.reload() );
 		.pipe(browerSync.reload({stream: true}));
@@ -197,7 +197,7 @@ gulp.task('template_en', function(){
 			prefix: '@@',
 			basepath: '@file'
 		}))
-		.pipe( prettify( config.htmlPrettify) )
+		.pipe( htmlbeautify( config.htmlbeautify) )
 		.pipe( gulp.dest( config.template.dest_en ) )
 		// .pipe( connect.reload() );
 		.pipe(browerSync.reload({stream: true}));
@@ -210,7 +210,7 @@ gulp.task('template_jp', function(){
 			prefix: '@@',
 			basepath: '@file'
 		}))
-		.pipe( prettify( config.htmlPrettify) )
+		.pipe( htmlbeautify( config.htmlbeautify) )
 		.pipe( gulp.dest( config.template.dest_jp ) )
 		// .pipe( connect.reload() );
 		.pipe(browerSync.reload({stream: true}));
@@ -222,7 +222,7 @@ gulp.task('template_m_jp', function(){
 			prefix: '@@',
 			basepath: '@file'
 		}))
-		.pipe( prettify( config.htmlPrettify) )
+		.pipe( htmlbeautify( config.htmlbeautify) )
 		.pipe( gulp.dest( config.template.dest_m_jp ) )
 		.pipe(browerSync.reload({stream: true}));
 });
@@ -252,36 +252,3 @@ gulp.task('js', function(){
 });
 
 ///////////////////////////////////////////////
-// Bower 패키지에서 필요한 파일만 골라내기(Preen)
-gulp.task('preen', function(cb) {
-	preen.preen({}, cb);
-});
-// Bower 패키지 복사
-gulp.task('bower:copy', function() {
-	// susy
-	gulp.src(config.bower.susy.src)
-		.pipe( gulp.dest(config.bower.susy.dest) );
-	gulp.src(config.bower.breakpoint.src)
-		.pipe( gulp.dest(config.bower.breakpoint.dest) );
-	// fontawesome
-	gulp.src(config.bower.fontawesome.src)
-		.pipe( gulp.dest(config.bower.fontawesome.dest) );
-	// jquery, modernizr, detectizr
-	gulp.src(config.bower.others.src)
-		.pipe( gulp.dest(config.bower.others.dest) );
-});
-
-// 웹 서버
-// gulp.task('connect', connect.server( config.sev ) );
-
-gulp.task('compass', function() {
-	gulp.src( config.sass.src )
-		.pipe( plumber() )
-		.pipe( compass({
-			css : config.sass.dest,
-			sass: config.sass.compassSrc,
-			style: 'compact' // nested, expanded, compact, compressed
-		}) )
-		.pipe( gulp.dest( config.sass.dest ) )
-		.pipe(browerSync.reload({stream: true}));
-});
