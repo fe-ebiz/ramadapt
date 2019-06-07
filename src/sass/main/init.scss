@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 // bourbon 믹스인
-@import "bourbon/bourbon";
+@import "../bourbon/bourbon";
 // Scss 변수 (Variables: $)
-@import "parts/variables";
+@import "../parts/variables";
 // Scss 믹스인(Mixins)
-@import "parts/mixins";
+@import "../parts/mixins";
 
 // Scss 한줄 주석
 // css 코드로 변경될 때, 해석되지 않습니다.

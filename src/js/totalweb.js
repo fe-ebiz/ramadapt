@@ -1,7 +1,11 @@
 $(function() {
 	
 	menuFn();
-    rsvtFn();
+    
+    if( $('footer').css('display') == 'block'){
+        
+        rsvtFn();
+    }
 
 });
 

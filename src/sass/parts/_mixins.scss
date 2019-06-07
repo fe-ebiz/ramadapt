@@ -43,4 +43,19 @@
 	.lt-ie8 & {
 		zoom: 1;
 	}
+	.ie8 & {
+		//clear: both;
+        &:before, &:after {
+            content: '';
+            display: table;
+		    clear: both;
+        }
+        &:after {
+            clear: both;
+        }
+	}
+}
+@mixin bx($p:relative) {
+	position: $p;
+	box-sizing: border-box;
 }
