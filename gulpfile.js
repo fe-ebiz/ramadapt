@@ -51,8 +51,9 @@ gulp.task('browserSync', ['template', 'sass', 'js'], function() {
 		}
 	});
 });
-gulp.task('browserSync_m', ['template_m', 'css', 'js'], function() {
+gulp.task('browserSync_m', ['template_m', 'sass', 'js'], function() {
 	return browerSync.init({
+		port: 3005,
 		server: {
 			baseDir: './dist'
 		}
@@ -106,8 +107,8 @@ gulp.task('watch_m', [], function(){
 		gulp.start('template_m');
 	});
 	// Sass 업무 관찰
-	watch(config.css.src, function() {
-		gulp.start('css');
+	watch(config.sass.src, function() {
+		gulp.start('sass');
 	});
 	// Js 업무 관찰
 	watch(config.js.src, function() {
@@ -172,7 +173,7 @@ gulp.task('clean:js', function(){
 
 // HTML 템플릿(template)
 gulp.task('template', function(){
-	gulp.src(config.template.src)
+	return gulp.src(config.template.src)
 		.pipe( plumber() )
 		.pipe( fileinclude({
 			prefix: '@@',
@@ -184,7 +185,7 @@ gulp.task('template', function(){
 		.pipe(browerSync.reload({stream: true}));
 });
 gulp.task('template_m', function(){
-	gulp.src(config.template.src_m)
+	return gulp.src(config.template.src_m)
 		.pipe( plumber() )
 		.pipe( fileinclude({
 			prefix: '@@',
@@ -196,7 +197,7 @@ gulp.task('template_m', function(){
 		.pipe(browerSync.reload({stream: true}));
 });
 gulp.task('template_en', function(){
-	gulp.src(config.template.src_en)
+	return gulp.src(config.template.src_en)
 		.pipe( plumber() )
 		.pipe( fileinclude({
 			prefix: '@@',
@@ -209,7 +210,7 @@ gulp.task('template_en', function(){
 });
 //jp추가
 gulp.task('template_jp', function(){
-	gulp.src(config.template.src_jp)
+	return gulp.src(config.template.src_jp)
 		.pipe( plumber() )
 		.pipe( fileinclude({
 			prefix: '@@',
@@ -221,7 +222,7 @@ gulp.task('template_jp', function(){
 		.pipe(browerSync.reload({stream: true}));
 });
 gulp.task('template_m_jp', function(){
-	gulp.src(config.template.src_m_jp)
+	return gulp.src(config.template.src_m_jp)
 		.pipe( plumber() )
 		.pipe( fileinclude({
 			prefix: '@@',
@@ -233,7 +234,7 @@ gulp.task('template_m_jp', function(){
 });
 
 gulp.task('sass', function() {
-	gulp.src( config.sass.src )
+	return gulp.src( config.sass.src )
 		.pipe( plumber() )
 //		.pipe(sourcemaps.init())
 		.pipe( sass().on('error', sass.logError)) // {outputStyle: nested} expanded, compact, compressed
@@ -243,14 +244,14 @@ gulp.task('sass', function() {
 });
 
 gulp.task('css', function(){
-	gulp.src(config.css.src)
+	return gulp.src(config.css.src)
 		.pipe( plumber() )
 		.pipe( gulp.dest(config.css.dest) )
 		.pipe(browerSync.reload({stream: true}));
 });
 
 gulp.task('js', function(){
-	gulp.src(config.js.src)
+	return gulp.src(config.js.src)
 		.pipe( plumber() )
 		.pipe( gulp.dest(config.js.dest) )
 		.pipe(browerSync.reload({stream: true}));

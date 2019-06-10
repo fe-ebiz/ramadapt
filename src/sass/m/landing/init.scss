@@ -1,0 +1,413 @@
+@charset "utf-8";
+
+@import "../../m/parts/common";
+
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+#content {margin-bottom: 0;}
+
+$visual-ht: 500px;
+$red: #e4295b;
+$green: #15b1ab;
+* {
+    font-family: "Noto Sans KR", "Nanum Gothic", sans-serif; 
+    figure {
+        @include bx;
+        display: block;
+        line-height: 0;
+        img {
+            @include bx;
+            max-width: 100%; 
+            line-height: 0;
+        }
+    }
+}
+
+.ld-visual-sect {
+    .ld-visual-list {
+        .item {
+            .ld-visual  {
+                > img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// 기본 아산피나클랜드
+/* 탭 */
+.ld-tab-sect {
+    $tab-ht: 50px;
+    z-index: 98;
+    // @include position(absolute, ($visual-ht+100), 0);
+    width: 100%;
+    height: $tab-ht;
+    background: $red;
+    // &:before {
+    //     content: '';
+    //     display: block;
+    //     width: 50%;
+    //     height: 100%;
+    //     background: $green;
+    // }
+    .ld-tab-list {
+        @include bx;
+        @include clearfix;
+        z-index: 98;
+        width: 100%;
+        height: $tab-ht;
+        > li {
+            @include bx;
+            cursor: pointer;
+            float: left;
+            display: table;
+            width: 50%;
+            height: 50px;
+            margin: 0 auto;
+            text-align: center;
+            background: $red;
+            p {
+                position: relative;
+                display: table-cell;
+                vertical-align: middle;
+                a {
+                    @include bx;
+                    display: inline-block;
+                    top: 2px;
+                    > img {height: 16px}
+                }
+            }
+            
+            &.on {
+                p {
+                    &:before {
+                        z-index: 99;
+                        content: '';
+                        @include position(absolute, $left:50%, $bottom:-20px);
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        margin-left: -6.5px;
+                        border: 13px solid transparent; 
+                        border-top: 10px solid $red; 
+                    }
+                    a {
+                        &:before {
+                            content: '';
+                            @include position(absolute, $left:0, $bottom:0);
+                            display: block;
+                            width: 100%;
+                            height: 2px;
+                            background: #fff;
+                        }
+                        img {
+                        }
+                    }
+                }
+            }
+            
+            &.spa {
+                background: $green;
+                &.on {
+                    p {
+                        &:before {
+                            border-top-color: $green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.on .ld-tab-list {
+        position: fixed;
+        top: 0;
+        box-shadow: 0 10px 13px 5px rgba(255, 255, 255, 0.8);
+        /*.ie8 & {
+            -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=25, Direction=135, Color='#ffffff')";
+            filter: progid:DXImageTransform.Microsoft.Shadow(Strength=25, Direction=135, Color='#ffffff');
+        }*/
+    }
+    
+}
+
+/* 공통 스타일 설정 */
+.ld-visual-sect .ld-visual-list > li,
+.ld-cont-sect .ld-cont-list > li {
+    display: none;
+}
+.ld-visual-sect .ld-visual-list > li.on,
+.ld-cont-sect .ld-cont-list > li.on {
+    display: block;
+}
+
+/* 내용 */
+.ld-cont-sect {
+    div[class*='-area'] {
+        @include bx;
+        @include clearfix;
+        .container {
+            @include bx;
+            @include clearfix;
+            width: 96%;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+    
+    .ld-cont-list {
+        .item {
+            @include bx;
+            margin-top: 30px;
+            .ld-tit {
+                line-height: 1;
+            }
+            .ld-sub-tit {
+                padding: 15px 0;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 1.4;
+                color: #515151;
+                letter-spacing: -0.7px;
+                em {
+                    font-weight: bold;
+                    color: $red;
+                }
+            }
+            /* 지도 */
+            .ld-map-area {
+                z-index: 2;
+                // padding: 78px 0;
+                .ld-tit {
+                    > img {
+                        width: 200px;
+                    }
+                }
+            }
+            
+            /* 예약하기 */
+            .ld-rest-area {
+                z-index: 1;
+                margin-top: -50%;
+                padding: 50% 0 25px;
+                background: #f9e3e5;
+                .ld-tit {
+                    margin-top: 25px;
+                    > img {
+                        width: 80px;
+                    }
+                }
+                .ld-rest-box {
+                    @include bx;
+                    @include clearfix;
+                    margin-top: 10px;
+                    .btn-link {
+                        float: right;
+                        width: 49.5%;
+                        &:nth-child(2n-1) {
+                            float: left;
+                        }
+                        > img {
+                            width: 100%;
+                        }
+                    }
+                }
+                
+                .ie8 & {
+                    min-height: 1008px;
+                }
+            }
+            
+            /* 리스트 */
+            .ld-list-area {
+                @include bx;
+                @include clearfix;
+                background: #d7fafe;
+                .ld-list {
+                    > li:nth-child(2n+1) {clear: both;}
+                }
+            }
+            
+            /* 버튼 */
+            .ld-btn-area {
+                @include bx;
+                // padding: 50px 0 0;
+                .ld-btn-box {
+                    @include bx;
+                    @include clearfix;
+                    
+                    .btn-link {
+                        float: left;
+                        width: 50%;
+                        > img {
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+                }
+            }
+            &.pina {
+                /* 가이드 */
+                .ld-guide-area {
+                    // padding: 43px 0 79px;
+                    background: #f0f0f0;
+                    figure {
+                        img {
+                            border: 1px solid #d2d2d2;
+                        }
+                    }
+                    .ld-guide-img-box {
+                        @include bx;
+                        @include clearfix;
+    
+                        .img-big {
+                            float: left;
+                            // display: inline-block;
+                        }
+                    }
+                    .ld-guide-txt-box {
+                        @include bx;
+                        @include clearfix;
+                        margin-top: 10px;
+                        .ld-guide-txt {
+                            @include bx;
+                            width: 100%;
+                            padding: 15px 0 20px;
+                            .ld-guide-list {
+                                @include clearfix;
+                                @include bx;
+                                border: 1px solid #c0c0c0;
+                                border-bottom: none;
+                                border-right: none;
+                                li {
+                                    @include bx;
+                                    float: left;
+                                    width: 33.33%;
+                                    height: 40px;
+                                    padding-left: 2px;
+                                    border: 1px solid #c0c0c0;
+                                    border-top: none;
+                                    border-left: none;
+                                    font-size: 11px;
+                                    line-height: 40px;
+                                    text-align: left;
+                                    letter-spacing: -1px;
+                                    color: #333;
+                                    .ie &, .safari &, .firefox & {
+                                        letter-spacing: -1.2px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            
+                /* 리스트 */
+                .ld-list-area {
+                    padding: 20px 0;
+                    .ld-list {
+                        @include bx;
+                        @include clearfix;
+                        margin: 0 -6px;
+                        margin-top: -10px;
+                        li {
+                            @include bx;
+                            float: left;
+                            width: 50%;
+                            padding: 10px 3px 0;
+                            text-align: left;
+                            .ld-list-img {
+                                @include bx;
+                                > img {
+                                    width: 100%;
+                                }
+                            }
+    
+                            .ld-list-txt-box {
+                                @include bx;
+                                padding-top: 8px;
+                                p {
+                                    &.ld-list-tit {
+                                        font-size: 13px;
+                                        line-height: 1;
+                                        font-weight: bold;
+                                        color: #323232;
+                                    }
+                                    &.ld-list-txt {
+                                        font-size: 12px;
+                                        line-height: 1.5;
+                                        font-weight: 500;
+                                        color: #018981;
+                                        letter-spacing: -1px;
+                                        .ie8 &, .safari & {
+                                            letter-spacing: -1.2px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &.spa {
+                .ld-sub-tit {
+                    em {
+                        color: #0b9691;
+                    }
+                }
+                
+                .ld-rest-area {
+                    background: #c9faf8;
+                }
+                
+                .ld-bn-area {
+                    background: #25c3bd;
+                }
+                
+                .ld-list-area {
+                    padding: 20px 0 20px;
+                    .ld-list {
+                        margin-top: -15px;
+                        li {
+                            @include bx;
+                            @include clearfix;
+                            padding-top: 15px;
+                            .ld-list-img-box{
+                                @include bx;
+                                @include clearfix;
+                                figure {
+                                    float: right;
+                                    width: 49.5%;
+                                    &:first-child {
+                                        float: left;
+                                    }
+                                }
+                            }
+                            .ld-list-txt-box {
+                                p {
+                                    word-break: keep-all;
+                                    &.ld-list-tit {
+                                        padding: 8px 0 2px;
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                        line-height: 1;
+                                        color: #0a908b;
+                                    }
+                                    &.ld-list-txt {
+                                        padding: 0 10px;
+                                        font-size: 12.5px;
+                                        line-height: 1.4;
+                                        color: #555;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

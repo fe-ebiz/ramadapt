@@ -6,28 +6,24 @@ $(function() {
 });
 
 function tabFn() {
-    $('.Landing .ld-tab-sect .ld-tab-list li').on('click', function(){
-        var id = $(this).find('a').attr('href'); 
+    $('.Landing .ld-tab-sect .ld-tab-list > li').on('click', function(){
+        var idx = $(this).index(); 
         
-        $(this).siblings('li').removeClass('on'); 
-        $(this).addClass('on'); 
-        
-        $('div[class*="ld-sect"]').stop().hide();
-        $(id).stop().show();
+        $('.ld-toggle').each(function(index, item) {
+            $(item).children('li').eq(idx).addClass('on').siblings().removeClass('on'); 
+        });
         
         $('html, body').stop().animate({
-            scrollTop : 0
+            scrollTop : $('#visual-sect').offset().top
         }, 500);
     });
     // 예약페이지 별도
-    $('.Booking .ld-tab-sect .ld-tab-list li').on('click', function(){
+    $('.Booking .ld-tab-sect .ld-tab-list > li').on('click', function(){
         var id = $(this).find('a').attr('href'); 
         
-        $(this).siblings('li').removeClass('on'); 
-        $(this).addClass('on'); 
-        
-        $('div[class*="ld-sect"]').stop().hide();
-        $(id).stop().show();
+        $('.ld-toggle').each(function(index, item) {
+            $(item).children('li').eq(idx).addClass('on').siblings().removeClass('on'); 
+        });
     
         $('html, body').stop().animate({
             scrollTop: $('.ld-visual').outerHeight() + $('#header').outerHeight()
