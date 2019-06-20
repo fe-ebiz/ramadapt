@@ -1,0 +1,79 @@
+@@include('./include/_head.html', {
+    "page": ""
+})
+
+</head>
+<body class="Booking">
+    <div id="Contents">
+        @@include('./include/_header.html')
+
+        <div id="content">
+            @@include('./include/_subVisual.html')
+        </div>
+        <!-- //#content-->
+
+        <!-- 예약페이지 가져오기 , 아래 부분은 개발단에서 작업 -->
+        <div id="contents">
+				<!-- 190417 왼쪽 상담 배너 추가 -->
+				<div class="lWing-wrap" id="left_banner">
+				    <div class="lw-area">
+				       <div class="consult-box">
+                           <div class="cst-box-1">
+                                <p class="p-0"><img src="http://img.ocean2you.co.kr/renew/reservation/tit_rsvt_consult.png" alt="예약도우미"></p>
+                                <p class="p-1"><span>예약이 어려우신가요?</span>성함과 전화번호를 남기시면 도와드립니다.</p>
+                                
+                                <a href="javascript:;" class="btn-cst open">예약문의</a>
+                           </div>
+                           <div class="cst-box-2">
+                               <p class="p-box">
+                                   <label for="name" class="s-lbl">성함</label>
+                                   <input type="text" id="name" class="ip-wd" placeholder="홍길동">
+                               </p>
+                               <p class="p-box">
+                                   <label for="phoneNum" class="s-lbl">전화번호</label>
+                                   <input type="tel" id="phoneNum" class="ip-wd" placeholder="숫자만입력">
+                               </p>
+                               
+                               <button type="button" class="btn-cst cls">도움요청</button> 
+                               
+                               <!-- 190423 텍스트 추가 -->
+                               <p class="p-1 fc-center">직접 전화를 주시면<br>빠른 도움을 드립니다.<span class="s-1">010 - 4279 - 6010</span></p>
+                           </div>
+					   </div> 
+					   <!-- /.consult-box -->
+					   <div class="btn-box">
+							<a href="#this" class="btn-resA">
+								<img src="http://img.ocean2you.co.kr/go/i_calChk.png" alt="조회">예약내역조회
+							</a>
+							<a href="#this" target="_blank" class="btn-manyRes">
+								<img src="http://img.ocean2you.co.kr/go/i_mUser.png" alt="단체예약문의">단체예약문의
+							</a>
+						</div>
+						<!-- /.btn-box -->
+				    </div>
+				</div>
+				<!--END : 190417 왼쪽 상담 배너 추가 -->
+            <style type="text/css">
+            @media (max-width: 979px) {
+            	#rBanner {display:none}
+            }
+            @media (min-width: 980px) {
+            	#rBanner {display:block}
+            }
+            </style>
+
+			
+
+			<style>
+				#contents {min-height: 600px;}
+			</style>
+
+			
+        </div>
+        <!-- //#contents -->
+
+        @@include('./include/_footer.html')
+    </div>
+</body>
+
+</html>
