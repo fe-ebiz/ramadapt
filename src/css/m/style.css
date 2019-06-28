@@ -1236,8 +1236,21 @@ html.mmenu-right.mmenu-opening .mmenu-page, html.mmenu-right.mmenu-opening #mmen
 	 margin-top: 20px;
  }
  #footer_ramada .logo_f_main {
- 	width: 80px;
+ 	width: 100px;
  	display: inline-block;
+    margin: 0 0 8px -2px;
+    vertical-align: middle;
+ }
+/* 190628 고코링크 추가 */
+ #footer_ramada .btn-goco {
+ 	display: inline-block;
+    margin: 0 0 8px 12px;
+    vertical-align: middle;
+ }
+ #footer_ramada .btn-goco img {
+ 	display: inline-block;
+    width: 78px;
+    vertical-align: middle;
  }
  #footer_ramada .privacyBtn {
  	display: inline-block;
@@ -1250,6 +1263,11 @@ html.mmenu-right.mmenu-opening .mmenu-page, html.mmenu-right.mmenu-opening #mmen
  	font-size: 12px;
 	line-height: 1.5;
 	margin-top: 0;
+ }
+ #footer_ramada .address .mt-10 {
+    position: relative;
+ 	display: block;
+    margin-top: 10px;
  }
  #footer_ramada small {
  	display: block;
@@ -1276,7 +1294,7 @@ html.mmenu-right.mmenu-opening .mmenu-page, html.mmenu-right.mmenu-opening #mmen
  	color: #ad0000; margin-right: 5px;
 }
 #footer_ramada .right_area .row + .row {
- 	margin-top: 5px;
+ 	margin-top: 9px;
 }
 /* #footer_ramada {
 	padding: 18px 0px 18px 0px;

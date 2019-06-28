@@ -1582,6 +1582,9 @@ body {
 .fz_14 {font-size: 14px !important;}
 .fz_16 {font-size: 16px !important;}
 .fz_18 {font-size: 18px !important;}
+/* 190628 고코링크 추가 */
+#footer .right_area .btn-goco {position: absolute; display: inline-block; left: 223px; margin-top: 5px;}
+#footer .right_area .btn-goco img {}
 #footer .right_area .row {
 	line-height: 1.6em;
 }
