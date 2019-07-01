@@ -142,16 +142,16 @@ $green: #15b1ab;
     
     .ld-cont {
         @include bx;
-        margin-top: 70px;
-        .ld-tit {
-            
-        }
+        margin-top: 0;
+       // border-top: 5px solid #0b9691;
+        background: #2ed5f8;
+        
         .ld-sub-tit {
             padding: 17px 0 25px;
             font-size: 26px;
             font-weight: 400;
             line-height: 35px;
-            color: #515151;
+            color: #333;
             em {
                 font-weight: bold;
                 color: $red;
@@ -166,9 +166,10 @@ $green: #15b1ab;
         /* 예약하기 */
         .ld-rest-area {
             z-index: 1;
-            margin-top: -365px;
-            padding: 365px 0 95px;
-            background: #f9e3e5;
+            margin-top: -226px;
+            padding: 226px 0 95px;
+            //background: #f9e3e5;
+            background: #fff;
             .ld-rest-box {
                 @include bx;
                 @include clearfix;
@@ -192,13 +193,15 @@ $green: #15b1ab;
         .ld-list-area {
             @include bx;
             @include clearfix;
-            background: #d7fafe;
+            //background: #d7fafe;
+            background: #eee;
         }
         
         /* 버튼 */
         .ld-btn-area {
             @include bx;
             padding: 50px 0;
+            background: #fff;
             .ld-btn-box {
                 @include bx;
                 @include clearfix;
@@ -344,16 +347,19 @@ $green: #15b1ab;
         .ld-cont {
             .ld-sub-tit {
                 em {
-                    color: #0b9691;
+                    //color: #0b9691;
+                    color: #0075ed;
                 }
             }
             
             .ld-rest-area {
-                background: #c9faf8;
+                //background: #c9faf8;
+                background: #fff;
             }
             
             .ld-bn-area {
-                background: #25c3bd;
+                //background: #25c3bd;
+                background: #0099ff;
             }
             
             .ld-list-area {
@@ -393,6 +399,13 @@ $green: #15b1ab;
                 }
             }
         }
+    }
+}
+
+.ld-tab-sect  + .ld-sect {
+    .ld-cont {
+        margin-top: 70px;
+        background: none;
     }
 }
 
