@@ -23,6 +23,10 @@ $green: #15b1ab;
     }
 }
 
+.Landing {
+    padding-bottom: 41px;
+}
+
 .ld-visual-sect {
     .ld-visual-list {
         .item {
@@ -225,7 +229,7 @@ $green: #15b1ab;
             .ld-list-area {
                 @include bx;
                 @include clearfix;
-                margin-bottom: 61px;
+                //margin-bottom: 61px;
                 //background: #d7fafe;
                 background: #eee;
                 .ld-list {
