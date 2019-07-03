@@ -24,7 +24,12 @@ $green: #15b1ab;
 }
 
 .Landing {
-    padding-bottom: 41px;
+    .mmenu-page {
+        padding-bottom: 41px;
+    }
+    .sub_content {
+        padding-bottom: 0;
+    }
 }
 
 .ld-visual-sect {
