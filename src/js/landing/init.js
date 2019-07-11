@@ -6,19 +6,22 @@ $(function() {
 });
 
 function tabFn() {
-    $('.Landing .ld-tab-sect .ld-tab-list li').on('click', function(){
-        var id = $(this).find('a').attr('href'); 
+    $('.Landing .ld-tab-sect .ld-tab-list > li, .Landing .ld-bn-sect .ld-bn-list > li').on('click', function(){
+        var idx = $(this).index(); 
         
-        $(this).siblings('li').removeClass('on'); 
-        $(this).addClass('on'); 
+        $('.ld-toggle').each(function(index, item) {
+            $(item).children('li').eq(idx).addClass('on').siblings().removeClass('on'); 
+        });
         
-        $('div[class*="ld-sect"]').stop().hide();
-        $(id).stop().show();
-        
+        //190710 수정
         $('html, body').stop().animate({
-            scrollTop : 0
+            scrollTop : ($('#tab-sect').offset().top)
         }, 500);
+        
+        return false;
     });
+    
+    
     // 예약페이지 별도
     $('.Booking .ld-tab-sect .ld-tab-list li').on('click', function(){
         var id = $(this).find('a').attr('href'); 
@@ -37,8 +40,21 @@ function tabFn() {
     });
 }
 function scrollFn() {
-    /* 스크롤 탭 고정 */
     $(window).scroll(function(){
+        var scltop = $(window).scrollTop();
+        var visualHt = $('#ld-cont-sect').offset().top;
+        
+        if( scltop <= visualHt) {
+            $('.ld-bn-sect').removeClass('on');
+        }else {
+            $('.ld-bn-sect').addClass('on');
+        }
+    });
+    
+    
+    
+    // 스크롤 탭 고정 
+   /* $(window).scroll(function(){
         var scltop = $(window).scrollTop();
         var visualHt = ($('.ld-visual').height()+100);
         
@@ -49,5 +65,5 @@ function scrollFn() {
         }else {
             $('.ld-tab-sect').addClass('on');
         }
-    });
+    });*/
 }

@@ -6,26 +6,29 @@
 
 #content {margin-bottom: 0;}
 
-$visual-ht: 500px;
-$red: #e4295b;
-$green: #15b1ab;
+//변수
+$tab-ht: 102px;
+$dogo: #0179f3;
+$risom: #ff711c; 
+$spa: #009848;
+$pt:26%;
 * {
     font-family: "Noto Sans KR", "Nanum Gothic", sans-serif; 
+    img {
+        @include bx;
+        max-width: 100%; 
+        line-height: 0;
+    }
     figure {
         @include bx;
         display: block;
         line-height: 0;
-        img {
-            @include bx;
-            max-width: 100%; 
-            line-height: 0;
-        }
     }
 }
 
 .Landing {
     .mmenu-page {
-        padding-bottom: 41px;
+        padding-bottom: 16%;
     }
     .sub_content {
         padding-bottom: 0;
@@ -45,22 +48,77 @@ $green: #15b1ab;
     }
 }
 
-// 기본 아산피나클랜드
+// 기본 아산 스파비스
 /* 탭 */
 .ld-tab-sect {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    //min-height: $tab-ht;
+    margin: 0 auto;
+    padding: $pt 2% 0;
+    background: #14319b;
+    .ld-tab-box {
+        position: absolute;
+        width: 96%;
+        top:0;
+        padding-top: 2.5%;
+        .ld-tab-list {
+            @include bx;
+            max-width: 768px;
+            margin: 0 auto;
+            li {
+                @include bx;
+                float: left;
+                width: 32.8%;
+                margin-left: 0.7%;
+                &:first-child {
+                    margin-left: 0;
+                }
+                a {
+                    @include bx;
+                    display: block;
+                    img {
+                        @include bx;
+                        &.off {
+                            display: block;
+                        }
+                        &.on {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.on {
+                    margin-top: 2%;
+                    a {
+                        img {
+                            &.off {
+                                display: none;
+                            }
+                            &.on {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    &.on {
+        position: fixed;
+        top: 0;
+        z-index: 110;
+        padding-top: 21%;
+    }
+}
+/*.ld-tab-sect {
     $tab-ht: 50px;
     z-index: 98;
-    // @include position(absolute, ($visual-ht+100), 0);
     width: 100%;
     height: $tab-ht;
     background: $red;
-    // &:before {
-    //     content: '';
-    //     display: block;
-    //     width: 50%;
-    //     height: 100%;
-    //     background: $green;
-    // }
     .ld-tab-list {
         @include bx;
         @include clearfix;
@@ -91,17 +149,6 @@ $green: #15b1ab;
             
             &.on {
                 p {
-                    &:before {
-                        z-index: 99;
-                        content: '';
-                        @include position(absolute, $left:50%, $bottom:-20px);
-                        display: block;
-                        width: 0;
-                        height: 0;
-                        margin-left: -6.5px;
-                        border: 13px solid transparent; 
-                        border-top: 10px solid $red; 
-                    }
                     a {
                         &:before {
                             content: '';
@@ -117,29 +164,12 @@ $green: #15b1ab;
                 }
             }
             
-            &.spa {
-                background: $green;
-                &.on {
-                    p {
-                        &:before {
-                            border-top-color: $green;
-                        }
-                    }
-                }
-            }
+            
+            
         }
     }
-    &.on .ld-tab-list {
-        position: fixed;
-        top: 0;
-        box-shadow: 0 10px 13px 5px rgba(255, 255, 255, 0.8);
-        /*.ie8 & {
-            -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=25, Direction=135, Color='#ffffff')";
-            filter: progid:DXImageTransform.Microsoft.Shadow(Strength=25, Direction=135, Color='#ffffff');
-        }*/
-    }
     
-}
+}*/
 
 /* 공통 스타일 설정 */
 .ld-visual-sect .ld-visual-list > li,
@@ -151,9 +181,54 @@ $green: #15b1ab;
     display: block;
 }
 
+
+/* 튜브와 볼 */
+/*.deco-box {
+    position: relative;
+    width: 96%;
+    margin: 0 auto;
+    figure {
+        display: block;
+        position: absolute;
+        &.ico-tube {
+            z-index: 102;
+            width: 12%;
+            top: 0;
+            left: 0;
+            margin-top: -10%;
+        }
+        &.ico-ball {
+            z-index: 99;
+            width: 13.1%;
+            top: 0;
+            right: 0;
+            margin-top: -10%;
+        }
+    }
+    
+    &.on {
+        figure {
+            position: fixed;
+            top: 0;
+            &.ico-tube {
+                z-index: 125;
+                margin-top: 18%;
+                left: 2%;
+            }
+            &.ico-ball {
+                z-index: 115;
+                margin-top: 18%;
+                right: 2%;
+            }
+        }
+    }
+}*/
+
 /* 내용 */
 .ld-cont-sect {
-    background: #2ed5f8;
+    padding-top: $pt;
+    background: #14319b;
+    
     div[class*='-area'] {
         @include bx;
         @include clearfix;
@@ -169,197 +244,210 @@ $green: #15b1ab;
     .ld-cont-list {
         .item {
             @include bx;
-            padding-top: 30px;
+            
+            &:before {
+                content: '';
+                z-index: 100;
+                display: block;
+                position: absolute;
+                box-sizing: border-box;
+                width: 100%;
+                //min-height: 37px;
+                top: 0;
+                left: 0;
+                margin-top: -4%;
+                padding-top: 10%;
+                background: url(http://img.ramadapt.co.kr/landing/spa/bg_wave.png) repeat-x;
+                background-size: 100% auto;
+            }
+            
             .ld-tit {
+                width: 70%;
+                margin: 0 auto;
                 line-height: 1;
             }
             .ld-sub-tit {
-                padding: 15px 0;
-                font-size: 13px;
+                padding: 14px 0 21px;
+                font-size: 14px;
                 font-weight: 400;
                 line-height: 1.4;
-                color: #333;
-                letter-spacing: -0.7px;
+                letter-spacing: -1.2px;
                 em {
+                    font-size: 17px;
                     font-weight: bold;
-                    color: $red;
                 }
-            }
-            /* 지도 */
-            .ld-map-area {
-                z-index: 2;
-                // padding: 78px 0;
-                .ld-tit {
-                    > img {
-                        width: 200px;
-                    }
+                .f-pt {
+                    color: $spa;
                 }
             }
             
-            /* 예약하기 */
-            .ld-rest-area {
-                z-index: 1;
-                margin-top: -50%;
-                padding: 50% 0 25px;
-                //background: #f9e3e5;
-                background: #fff;
-                .ld-tit {
-                    margin-top: 25px;
-                    > img {
-                        width: 80px;
-                    }
+            /* all */
+            .ld-main-area {
+                padding: 12% 0 47px;
+                background: $spa;
+
+                .ld-sub-tit {
+                    color: #fff;
                 }
+            }
+            
+            /* rest */
+            .ld-rest-area {
+                padding: 45px 0 11%;
+                background: url(http://img.ramadapt.co.kr/landing/common/bg_rest.jpg) repeat;
+
                 .ld-rest-box {
                     @include bx;
                     @include clearfix;
-                    margin-top: 10px;
+                    width: 90%;
+                    max-width: 768px;
+                    margin: 0 auto;
+
                     .btn-link {
-                        float: right;
-                        width: 49.5%;
-                        &:nth-child(2n-1) {
-                            float: left;
-                        }
-                        > img {
-                            width: 100%;
+                        display: block;
+                        & + .btn-link {
+                            margin-top: 20px;
                         }
                     }
                 }
-                
-                .ie8 & {
-                    min-height: 1008px;
-                }
             }
-            
-            /* 리스트 */
+        
+            /* facil */
             .ld-list-area {
                 @include bx;
                 @include clearfix;
-                //margin-bottom: 61px;
-                //background: #d7fafe;
-                background: #eee;
+                padding-top: 30px;
+                background: #fff;
+            
+                &:before {
+                    content: '';
+                    z-index: 100;
+                    display: block;
+                    position: absolute;
+                    box-sizing: border-box;
+                    width: 100%;
+                    min-height: 37px;
+                    top: 0;
+                    left: 0;
+                    margin-top: -4%;
+                    padding-top: 10%;
+                    background: url(http://img.ramadapt.co.kr/landing/common/bg_wave.png) repeat-x;
+                    background-size: 100% auto;
+                }
+
+                .ld-sub-tit {
+                    padding-bottom: 30px;
+                }
+
                 .ld-list {
-                    > li:nth-child(2n+1) {clear: both;}
+                    li {
+                        @include bx;
+                        padding-bottom: 15px;
+                        .ld-list-img-box {
+                            @include bx;
+                            @include clearfix;
+                            figure {
+                                width: 49%;
+                                float: right;
+                                &:first-child {
+                                    float: left;
+                                }
+                            }
+                        }
+
+                        .ld-list-txt-box {
+                            p {
+                                text-align: center;
+                                &.ld-list-tit {
+                                    padding: 3px 0 1px;
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    letter-spacing: -2px;
+                                    color: $spa;
+                                }
+                                &.ld-list-txt {
+                                    font-size: 11px;
+                                    line-height: 1.4;
+                                    letter-spacing: -1px;
+                                    color: #555;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             
             /* 버튼 */
             .ld-btn-area {
-                z-index: 10;
+                z-index: 110;
                 position: fixed;
-                left: 0;
-                bottom: 0;
                 box-sizing: border-box;
-                // padding: 50px 0 0;
+                width: 100%;
+                left: 0;
+                bottom: -1px;
+                padding: 0;
+                -webkit-transition: all 0.4s ease 0.1s;
+                -moz-transition: all 0.4s ease 0.1s;
+                -ms-transition: all 0.4s ease 0.1s;
+                -o-transition: all 0.4s ease 0.1s;
+                transition: all 0.4s ease 0.1s;
                 .ld-btn-box {
                     @include bx;
                     @include clearfix;
                     
                     .btn-link {
-                        float: left;
+                        float: right;
                         width: 50%;
                         > img {
-                            width: 100%;
                             display: block;
-                        }
-                    }
-                }
-            }
-            &.pina {
-                /* 가이드 */
-                .ld-guide-area {
-                    // padding: 43px 0 79px;
-                    background: #f0f0f0;
-                    figure {
-                        img {
-                            border: 1px solid #d2d2d2;
-                        }
-                    }
-                    .ld-guide-img-box {
-                        @include bx;
-                        @include clearfix;
-    
-                        .img-big {
-                            float: left;
-                            // display: inline-block;
-                        }
-                    }
-                    .ld-guide-txt-box {
-                        @include bx;
-                        @include clearfix;
-                        margin-top: 10px;
-                        .ld-guide-txt {
-                            @include bx;
                             width: 100%;
-                            padding: 15px 0 20px;
-                            .ld-guide-list {
-                                @include clearfix;
-                                @include bx;
-                                border: 1px solid #c0c0c0;
-                                border-bottom: none;
-                                border-right: none;
-                                li {
-                                    @include bx;
-                                    float: left;
-                                    width: 33.33%;
-                                    height: 40px;
-                                    padding-left: 2px;
-                                    border: 1px solid #c0c0c0;
-                                    border-top: none;
-                                    border-left: none;
-                                    font-size: 11px;
-                                    line-height: 40px;
-                                    text-align: left;
-                                    letter-spacing: -1px;
-                                    color: #333;
-                                    .ie &, .safari &, .firefox & {
-                                        letter-spacing: -1.2px;
-                                    }
-                                }
-                            }
+                        }
+                        
+                        &:first-child {
+                            float: left;
                         }
                     }
                 }
+                
+                &.off {
+                    bottom: -20%;
+                    -webkit-transition: all 0.4s ease 0.1s;
+                    -moz-transition: all 0.4s ease 0.1s;
+                    -ms-transition: all 0.4s ease 0.1s;
+                    -o-transition: all 0.4s ease 0.1s;
+                    transition: all 0.4s ease 0.1s;
+                }
+            }
             
-                /* 리스트 */
+            
+            &.dogo {
+                &:before {
+                    background: url(http://img.ramadapt.co.kr/landing/dogo/bg_wave.png) repeat-x;
+                    background-size: 100% auto;
+                }
+                /* all */
+                .ld-main-area {
+                    background: $dogo;
+                }
+
+                /* rest */
+                .ld-rest-area {
+                    .ld-sub-tit {
+                        .f-pt {
+                            color: $dogo;
+                        }
+                    }
+                }
+                
+                /* facil */
                 .ld-list-area {
-                    padding: 20px 0;
+
                     .ld-list {
-                        @include bx;
-                        @include clearfix;
-                        margin: 0 -6px;
-                        margin-top: -10px;
                         li {
-                            @include bx;
-                            float: left;
-                            width: 50%;
-                            padding: 10px 3px 0;
-                            text-align: left;
-                            .ld-list-img {
-                                @include bx;
-                                > img {
-                                    width: 100%;
-                                }
-                            }
-    
                             .ld-list-txt-box {
-                                @include bx;
-                                padding-top: 8px;
                                 p {
                                     &.ld-list-tit {
-                                        font-size: 13px;
-                                        line-height: 1;
-                                        font-weight: bold;
-                                        color: #323232;
-                                    }
-                                    &.ld-list-txt {
-                                        font-size: 12px;
-                                        line-height: 1.5;
-                                        font-weight: 500;
-                                        color: #018981;
-                                        letter-spacing: -1px;
-                                        .ie8 &, .safari & {
-                                            letter-spacing: -1.2px;
-                                        }
+                                        color: $dogo;
                                     }
                                 }
                             }
@@ -368,58 +456,35 @@ $green: #15b1ab;
                 }
             }
             
-            &.spa {
-                .ld-sub-tit {
-                    em {
-                        //color: #0b9691;
-                        color: #0075ed;
+            
+            &.risom {
+                &:before {
+                    background: url(http://img.ramadapt.co.kr/landing/risom/bg_wave.png) repeat-x;
+                    background-size: 100% auto;
+                }
+                /* all */
+                .ld-main-area {
+                    background: $risom;
+                }
+
+                /* rest */
+                .ld-rest-area {
+                    .ld-sub-tit {
+                        .f-pt {
+                            color: $risom;
+                        }
                     }
                 }
                 
-                .ld-rest-area {
-                    //background: #c9faf8;
-                    background: #fff;
-                }
-                
-                .ld-bn-area {
-                    //background: #25c3bd;
-                    background: #0099ff;
-                }
-                
+                /* facil */
                 .ld-list-area {
-                    padding: 20px 0 20px;
+
                     .ld-list {
-                        margin-top: -15px;
                         li {
-                            @include bx;
-                            @include clearfix;
-                            padding-top: 15px;
-                            .ld-list-img-box{
-                                @include bx;
-                                @include clearfix;
-                                figure {
-                                    float: right;
-                                    width: 49.5%;
-                                    &:first-child {
-                                        float: left;
-                                    }
-                                }
-                            }
                             .ld-list-txt-box {
                                 p {
-                                    word-break: keep-all;
                                     &.ld-list-tit {
-                                        padding: 8px 0 2px;
-                                        font-size: 16px;
-                                        font-weight: bold;
-                                        line-height: 1;
-                                        color: #0a908b;
-                                    }
-                                    &.ld-list-txt {
-                                        padding: 0 10px;
-                                        font-size: 12.5px;
-                                        line-height: 1.4;
-                                        color: #555;
+                                        color: $risom;
                                     }
                                 }
                             }
@@ -428,10 +493,41 @@ $green: #15b1ab;
                 }
             }
         }
-        
+
     }
 }
 
-.ld-tab-sect + .ld-cont-sect {
-    background: #fff;
+/*  */
+@media (max-width: 350px) {
+    
+    /* 내용 */
+    .ld-cont-sect {
+        .ld-cont-list {
+            .item {
+                .ld-sub-tit {
+                    font-size: 12px;
+                    letter-spacing: -1px;
+                    em {
+                        font-size: 15px;
+                    }
+                }
+
+                /* facil */
+                .ld-list-area {
+                    .ld-list {
+                        li {
+                            .ld-list-txt-box {
+                                p {
+                                    &.ld-list-txt {
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
 }
