@@ -115,6 +115,10 @@ $spa: #009848;
         right: -200px;
         margin-top: 0;
         li {
+            margin-top: 10px;
+            &:first-child {
+                margin-top: 0;
+            }
             a {
                 display: inline-block;
                 img {
