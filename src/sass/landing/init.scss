@@ -32,8 +32,21 @@ $spa: #009848;
 
 /* 비주얼 */
 .ld-visual {
+    @include bx;
+    margin: 0 auto;
+    text-align: center;
+    background: #9dd4f5;
     * {
         line-height: 0;
+    }
+    .img {
+        display: block;
+        width: 100%;
+        height: 545px;
+        background: url(http://img.ramadapt.co.kr/landing/common/visual.jpg) no-repeat center;
+        img {
+            display: none;
+        }
     }
 }
 
@@ -124,9 +137,11 @@ $spa: #009848;
                 img {
                     &.off {
                         display: block;
+                        padding: 1px 0;
                     }
                     &.on {
                         display: none;
+                        padding: 0 0;
                     }
                 }
             }
