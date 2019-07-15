@@ -17,7 +17,7 @@ function tabFn() {
         
         $('html, body').stop().animate({
             //190710 수정
-            scrollTop : ($('#ld-cont-sect').offset().top +1)
+            scrollTop : ($('#ld-cont-sect').offset().top -4)
             //scrollTop : $('#visual-sect').offset().top
         }, 0);
     });

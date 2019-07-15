@@ -11,7 +11,9 @@ $tab-ht: 102px;
 $dogo: #0179f3;
 $risom: #ff711c; 
 $spa: #009848;
-$pt:26%;
+$pina: #e4295b;
+$pt:24%;
+//$pt:28%;
 * {
     font-family: "Noto Sans KR", "Nanum Gothic", sans-serif; 
     img {
@@ -65,12 +67,13 @@ $pt:26%;
         padding-top: 2.5%;
         .ld-tab-list {
             @include bx;
-            max-width: 768px;
+            //max-width: 768px;
             margin: 0 auto;
             li {
                 @include bx;
                 float: left;
-                width: 32.8%;
+                width: 24.4%;
+                //width: 32.8%;
                 margin-left: 0.7%;
                 &:first-child {
                     margin-left: 0;
@@ -80,6 +83,7 @@ $pt:26%;
                     display: block;
                     img {
                         @include bx;
+                        width: 100%;
                         &.off {
                             display: block;
                         }
@@ -110,7 +114,8 @@ $pt:26%;
         position: fixed;
         top: 0;
         z-index: 110;
-        padding-top: 21%;
+        padding-top: 20.5%;
+        //padding-top: 25%;
     }
 }
 /*.ld-tab-sect {
@@ -262,7 +267,7 @@ $pt:26%;
             }
             
             .ld-tit {
-                width: 70%;
+                width: 80%;
                 margin: 0 auto;
                 line-height: 1;
             }
@@ -286,6 +291,9 @@ $pt:26%;
                 padding: 12% 0 47px;
                 background: $spa;
 
+                .ld-tit {
+                    width: 70%;
+                }
                 .ld-sub-tit {
                     color: #fff;
                 }
@@ -485,6 +493,50 @@ $pt:26%;
                                 p {
                                     &.ld-list-tit {
                                         color: $risom;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+            &.pina {
+                &:before {
+                    background: url(http://img.ramadapt.co.kr/landing/pina/bg_wave.png) repeat-x;
+                    background-size: 100% auto;
+                }
+                /* all */
+                .ld-main-area {
+                    background: $pina;
+                    .ld-tit {
+                        width: 90%;
+                    }
+                }
+
+                /* rest */
+                .ld-rest-area {
+                    .ld-sub-tit {
+                        .f-pt {
+                            color: $pina;
+                        }
+                    }
+                }
+                
+                /* facil */
+                .ld-list-area {
+
+                    .ld-tit {
+                        width: 70%;
+                    }
+
+                    .ld-list {
+                        li {
+                            .ld-list-txt-box {
+                                p {
+                                    &.ld-list-tit {
+                                        color: $pina;
                                     }
                                 }
                             }

@@ -16,6 +16,7 @@ $tab-ht: 202px;
 $dogo: #0179f3;
 $risom: #ff711c; 
 $spa: #009848; 
+$pina: #e4295b;
 * {
     font-family: "Noto Sans KR", "Nanum Gothic", sans-serif; 
     figure {
@@ -57,24 +58,27 @@ $spa: #009848;
     //@include position(absolute, ($visual-ht+100), 0);
     width: 100%;
     margin-top: -31px;
+    text-align: center;
     background: #14319b;
     .ld-tab-list {
         @include bx;
         @include clearfix;
-        width: 1000px;
+        display: inline-block;
+        /*width: 1000px;*/
         height: $tab-ht;
         margin: 0 auto;
         padding-top: 22px;
+        text-align: center;
         li {
             @include bx;
             cursor: pointer;
             float: left;
-            display: table;
-            width: 330px;
+            //width: 330px;
+            //width: 25%;
             height: 139px;
             margin: 0 auto;
             text-align: center;
-            padding-left: 5px;
+            padding: 0 0 0 5px;
             &:first-child {
                 padding-left: 0;
             }
@@ -83,7 +87,7 @@ $spa: #009848;
                 display: block;
                 
                 img {
-                    position: relative;
+                    @include bx;
                     //width: 100%;
                     &.off {
                         display: block;
@@ -135,6 +139,7 @@ $spa: #009848;
             a {
                 display: inline-block;
                 img {
+                    margin: 0 auto;
                     &.off {
                         display: block;
                         padding: 1px 0;
@@ -144,6 +149,12 @@ $spa: #009848;
                         padding: 0 0;
                     }
                 }
+            }
+            
+            &.home {
+                position: absolute;
+                left: 50%;
+                margin-left: -88.5px;
             }
 
             &.on {
@@ -535,6 +546,41 @@ $spa: #009848;
                             p {
                                 &.ld-list-tit {
                                     color: $risom;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    &.pina {
+        .ld-cont {
+            &:before {
+                background: url(http://img.ramadapt.co.kr/landing/pina/bg_wave.png) repeat-x;
+            }
+            
+            .ld-sub-tit {
+                .f-pt {
+                    color: $pina;
+                }
+            }
+            
+            /* all */
+            .ld-main-area {
+                background: $pina;
+            }
+
+            /* facil */
+            .ld-list-area {
+
+                .ld-list {
+                    li {
+                        .ld-list-txt-box {
+                            p {
+                                &.ld-list-tit {
+                                    color: $pina;
                                 }
                             }
                         }

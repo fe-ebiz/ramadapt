@@ -2436,8 +2436,8 @@ body {
 .cred-3 {color: #c41919;}
 .cblue-2 {color: #0012ff;}
 /* aside wing */
-.rWing {position: fixed; top: 315px; z-index: 9; left: 50%; margin-left: 530px;}
-.rWing img {display:block; margin-bottom:1px;}
+.rWing {position: fixed; top: 315px; z-index: 9; left: 50%; margin-left: 530px; text-align: center;}
+.rWing img {display:inline-block; margin-bottom:1px;}
 .rWing img + img {margin-top: 10px;}
 
 .Group {position: relative;}
