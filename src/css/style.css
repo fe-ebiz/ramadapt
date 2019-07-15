@@ -2830,3 +2830,6 @@ body {
 /* 2019 제58회 아산성웅 이순신축제 */
 #eventSec .evt-sec.leesoonshin .bxS li {background: url(http://img.ramadapt.co.kr/banner/event_leesoonshin_01.jpg) no-repeat; background-size: cover;}
 #eventSec .evt-sec.leesoonshin .evt-tb li.nth-4 .p-txt {font-size: 12.5px;}
+
+/* 2019 평택호 불빛축제 ftfestival */
+#eventSec .evt-sec.ftfestival .bxS li {background: url(http://img.ramadapt.co.kr/banner/event_light_01.jpg) no-repeat; background-size: cover;}
