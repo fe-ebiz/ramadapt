@@ -2437,8 +2437,12 @@ body {
 .cblue-2 {color: #0012ff;}
 /* aside wing */
 .rWing {position: fixed; top: 315px; z-index: 9; left: 50%; margin-left: 530px; text-align: center;}
-.rWing img {display:inline-block; margin-bottom:1px;}
+.rWing img {display:block; /*margin-bottom:1px;*/}
 .rWing img + img {margin-top: 10px;}
+.rWing .btn-wing {display: block; margin-top: 4px; line-height: 0;}
+.rWing .btn-wing:first-child {margin-top: 0;}
+/* 메인 wing */
+.Main .rWing {top: 135px; margin-left: 620px;}
 
 .Group {position: relative;}
 .Group #groupSec {position: relative; box-sizing: border-box;}

@@ -9,14 +9,19 @@ function tabFn() {
     $('.Landing .ld-tab-sect .ld-tab-list > li, .Landing .ld-bn-sect .ld-bn-list > li').on('click', function(){
         var idx = $(this).index(); 
         
-        $('.ld-toggle').each(function(index, item) {
-            $(item).children('li').eq(idx).addClass('on').siblings().removeClass('on'); 
-        });
-        
-        //190710 수정
-        $('html, body').stop().animate({
-            scrollTop : ($('#tab-sect').offset().top)
-        }, 500);
+        if( $(this).hasClass('nope') ) {
+
+        }else {
+            $('.ld-toggle').each(function(index, item) {
+                $(item).children('li').eq(idx).addClass('on').siblings().removeClass('on'); 
+
+            });
+
+            //190710 수정
+            $('html, body').stop().animate({
+                scrollTop : ($('#tab-sect').offset().top)
+            }, 500);
+        }
         
         return false;
     });
