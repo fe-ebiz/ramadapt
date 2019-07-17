@@ -11,6 +11,7 @@ $tab-ht: 102px;
 $dogo: #0179f3;
 $risom: #ff711c; 
 $spa: #009848;
+$land: #932af5;
 $pina: #e4295b;
 $pt:24%;
 //$pt:28%;
@@ -507,6 +508,48 @@ $pt:24%;
                 }
             }
             
+            &.land {
+                &:before {
+                    background: url(http://img.ramadapt.co.kr/landing/land/bg_wave.png) repeat-x;
+                    background-size: 100% auto;
+                }
+                /* all */
+                .ld-main-area {
+                    background: $land;
+                    .ld-tit {
+                        width: 90%;
+                    }
+                }
+
+                /* rest */
+                .ld-rest-area {
+                    .ld-sub-tit {
+                        .f-pt {
+                            color: $land;
+                        }
+                    }
+                }
+                
+                /* facil */
+                .ld-list-area {
+
+                    .ld-tit {
+                        width: 70%;
+                    }
+
+                    .ld-list {
+                        li {
+                            .ld-list-txt-box {
+                                p {
+                                    &.ld-list-tit {
+                                        color: $land;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             
             &.pina {
                 &:before {
