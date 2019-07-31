@@ -2443,7 +2443,7 @@ body {
 .rWing .btn-wing {margin-top: 4px;}
 .rWing .btn-wing:first-child {margin-top: 0;}
 /* 메인 wing */
-.Main .rWing {top: 135px; margin-left: 620px;}
+.Main .rWing {top: 165px; margin-left: 620px;}
 
 .Group {position: relative;}
 .Group #groupSec {position: relative; box-sizing: border-box;}
