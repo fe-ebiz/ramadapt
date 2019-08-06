@@ -114,6 +114,12 @@ strong {
 .cyellow {
 	color: #ffba00 !important;
 }
+.cyellow {
+	color: #ffba00 !important;
+}
+.c-yellow {
+	color: yellow !important;
+}
 a:hover, a:active, a:focus {
 	text-decoration: none;
 }
