@@ -697,7 +697,8 @@ body {
 	color: #fff;
 	text-align: center;
 	line-height: 42px;
-	height: 58px;
+	/*height: 58px;*/
+    height: 56px;
 	position: relative;
 }
 
@@ -713,9 +714,12 @@ body {
 	top: 5px;
 	left: 13px;
 }
+#util_box .logo {
+    display: inline-block;
+}
 #util_box .logo img {
-	width: 120px;
-	padding-top: 12px;
+	width: 110px;
+	padding-top: 10px;
 }
 /*#page { max-width:800px; margin:0 auto }*/
 #page nav {
