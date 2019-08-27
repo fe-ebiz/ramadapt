@@ -42,11 +42,29 @@ jQuery(document).ready(function() {
 			})
 		})
 	})
+    
+    
+    headerFunc();
 })
 function activeSub() {
 	jQuery(".gnb ul").children("li").eq(oneNum).addClass("on");
 }
 
+//header scroll function
+function headerFunc() {
+	var hd	= $("#header_ramada"),
+		hdTop  = hd.height();
+    
+	$(window).scroll(function() {
+		var scr = $(window).scrollTop();
+		
+        if ( scr <= hdTop ) {
+            hd.removeClass('on');
+        } else if ( scr > hdTop ) {
+            hd.addClass('on');
+        } 
+	});
+}
 
 /* ----------------------------------------------------------------
  visual_main
@@ -140,8 +158,28 @@ $(document).ready(function() {
  -----------------------------------------------------------------*/
 
 $(document).ready(function() {
-	$('nav#menu_ramada').mmenu();
+    var nav = $('nav#menu_ramada');
+    
+	nav.mmenu();
+    
+    /*nav.toggle(function(){
+        var winH = $(window).height(); 
+        var scr = $(window).scrollTop();
+        nav.css({'display' : 'block', 'height' : winH+'px', 'top' : scr+'px'});
 
+        $('html').css({'overflow': 'hidden', 'height': '100%'});
+        nav.on('scroll touchmove mousewheel', function(event) { 
+            event.preventDefault();     
+            event.stopPropagation();     
+            return false; 
+        }); 
+    }, function(){
+        nav.css({'display' : 'none'});
+        
+        $('html').css({'overflow': 'auto'});
+        nav.off('scroll touchmove mousewheel');
+    });*/
+    
 });
 
 /* ----------------------------------------------------------------

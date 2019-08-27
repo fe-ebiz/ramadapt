@@ -72,11 +72,27 @@ jQuery(document).ready(function() {
 
     });
     
+    headerFunc();
 })
 function activeSub() {
 	jQuery(".gnb ul").children("li").eq(oneNum).addClass("on");
 }
 
+//header scroll function
+function headerFunc() {
+	var hd	= $("#header"),
+		hdTop  = hd.height();
+    
+	$(window).scroll(function() {
+		var scr = $(window).scrollTop();
+		
+        if ( scr <= hdTop ) {
+            hd.removeClass('on');
+        } else if ( scr > hdTop ) {
+            hd.addClass('on');
+        } 
+	});
+}
 
 /*-----------------
  * visual
@@ -173,7 +189,6 @@ function visual() {
 	}, 500);
 	*/
 }
-
 
 /* ----------------------------------------------------------------
  tab

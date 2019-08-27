@@ -661,8 +661,9 @@ body {
 	color: #555;
 }
 #content {
-	background: #fff;
 	margin-bottom:20px;
+    padding-top: 56px;
+	background: #fff;
 }
 /* .Main #content {
 	margin-bottom: 0;
@@ -692,7 +693,16 @@ body {
 /* ----------------------------------------------------------------
  header
  -----------------------------------------------------------------*/
-#header_ramada { background:#272d34;}
+#header_ramada { 
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    background:#272d34;
+}
+#header_ramada.on { 
+    z-index: 99;
+    position: fixed;
+}
 #util_box {
 	color: #fff;
 	text-align: center;
@@ -866,13 +876,15 @@ html.mmenu-right.mmenu-opening .mmenu-page, html.mmenu-right.mmenu-opening #mmen
 /* ----------------------------------------------------------------
  menu_list
  -----------------------------------------------------------------*/
+.menu_list {
+    
+	background: #23262b;
+}
+
 .menu_list .sm_btn {
 	background: #44494e;
 	border: 1px solid #3c4148;
 	font-weight: normal;
-}
-.menu_list {
-	background: #23262b;
 }
 .menu_list .info {
 	color: #dbdbdb;
