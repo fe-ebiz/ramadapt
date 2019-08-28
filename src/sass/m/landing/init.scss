@@ -12,9 +12,11 @@ $dogo: #0179f3;
 $risom: #ff711c; 
 $spa: #009848;
 $land: #932af5;
-$pina: #e4295b;
-$pt:24%;
-//$pt:28%;
+$rail: #00a1ab;
+$pina: #e4295b; 
+
+$pt:27%;
+$pt-2:24%;
 * {
     font-family: "Noto Sans KR", "Nanum Gothic", sans-serif; 
     img {
@@ -28,6 +30,10 @@ $pt:24%;
         line-height: 0;
     }
 }
+
+/*#content.sub_content {
+    padding-top: 0;
+}*/
 
 .Landing {
     .mmenu-page {
@@ -61,6 +67,7 @@ $pt:24%;
     margin: 0 auto;
     padding: $pt 2% 0;
     background: #14319b;
+    //transition: all 0.2s ease 0s;
     .ld-tab-box {
         position: absolute;
         width: 96%;
@@ -74,7 +81,6 @@ $pt:24%;
                 @include bx;
                 float: left;
                 width: 24.4%;
-                //width: 32.8%;
                 margin-left: 0.7%;
                 &:first-child {
                     margin-left: 0;
@@ -114,9 +120,32 @@ $pt:24%;
     &.on {
         position: fixed;
         top: 0;
-        z-index: 110;
-        padding-top: 20.5%;
-        //padding-top: 25%;
+        z-index: 101;
+        margin-top: 56px;
+        padding-top: 23%;
+        transition: all 0.2s ease 0s;
+    }
+        
+    &.type-2 {
+        padding-top: $pt-2;
+        .ld-tab-box {
+            .ld-tab-list {
+                li {
+                    width: 19.2%;
+                    margin-left: 1%;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        &.on {
+            padding-top: 20%;
+        }
+        
+        & + .ld-cont-sect {
+            padding-top: $pt-2;
+        }
     }
 }
 /*.ld-tab-sect {
@@ -543,6 +572,48 @@ $pt:24%;
                                 p {
                                     &.ld-list-tit {
                                         color: $land;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &.rail {
+                &:before {
+                    background: url(http://img.ramadapt.co.kr/landing/rail/bg_wave.png) repeat-x;
+                    background-size: 100% auto;
+                }
+                /* all */
+                .ld-main-area {
+                    padding-top: 9%;
+                    background: $rail;
+                    .ld-tit {
+                        width: 90%;
+                    }
+                }
+
+                /* rest */
+                .ld-rest-area {
+                    .ld-tit {
+                        width: 90%;
+                    }
+                    .ld-sub-tit {
+                        .f-pt {
+                            color: $rail;
+                        }
+                    }
+                }
+                
+                /* facil */
+                .ld-list-area {
+                    .ld-list {
+                        li {
+                            .ld-list-txt-box {
+                                p {
+                                    &.ld-list-tit {
+                                        color: $rail;
                                     }
                                 }
                             }
