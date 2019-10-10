@@ -2460,7 +2460,10 @@ body {
 .rWing .btn-wing {margin-top: 4px;}
 .rWing .btn-wing:first-child {margin-top: 0;}
 /* 메인 wing */
-.Main .rWing {top: 130px; margin-left: 620px;}
+.Main .rWing {top: 108px; margin-left: 620px;}
+/* 예약 wing */
+.Booking .rWing {top: 240px; transition: all 1s ease 0s;}
+.Booking .rWing.on {top: 175px;}
 
 .Group {position: relative;}
 .Group #groupSec {position: relative; box-sizing: border-box;}
