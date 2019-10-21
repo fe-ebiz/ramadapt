@@ -366,3 +366,27 @@ function toggleOn(itm, type) {
 		});
 	}
 }
+
+/*-----------------
+ * 예약
+ * --------------*/
+$(function () {
+    if( $('body').hasClass('Booking') ){
+        rsvtBnScr();
+
+        $(window).scroll(function() {
+             rsvtBnScr();
+        });
+    }
+});
+function rsvtBnScr(){
+    var rightBn = $(".rWing");
+    var scrollTop = $(window).scrollTop();
+
+    if(scrollTop > 100) {																									
+        rightBn.addClass('on');		
+    } 
+    if(scrollTop < 100) {																	
+        rightBn.removeClass('on');
+    }
+}

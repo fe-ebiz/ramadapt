@@ -633,12 +633,15 @@ body {
 	letter-spacing: -0.5px;
 }
 #header.on {
-    z-index: 99; 
+    z-index: 115; 
     position: fixed !important;
 }
 
 #content {
 	 padding-top: 100px; 
+}
+#content #content {
+	 padding-top: 0; 
 }
 #Contents {
 	display: table;
@@ -2507,14 +2510,17 @@ body {
 .cred-3 {color: #c41919;}
 .cblue-2 {color: #0012ff;}
 /* aside wing */
-.rWing {position: fixed; top: 310px; z-index: 9; left: 50%; margin-left: 530px; text-align: center;}
+.rWing {position: fixed; top: 240px; z-index: 1; left: 50%; margin-left: 530px; text-align: center;}
 .rWing img {display:block; /*margin-bottom:1px;*/}
 .rWing img + img {margin-top: 10px;}
 .rWing a {display: block; margin-top: 10px; line-height: 0;}
 .rWing .btn-wing {margin-top: 4px;}
 .rWing .btn-wing:first-child {margin-top: 0;}
 /* 메인 wing */
-.Main .rWing {top: 165px; margin-left: 620px;}
+.Main .rWing {top: 108px; margin-left: 620px;}
+/* 예약 wing */
+.Booking .rWing {top: 240px; transition: all 1s ease 0s;}
+.Booking .rWing.on {top: 175px;}
 
 .Group {position: relative;}
 .Group #groupSec {position: relative; box-sizing: border-box;}

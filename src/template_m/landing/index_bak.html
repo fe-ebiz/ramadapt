@@ -4,9 +4,11 @@
 
     <!-- 별도 css, js 가져오기 -->
     <link rel="stylesheet" href="http://static.ramadapt.co.kr/css/m/landing/init.css">
+    <!-- <link rel="stylesheet" href="../../../static/css/m/landing/init.css">-->
+     <link rel="stylesheet" href="../../static/css/m/landing/init.css">
+     
     <script src="http://static.ramadapt.co.kr/js/m/landing/init.js"></script>
-     <!--<link rel="stylesheet" href="../../../static/css/m/landing/init.css">-->
-    <!--<script src="../../../static/js/m/landing/init.js"></script> -->
+    <!--<script src="../../../static/js/m/landing/init.js"></script>--> 
     
 </head>
 <body class="Landing">
@@ -15,96 +17,458 @@
 	@@include('../include/_header.html')
 
 	<div id="content">
-        <!-- 190701 피나클랜드 제거 & 수정 -->
         <div class="ld-visual-sect" id="visual-sect">
             <ul class="ld-visual-list ld-toggle">
-                <li class="item spa on"><div class="ld-visual"><img src="http://img.ramadapt.co.kr/m/landing/spa/visual.jpg" alt="스파비스 이미지"></div></li>
+                <li class="item on"><div class="ld-visual"><img src="http://img.ramadapt.co.kr/m/landing/common/visual.jpg" alt="워터파크&프리미엄호텔"></div></li>
             </ul>
         </div>
         
-        <div class="ld-cont-sect">
+        <div class="ld-tab-sect" id="tab-sect">
+            <div class="ld-tab-box">
+                <ul class="ld-tab-list ld-toggle">
+                    <li class="item spa on">
+                        <a href="javascript:;" role="button">
+                            <img class="off" src="http://img.ramadapt.co.kr/m/landing/common/tab_spa.png" alt="아산 스파비스">
+                            <img class="on" src="http://img.ramadapt.co.kr/m/landing/common/tab_spa_on.png" alt="아산 스파비스">
+                        </a>
+                    </li>
+                    <li class="item dogo">
+                        <a href="javascript:;" role="button">
+                            <img class="off" src="http://img.ramadapt.co.kr/m/landing/common/tab_dogo.png" alt="파라다이스 스파도고">
+                            <img class="on" src="http://img.ramadapt.co.kr/m/landing/common/tab_dogo_on.png" alt="파라다이스 스파도고">
+                        </a>
+                    </li>
+                    <li class="item risom">
+                        <a href="javascript:;" role="button">
+                            <img class="off" src="http://img.ramadapt.co.kr/m/landing/common/tab_risom.png" alt="리솜 스플라스">
+                            <img class="on" src="http://img.ramadapt.co.kr/m/landing/common/tab_risom_on.png" alt="리솜 스플라스">
+                        </a>
+                    </li>
+                    <!-- 190717 에버랜드 추가 -->
+                    <li class="item land">
+                        <a href="javascript:;" role="button">
+                            <img class="off" src="http://img.ramadapt.co.kr/m/landing/common/tab_land.png" alt="에버랜드">
+                            <img class="on" src="http://img.ramadapt.co.kr/m/landing/common/tab_land_on.png" alt="에버랜드">
+                        </a>
+                    </li>
+                   <!-- 190712 피나클랜드 추가 -->
+                    <!--<li class="item pina">
+                        <a href="javascript:;" role="button">
+                            <img class="off" src="http://img.ramadapt.co.kr/m/landing/common/tab_pina.png" alt="피나클랜드">
+                            <img class="on" src="http://img.ramadapt.co.kr/m/landing/common/tab_pina_on.png" alt="피나클랜드">
+                        </a>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+        
+        <div class="ld-cont-sect" id="ld-cont-sect">
             <ul class="ld-cont-list ld-toggle">
+                <!-- 아산 스파비스 -->
                 <li class="item spa on">
-                    <div class="ld-map-area">
+                    <!-- all -->
+                    <div class="ld-main-area">
                         <div class="container">
-                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/landing/spa/tit_01.png" alt="아산 스파비스&라마다앙코르평택호텔"></h2>
-                            <p class="ld-sub-tit"><em>아산 스파비스와 20분 거리에 위치</em>한 라마다앙코르평택호텔을 경험해보세요.<br>인근 최고의 룸컨디션과 좋은 가격으로 호텔 서비스를 제공해드립니다.</p>
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/m/landing/spa/tit_main.png" alt="아산 스파비스&라마다앙코르평택호텔"></h2>
+                            <p class="ld-sub-tit">대형 파도풀과 레이스 슬라이드, 바디슬라이드와 대형 파도풀,<br>온 가족이 함께 즐길 수 있는 대형 아쿠아 플레이까지,<br>온천수를 이용한 테마워터파크에서<br>스릴만점 물놀이와 휴식을 즐겨보세요!</p> 
                             <figure class="img-map">
-                                <img src="http://img.ramadapt.co.kr/m/landing/spa/img_map.jpg" alt="라마다앙코르평택호텔에서 아산 스파비스까지 지도">
+                                <img src="http://img.ramadapt.co.kr/m/landing/spa/img_main.jpg" alt="아산 스파비스와 라마다앙코르평택호텔 패키지">
                             </figure>
                         </div>
-                    </div> 
-                    
+                    </div>
+                
+                    <!-- reservation -->
                     <div class="ld-rest-area">
                         <div class="container">
-                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/landing/spa/tit_02.png" alt="예약하기"></h2>
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/landing/spa/tit_rest.png" alt="워터파크&숙소 예약하기"></h2>
+                            <p class="ld-sub-tit"><em>가격걱정 NO!</em><br>패키지 할인특가로 <span class="f-pt">프리미엄 호텔의 품격있는 <br>혜택과 서비스를 최저가로 이용</span>해보세요!</p>
+
                             <div class="ld-rest-box">
                                 <!-- 예약하기로 페이지 이동됩니다 / 해당 패키지로 이동 -->
-                                <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/spa/img_link.jpg" alt="아산 스파비스 예약하기"></a>
-                                <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/spa/img_link_pkg.jpg" alt="아산 스파비스+라마다앙코르평택 패키지 예약하기"></a>
+                                <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/landing/spa/list_rest_01.jpg" alt="아산 스파비스 입장권 상품 바로가기"></a>
+                                <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/landing/spa/list_rest_02.jpg" alt="아산 스파비스 입장권+평택라마다앙코르호텔 상품 바로가기"></a>
                             </div>
+                        </div>
+                    </div> 
+                
+                    <!-- facil -->
+                    <div class="ld-list-area">
+                        <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/landing/spa/tit_facil.png" alt="아산 스파비스 시설안내"></h2>
+                            <p class="ld-sub-tit">대형 파도풀과 레이스 슬라이드, 바디슬라이드와 대형 파도풀,<br>온 가족이 함께 즐길 수 있는 대형 아쿠아 플레이까지,<br>온천수를 이용한 테마워터파크에서<br>스릴만점 물놀이와 휴식을 즐겨보세요!</p> 
+
+                            <ul class="ld-list">
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/list_facil_01_1.jpg" alt="야외 온천풀"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/list_facil_01_2.jpg" alt="야외 온천풀"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">야외 온천풀</p>
+                                        <p class="ld-list-txt">황토보원 사우나, 유수풀, 동굴탕, 워터슬라이드 등<br>사계절 내내 물놀이와 노천온천을 즐길 수 있습니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/list_facil_02_1.jpg" alt="실외유수풀"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/list_facil_02_2.jpg" alt="실외유수풀"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">바데풀</p>
+                                        <p class="ld-list-txt">국내 최초의 수(水) 치료풀!  온천수를 이용하여 각종 질병의 예방, 요양, 건강증진을<br>목적으로 개발된 보양 온천시설입니다. </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/list_facil_03_1.jpg" alt="이벤트스파"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/list_facil_03_2.jpg" alt="이벤트스파"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">대온천장</p>
+                                        <p class="ld-list-txt">숯 사우나, 옥탕, 침탕, 헬스탕 등 약 23개의 각종 기능탕과 노천탕이 있으며<br>약 6m 높이의 높은 천장 일부를 유리로 처리하여<br>색다른 개방감을 만끽하실 수 있습니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/list_facil_04_1.jpg" alt="아웃도어스파"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/list_facil_04_2.jpg" alt="아웃도어스파"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">키즈파크</p>
+                                        <p class="ld-list-txt">아이들이 마음놓고 뛰어놀 수 있는 곳!<br>겨울터널, 수족관, 정글집, 향기터널 등의 다양한<br>놀이시설과 안전한 놀이터!  아이들이 좋아하는 무지개 빛깔의 놀이동산입니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/list_facil_05_1.jpg" alt="키즈랜드"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/list_facil_05_2.jpg" alt="키즈랜드"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">푸드코트</p>
+                                        <p class="ld-list-txt">스파비스에서 즐겁게 놀고 맛있게 즐길 수 있는 고객님을 위한 편의시설!<br>아산 스파비스의 푸드코너 입니다.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <!-- button -->
+                    <div class="ld-btn-area">
+                        <div class="ld-btn-box">
+                            <!-- 예약하기로 페이지 이동됩니다 / 해당 패키지로 이동 -->
+                            <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/spa/btn_single.jpg" alt="아산 스파비스 단품구매"></a>
+                            <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/spa/btn_pakage.jpg" alt="아산 스파비스&숙박 패키지구매"></a>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- 파라다이스 스파도고 -->
+                <li class="item dogo">
+                    <!-- all -->
+                    <div class="ld-main-area">
+                        <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/m/landing/dogo/tit_main.png" alt="파라다이스 스파도고&라마다앙코르평택호텔"></h2>
+                            <p class="ld-sub-tit">좋은 물로 효능을 인정받은 온천수,<br>다양한 실내외 스파풀장, 테라피 마사지, 피로가 쌓인 몸에 치유의<br>시간을 선물할 수 있는 새로운 힐링 파라다이스공간입니다.</p> 
+                            <figure class="img-map">
+                                <img src="http://img.ramadapt.co.kr/m/landing/dogo/img_main.jpg" alt="파라다이스 스파도고와 라마다앙코르평택호텔 패키지">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- reservation -->
+                    <div class="ld-rest-area">
+                        <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/landing/dogo/tit_rest.png" alt="워터파크&숙소 예약하기"></h2>
+                            <p class="ld-sub-tit"><em>가격걱정 NO!</em><br>패키지 할인특가로 <span class="f-pt">프리미엄 호텔의 품격있는<br>혜택과 서비스를 최저가로 이용</span>해보세요!</p>
+
+                            <div class="ld-rest-box">
+                                <!-- 예약하기로 페이지 이동됩니다 / 해당 패키지로 이동 -->
+                                <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/landing/dogo/list_rest_01.jpg" alt="파라다이스 스파도고 입장권 상품 바로가기"></a>
+                                <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/landing/dogo/list_rest_02.jpg" alt="파라다이스 스파도고 입장권+평택라마다앙코르호텔 상품 바로가기"></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- facil -->
+                    <div class="ld-list-area">
+                        <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/landing/dogo/tit_facil.png" alt="파라다이스 스파도고 시설안내"></h2>
+                            <p class="ld-sub-tit">좋은 물로 효능을 인정받은 온천수,<br>다양한 실내외 스파풀장, 테라피 마사지, 피로가 쌓인 몸에 치유의<br>시간을 선물할 수 있는 새로운 힐링 파라다이스공간입니다.</p> 
+
+                            <ul class="ld-list">
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_01_1.jpg" alt="실내바데풀"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_01_2.jpg" alt="실내바데풀"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">실내바데풀</p>
+                                        <p class="ld-list-txt">수(水)치료 풀로서, 온천수를 이용하여 각종 질병의 예방,요양,치유,건강촉진을<br>목적으로 개발된 보양 온천시설입니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_02_1.jpg" alt="실외유수풀"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_02_2.jpg" alt="실외유수풀"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">실외유수풀</p>
+                                        <p class="ld-list-txt">초당 1m유속으로 물이 흐르는 길과 함께<br>다양한 테마를 경험할 수 있습니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_03_1.jpg" alt="이벤트스파"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_03_2.jpg" alt="이벤트스파"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">이벤트스파</p>
+                                        <p class="ld-list-txt">물놀이 중간중간 가족과 함께 휴식을 취할 수 있도록 마련된 공간으로<br>포도탕(태양인),산수유탕(소양인),오미자탕(태음인)등<br>다양한 테마탕이 있습니다. </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_04_1.jpg" alt="아웃도어스파"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_04_2.jpg" alt="아웃도어스파"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">아웃도어스파</p>
+                                        <p class="ld-list-txt">이벤트 스파와 연결된 스파로 체온유지실 등 다양하게 이용하실 수 있으며,<br>자연속 낭만과 힐링을 즐기실 수 있습니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_05_1.jpg" alt="키즈랜드"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_05_2.jpg" alt="키즈랜드"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">키즈랜드</p>
+                                        <p class="ld-list-txt">어린이들이 안전하고 즐겁게 물놀이를 즐길 수 있는 공간으로<br>미끄럼틀,컵분수 등 재미있는 시설들로 가득한 수중놀이터입니다. </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_06_1.jpg" alt="파도풀"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_06_2.jpg" alt="파도풀"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">파도풀</p>
+                                        <p class="ld-list-txt">이국적인 분위기인 신비로운 해안가 파도를 즐길 수 있는<br>국내 최초의 유황온천수 파도풀입니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_07_1.jpg" alt="아쿠아플레이 및 정규풀"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_07_2.jpg" alt="아쿠아플레이 및 정규풀"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">아쿠아플레이 및 정규풀</p>
+                                        <p class="ld-list-txt">어린아이부터 어른까지 즐겁게 물놀이를<br>즐길 수 있는 시설로 다양한 슬라이드(5종)와 컵분수 등의<br>재미있는 시설로 가득 차 있습니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_08_1.jpg" alt="온천대욕장"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_08_2.jpg" alt="온천대욕장"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">온천대욕장</p>
+                                        <p class="ld-list-txt">고급스러운 인테리어로 샤워부스와 다양한 바데시설과 건식 및 습식 사우나 시설로<br>고객 여러분께 편안한 휴식을 통한 활력을 드립니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_09_1.jpg" alt="노천탕"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/dogo/list_facil_09_2.jpg" alt="노천탕"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">노천탕</p>
+                                        <p class="ld-list-txt">삼림욕 효과를 볼 수 있으며 피로회복과 스트레스 해소에 도움을 드립니다.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <!-- button -->
+                    <div class="ld-btn-area">
+                        <div class="ld-btn-box">
+                            <!-- 예약하기로 페이지 이동됩니다 / 해당 패키지로 이동 -->
+                            <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/dogo/btn_single.jpg" alt="파라다이스 스파도고 단품구매"></a>
+                            <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/dogo/btn_pakage.jpg" alt="파라다이스 스파도고&숙박 패키지구매"></a>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- 스플라스 리솜 -->
+                <li class="item risom">
+                    <!-- all -->
+                    <div class="ld-main-area">
+                        <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/m/landing/risom/tit_main.png" alt="스플라스 리솜&라마다앙코르평택호텔"></h2>
+                            <p class="ld-sub-tit">스플라스 워터파크는 용출온도 49도의 보양온천 덕산온천수가<br>공급되는 온천 워터파크입니다. 짜릿한 즐거움과 여유로움이<br>공존하는 워터파크에서 물놀이를 즐겨 보세요!</p> 
+                            <figure class="img-map">
+                                <img src="http://img.ramadapt.co.kr/m/landing/risom/img_main.jpg" alt="스플라스 리솜과 라마다앙코르평택호텔 패키지">
+                            </figure>
+                        </div>
+                    </div>
+                
+                    <!-- reservation -->
+                    <div class="ld-rest-area">
+                        <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/landing/risom/tit_rest.png" alt="워터파크&숙소 예약하기"></h2>
+                            <p class="ld-sub-tit"><em>가격걱정 NO!</em><br>패키지 할인특가로 <span class="f-pt">프리미엄 호텔의 품격있는<br>혜택과 서비스를 최저가로 이용</span>해보세요!</p>
+
+                            <div class="ld-rest-box">
+                                <!-- 예약하기로 페이지 이동됩니다 / 해당 패키지로 이동 -->
+                                <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/landing/risom/list_rest_01.jpg" alt="스플라스 리솜 입장권 상품 바로가기"></a>
+                                <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/landing/risom/list_rest_02.jpg" alt="스플라스 리솜 입장권+평택라마다앙코르호텔 상품 바로가기"></a>
+                            </div>
+
                         </div>
                     </div>
                     
-                    <div class="ld-bn-area">
+                    <!-- facil -->
+                    <div class="ld-list-area">
                         <div class="container">
-                            <figure class="img-bn">
-                                <img src="http://img.ramadapt.co.kr/m/landing/spa/sub_banner.jpg" alt="온 가족을 위한 아산 스파비스">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/landing/risom/tit_facil.png" alt="스플라스 리솜 시설안내"></h2>
+                            <p class="ld-sub-tit">스플라스 워터파크는 용출온도 49도의 보양온천 덕산온천수가<br>공급되는 온천 워터파크입니다. 짜릿한 즐거움과 여유로움이<br>공존하는 워터파크에서 물놀이를 즐겨 보세요!</p> 
+
+                            <ul class="ld-list">
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/risom/list_facil_01_1.jpg" alt="파라원"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/risom/list_facil_01_2.jpg" alt="파라원"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">파라원</p>
+                                        <p class="ld-list-txt">바데풀, 유러피안 스파 등 다양한 스파를 체험할 수있는 실내스파 공간입니다.<br>1,2층에 자리한 파라원은 수치료 전문 시스템을 갖춘 바데풀을 중심으로 테마찜질방 사랑채<br>까지 준비되어 있습니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/risom/list_facil_02_1.jpg" alt="워터레이"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/risom/list_facil_02_2.jpg" alt="워터레이"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">워터레이</p>
+                                        <p class="ld-list-txt">신나는 물놀이 시설과 함께 짜릿한 스릴과 재미를 느낄 수 있는 공간입니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/risom/list_facil_03_1.jpg" alt="서니레이"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/risom/list_facil_03_2.jpg" alt="서니레이"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">서니레이</p>
+                                        <p class="ld-list-txt">이국적인 멋진 낭만이 함게하는 온 가족이 함께 즐길 수 있는 서니레이!<br>각종 워터슬라이드와 온천수 수영장이 함께 준비되어 있습니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/risom/list_facil_04_1.jpg" alt="혜미원"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/risom/list_facil_04_2.jpg" alt="혜미원"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">혜미원</p>
+                                        <p class="ld-list-txt">다양한 이벤트 탕으로 한국식 테마를 가득담아 입욕의 즐거움을 드립니다.<br>차와 과일,정종 등 천연 입욕제를 사용하며, 음료와 차를<br>수중에서 즐길 수 있는 공간입니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/risom/list_facil_05_1.jpg" alt="오감원"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/risom/list_facil_05_2.jpg" alt="오감원"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">오감원</p>
+                                        <p class="ld-list-txt">음악과 함께 분위기에 따라 내맘대로 즐기는 오감원 테마탕!<br>음악과 분위기에 따라 오색오감을 느낄 수 있는 휴식공간입니다. </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- button -->
+                    <div class="ld-btn-area">
+                        <div class="ld-btn-box">
+                            <!-- 예약하기로 페이지 이동됩니다 / 해당 패키지로 이동 -->
+                            <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/risom/btn_single.jpg" alt="스플라스 리솜 단품구매"></a>
+                            <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/risom/btn_pakage.jpg" alt="스플라스 리솜&숙박 패키지구매"></a>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- 190717 에버랜드 추가 -->
+                <li class="item land">
+                    <div class="ld-main-area">
+                        <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/m/landing/land/tit_main.png" alt="에버랜드&라마다앙코르평택호텔"></h2>
+                            <p class="ld-sub-tit">세계 각국의 아름다운 건축물 사이로<br>즐겁고 흥겨운 음악 소리가 울려 퍼지는 곳,<br>첫 발걸음의 시작과 동시에 즐거운 추억을 선사합니다.</p> 
+                            <figure class="img-map">
+                                <img src="http://img.ramadapt.co.kr/m/landing/land/img_main.jpg" alt="에버랜드와 라마다앙코르평택호텔 패키지">
                             </figure>
+                        </div>
+                    </div>
+                
+                    <div class="ld-rest-area">
+                        <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/landing/land/tit_rest.png" alt="액티비티&숙소 예약하기"></h2>
+                            <p class="ld-sub-tit"><em>가격걱정 NO!</em><br>패키지 할인특가로 <span class="f-pt">프리미엄 호텔의 품격있는<br>혜택과 서비스를 최저가로 이용</span>해보세요!</p>
+
+                            <div class="ld-rest-box">
+                                <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/landing/land/list_rest_01.jpg" alt="에버랜드 입장권 상품 바로가기"></a>
+                                <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/landing/land/list_rest_02.jpg" alt="에버랜드 입장권+평택라마다앙코르호텔 상품 바로가기"></a>
+                            </div>
+
                         </div>
                     </div>
                     
                     <div class="ld-list-area">
                         <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/landing/land/tit_facil.png" alt="에버랜드 시설안내"></h2>
+                            <p class="ld-sub-tit">세계 각국의 아름다운 건축물 사이로<br>즐겁고 흥겨운 음악 소리가 울려 퍼지는 곳,<br>첫 발걸음의 시작과 동시에 즐거운 추억을 선사합니다.</p> 
+
                             <ul class="ld-list">
                                 <li>
                                     <div class="ld-list-img-box">
-                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/img_list_01_1.jpg" alt="야외 온천풀"></figure>
-                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/img_list_01_2.jpg" alt="야외 온천풀"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/land/list_facil_01_1.jpg" alt="어트랙션"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/land/list_facil_01_2.jpg" alt="어트랙션"></figure>
                                     </div>
                                     <div class="ld-list-txt-box">
-                                        <p class="ld-list-tit">야외 온천풀</p>
-                                        <p class="ld-list-txt">황토보원 사우나, 유수풀, 동굴탕, 워터슬라이드 등 사계절 내내 물놀이와 노천온천을 즐길 수 있습니다.</p>
+                                        <p class="ld-list-tit">어트랙션</p>
+                                        <p class="ld-list-txt">꿈과 모험을 찾아 떠나는 곳으로 잊지 못 할 최고의 기억을 선사하는 공간입니다. </p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="ld-list-img-box">
-                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/img_list_02_1.jpg" alt="바데풀"></figure>
-                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/img_list_02_2.jpg" alt="바데풀"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/land/list_facil_02_1.jpg" alt="주토피아(동물원)"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/land/list_facil_02_2.jpg" alt="주토피아(동물원)"></figure>
                                     </div>
                                     <div class="ld-list-txt-box">
-                                        <p class="ld-list-tit">바데풀</p>
-                                        <p class="ld-list-txt">국내 최초의 수(水) 치료풀!  온천수를 이용하여 각종 질병의 예방, 요양, 건강증진을 목적으로 개발된 보양 온천시설입니다.</p>
+                                        <p class="ld-list-tit">주토피아(동물원)</p>
+                                        <p class="ld-list-txt">국내에서 유일하게 볼 수 있는 희귀종인 판다를<br>직접 관람할 수 있는 것 뿐만 아니라<br>다양한 동물을 볼 수 있으며, 직접 체험 또한 가능한 공간입니다. .</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="ld-list-img-box">
-                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/img_list_03_1.jpg" alt="대온천장"></figure>
-                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/img_list_03_2.jpg" alt="대온천장"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/land/list_facil_03_1.jpg" alt="플랜토피아(정원)"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/land/list_facil_03_2.jpg" alt="플랜토피아(정원)"></figure>
                                     </div>
                                     <div class="ld-list-txt-box">
-                                        <p class="ld-list-tit">대온천장</p>
-                                        <p class="ld-list-txt">숯 사우나, 옥탕, 침탕, 헬스탕 등 약 23개의 각종 기능탕과 노천탕이 있으며 약 6m 높이의 높은 천장 일부를 유리로 처리하여 색다른 개방감을 만끽하실 수 있습니다.</p>
+                                        <p class="ld-list-tit">플랜토피아(정원)</p>
+                                        <p class="ld-list-txt">사시사철 빛나는 매력적인 꽃들의 향연을 만끽하실 수 있으며<br>타워트리에서 으리으리한 인증샷 또한 에버랜드의 필수코스 입니다.</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="ld-list-img-box">
-                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/img_list_04_1.jpg" alt="키즈파크"></figure>
-                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/img_list_04_2.jpg" alt="키즈파크"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/land/list_facil_04_1.jpg" alt="레스토랑"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/land/list_facil_04_2.jpg" alt="레스토랑"></figure>
                                     </div>
                                     <div class="ld-list-txt-box">
-                                        <p class="ld-list-tit">키즈파크</p>
-                                        <p class="ld-list-txt">아이들이 마음놓고 뛰어놀 수 있는 곳!  겨울터널, 수족관, 정글집, 향기터널 등의 다양한 놀이시설과 안전한 놀이터!  아이들이 좋아하는 무지개 빛깔의 놀이동산입니다.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="ld-list-img-box">
-                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/img_list_05_1.jpg" alt="푸드코트"></figure>
-                                        <figure><img src="http://img.ramadapt.co.kr/landing/spa/img_list_05_2.jpg" alt="푸드코트"></figure>
-                                    </div>
-                                    <div class="ld-list-txt-box">
-                                        <p class="ld-list-tit">푸드코트</p>
-                                        <p class="ld-list-txt">스파비스에서 즐겁게 놀고 맛있게 즐길 수 있는 고객님을 위한 편의시설! 아산 스파비스의 푸드코너 입니다.</p>
+                                        <p class="ld-list-tit">레스토랑</p>
+                                        <p class="ld-list-txt">직접 뽑은 최고의 면과 정통 조리법으로 끓인 아시아 지역별 면요리,<br>정통 이탈리안 피자와 테라스에서 즐기는<br>시원한 맥주까지 겸비 된 식당이 있는 공간입니다.</p>
                                     </div>
                                 </li>
                             </ul>
@@ -113,12 +477,161 @@
                     
                     <div class="ld-btn-area">
                         <div class="ld-btn-box">
-                            <!-- 예약하기로 페이지 이동됩니다 / 해당 패키지로 이동 -->
-                            <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/spa/btn_link.jpg" alt="아산 스파비스 예약하기"></a>
-                            <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/spa/btn_link_pkg.jpg" alt="아산 스파비스+라마다앙코르평택 패키지 예약하기"></a>
+                            <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/land/btn_single.jpg" alt="에버랜드 단품구매"></a>
+                            <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/land/btn_pakage.jpg" alt="에버랜드&숙박 패키지구매"></a>
                         </div>
                     </div>
                 </li>
+                
+                <!-- 190712 피나클랜드 추가 -->
+                <!--<li class="item pina">
+                    <div class="ld-main-area">
+                        <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/m/landing/pina/tit_main.png" alt="피나클랜드&라마다앙코르평택호텔"></h2>
+                            <p class="ld-sub-tit">
+                                색있는 테마정원과 미니동물농장 다양한 산책로가 있어<br>
+                                가족나들이 연인들의 데이트코스 현장체험학습장으로<br>
+                                최적의 장소이며 봄가을 축제를 비롯해 물놀이장 눈썰매까지<br>가능한 사계절 테마공원입니다.
+                           </p> 
+                            <figure class="img-map">
+                                <img src="http://img.ramadapt.co.kr/m/landing/pina/img_main.jpg" alt="피나클랜드와 라마다앙코르평택호텔 패키지">
+                            </figure>
+                        </div>
+                    </div>
+                
+                    <div class="ld-rest-area">
+                        <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/landing/pina/tit_rest.png" alt="테마파크&숙소 예약하기"></h2>
+                            <p class="ld-sub-tit"><em>가격걱정 NO!</em><br>패키지 할인특가로 <span class="f-pt">프리미엄 호텔의 품격있는 <br>혜택과 서비스를 최저가로 이용</span>해보세요!</p>
+
+                            <div class="ld-rest-box">
+                                <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/landing/pina/list_rest_01.jpg" alt="피나클랜드 상품 바로가기"></a>
+                                <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/landing/pina/list_rest_02.jpg" alt="피나클랜드+평택라마다앙코르호텔 상품 바로가기"></a>
+                            </div>
+                        </div>
+                    </div> 
+                
+                    <div class="ld-list-area">
+                        <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/landing/pina/tit_facil.png" alt="피나클랜드 시설안내"></h2>
+                            <p class="ld-sub-tit">
+                                색있는 테마정원과 미니동물농장 다양한 산책로가 있어<br>
+                                가족나들이 연인들의 데이트코스 현장체험학습장으로<br>
+                                최적의 장소이며 봄가을 축제를 비롯해 물놀이장 눈썰매까지<br>가능한 사계절 테마공원입니다.
+                           </p> 
+
+                            <ul class="ld-list">
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_01_1.jpg" alt="메타세콰이어 로드"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_01_2.jpg" alt="메타세콰이어 로드"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">메타세콰이어 로드</p>
+                                        <p class="ld-list-txt">직선구간 200m정도로 조성되어 있으며 계절마다 다른 느낌을 주는 길입니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_02_1.jpg" alt="느티나무 광장"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_02_2.jpg" alt="느티나무 광장"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">느티나무 광장</p>
+                                        <p class="ld-list-txt">시원한 나무 그늘 아래에서 독서와 음악감상은 물론 각종 체험학습이<br>이루어 지는 곳으로 여름철에는 물놀이장의 휴식공간으로 봄가을의 하우스<br>웨딩장소로도 활용되는 공간입니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_03_1.jpg" alt="잔디광장"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_03_2.jpg" alt="잔디광장"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">잔디광장</p>
+                                        <p class="ld-list-txt">각종 동물조각과 조형물이 전시되어 있는 잔디광장은 아이들에게 마음껏<br>뛰어 놀 수 있는 장소로 어른들에게는 휴식과 힐링의 장소로 애용되는 곳입니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_04_1.jpg" alt="동물농장"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_04_2.jpg" alt="동물농장"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">동물농장</p>
+                                        <p class="ld-list-txt">유산양과 다람쥐 토끼 그리고 공작을 비롯한 각종조류들이 어우러져 있는 동물농장은<br>직접 보고 만지며 또 먹이주기 체험도 가능한 곳입니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_05_1.jpg" alt="윈드밀가든"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_05_2.jpg" alt="윈드밀가든"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">윈드밀가든</p>
+                                        <p class="ld-list-txt">봄철 튤립축제를 시작으로 여름철 후록스와 가을의 각종 세이지와<br>국화까지 연중 다양한 꽃을 감상할 수 있는 공간입니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_06_1.jpg" alt="워터가든"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_06_2.jpg" alt="워터가든"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">워터가든</p>
+                                        <p class="ld-list-txt">특이하게 화장실 옥상에 조성된 워터가든은 수련을 비롯한 다양한<br>수생식물을 볼 수 있으며 바람이 불면 아름다운 풍경소리를 들을 수 있고<br>난간에 서면 아산만을 조망할 수 있습니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_07_1.jpg" alt="전망대"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_07_2.jpg" alt="전망대"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">전망대</p>
+                                        <p class="ld-list-txt">피나클랜드의 최점상에 위치한 전망대에서는 멀리<br>서해대교와 평택호 그리고 아산만의 드넓은 평야를 감상하실 수 있습니다. .</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_08_1.jpg" alt="태양의 인사"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_08_2.jpg" alt="태양의 인사"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">태양의 인사</p>
+                                        <p class="ld-list-txt">피나클랜드의 랜드마크이기도 한 이 조형물은 일본의 스스무 신구씨의<br>2005년도 작품으로 동력을 사용하지 않고 순순한 바람의 힘으로 미풍에도 회전하며<br>태풍에도 스스로 속도를 제어하는 과학적 설계로 만들어진 작품입니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_09_1.jpg" alt="지그재그 길"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_09_2.jpg" alt="지그재그 길"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">지그재그 길</p>
+                                        <p class="ld-list-txt">지그재그 형태의 이 길은 영산홍과 함께 봄부터 가을까지<br>팬지 베고니아 메리골드등으로 아름다운 산책로를 보여주며<br>가장 사람들에게 인기있는 길입니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_10_1.jpg" alt="웨딩가든"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/pina/list_facil_10_2.jpg" alt="웨딩가든"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">워터가든</p>
+                                        <p class="ld-list-txt">이 곳에서 치러지는 하우스웨딩은 많은 신부들의 로망이며 꽃과 자연 그리고 아름다운<br>연회홀에 둘러싸인 이곳 가든에서의 웨딩은 당사자뿐 아니라 수많은<br>입장객에게 또 다른 즐거움을 선사한다. </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="ld-btn-area">
+                        <div class="ld-btn-box">
+                            <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/pina/btn_single.jpg" alt="피나클랜드 단품구매"></a>
+                            <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/pina/btn_pakage.jpg" alt="피나클랜드&숙박 패키지구매"></a>
+                        </div>
+                    </div>
+                </li>-->
             </ul>
         </div>
 	</div>

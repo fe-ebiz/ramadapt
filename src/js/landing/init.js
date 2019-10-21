@@ -8,6 +8,7 @@ $(function() {
 function tabFn() {
     $('.Landing .ld-tab-sect .ld-tab-list > li, .Landing .ld-bn-sect .ld-bn-list > li').on('click', function(){
         var idx = $(this).index(); 
+        var hdH = $('#header').height(); 
         
         if( $(this).hasClass('nope') ) {
 
@@ -19,7 +20,7 @@ function tabFn() {
 
             //190710 수정
             $('html, body').stop().animate({
-                scrollTop : ($('#tab-sect').offset().top)
+                scrollTop : ($('#tab-sect').offset().top - hdH)
             }, 500);
         }
         

@@ -5,7 +5,7 @@
     <!-- 별도 css, js 가져오기 -->
     <link rel="stylesheet" href="http://static.ramadapt.co.kr/css/m/landing/init.css">
     <!-- <link rel="stylesheet" href="../../../static/css/m/landing/init.css">-->
-     <link rel="stylesheet" href="../../static/css/m/landing/init.css">
+     <!--<link rel="stylesheet" href="../../static/css/m/landing/init.css">-->
      
     <script src="http://static.ramadapt.co.kr/js/m/landing/init.js"></script>
     <!--<script src="../../../static/js/m/landing/init.js"></script>--> 
@@ -13,7 +13,8 @@
 </head>
 <body class="Landing">
 
-<div id="Contents">
+<!--<div id="Contents">-->
+<div id="content" class="sub_content">
 	@@include('../include/_header.html')
 
 	<div id="content">
@@ -23,7 +24,8 @@
             </ul>
         </div>
         
-        <div class="ld-tab-sect" id="tab-sect">
+        <!-- 190828 멀티클래스 추가 -->
+        <div class="ld-tab-sect type-2" id="tab-sect">
             <div class="ld-tab-box">
                 <ul class="ld-tab-list ld-toggle">
                     <li class="item spa on">
@@ -49,6 +51,13 @@
                         <a href="javascript:;" role="button">
                             <img class="off" src="http://img.ramadapt.co.kr/m/landing/common/tab_land.png" alt="에버랜드">
                             <img class="on" src="http://img.ramadapt.co.kr/m/landing/common/tab_land_on.png" alt="에버랜드">
+                        </a>
+                    </li>
+                    <!-- 190828 아산레일바이크 추가 -->
+                    <li class="item rail">
+                        <a href="javascript:;" role="button">
+                            <img class="off" src="http://img.ramadapt.co.kr/m/landing/common/tab_rail.png" alt="아산레일바이크">
+                            <img class="on" src="http://img.ramadapt.co.kr/m/landing/common/tab_rail_on.png" alt="아산레일바이크">
                         </a>
                     </li>
                    <!-- 190712 피나클랜드 추가 -->
@@ -479,6 +488,109 @@
                         <div class="ld-btn-box">
                             <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/land/btn_single.jpg" alt="에버랜드 단품구매"></a>
                             <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/land/btn_pakage.jpg" alt="에버랜드&숙박 패키지구매"></a>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- 190828 아산레일바이크 추가 -->
+                <li class="item rail">
+                    <div class="ld-main-area">
+                        <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/m/landing/rail/tit_main.png" alt="아산 레일바이크&라마다앙코르평택호텔"></h2>
+                            <p class="ld-sub-tit">1960년대말 소도시 풍경을<br>그대로 간직하고 있는 아산레일바이크,<br>온 가족이 함께 즐기는 색다른 경험, 자연의 풍경을 즐겨보세요!</p> 
+                            <figure class="img-map">
+                                <img src="http://img.ramadapt.co.kr/m/landing/rail/img_main.jpg" alt="아산레일바이크와 라마다앙코르평택호텔 패키지">
+                            </figure>
+                        </div>
+                    </div>
+                
+                    <div class="ld-rest-area">
+                        <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/m/landing/rail/tit_rest.png" alt="아산 레일바이크&숙소 예약하기"></h2>
+                            <p class="ld-sub-tit"><em>가격걱정 NO!</em><br>패키지 할인특가로 <span class="f-pt">프리미엄 호텔의 품격있는<br>혜택과 서비스를 최저가로 이용</span>해보세요!</p>
+
+                            <div class="ld-rest-box">
+                                <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/landing/rail/list_rest_01.jpg" alt="아산레일바이크 탑승권 상품 바로가기"></a>
+                                <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/landing/rail/list_rest_02.jpg" alt="아산레일바이크 탑승권+평택라마다앙코르호텔 상품 바로가기"></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <div class="ld-list-area">
+                        <div class="container">
+                            <h2 class="ld-tit"><img src="http://img.ramadapt.co.kr/landing/rail/tit_facil.png" alt="아산레일바이크 시설안내"></h2>
+                            <p class="ld-sub-tit">아산레일바이크는 옛도고온천역부터 출발하여<br>왕복 4.8km 구간에서 사시사철 색다른 느낌과 경험으로<br>자연이 살아 숨쉬는 풍경을 만나실 수 있습니다.</p> 
+
+                            <ul class="ld-list">
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/rail/list_facil_01_1.jpg" alt="시원한 들판을 달리자!"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/rail/list_facil_01_2.jpg" alt="시원한 들판을 달리자!"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">시원한 들판을 달리자!</p>
+                                        <p class="ld-list-txt">맑은 공기와 시원한 들판을 달리며<br>사계절의 색다른 전경을 감상하실 수 있습니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/rail/list_facil_02_1.jpg" alt="페달을 밟는 미니기차"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/rail/list_facil_02_2.jpg" alt="페달을 밟는 미니기차"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">페달을 밟는 미니기차</p>
+                                        <p class="ld-list-txt">사랑하는가족 , 연인, 친구와 함게 페달을 밟으며 달리는 점이<br>다양한 관광객들의 큰 인기를 얻고 있습니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/rail/list_facil_03_1.jpg" alt="복선구조"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/rail/list_facil_03_2.jpg" alt="복선구조"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">복선구조</p>
+                                        <p class="ld-list-txt">
+                                            낭만의 철길을 달린다. 누구나 다함께~<br>
+                                            이용객이 몰려도 복선구조의 철길때문에 상시 출발이 가능합니다.<br>
+                                            기다리는 시간없이 빠른 이용이 가능합니다.
+                                       </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/rail/list_facil_04_1.jpg" alt="레일바이크 자동운행 코스"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/rail/list_facil_04_2.jpg" alt="레일바이크 자동운행 코스"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">레일바이크 자동운행 코스</p>
+                                        <p class="ld-list-txt">
+                                            레일바이크 반환점을 돌아오시는 마지막 400미터는 자동운행구간입니다.<br>
+                                            페달을 밟지않아도 바이크가 자동으로 움직이므로<br>힘들이지 않고 재미있게 즐길 수 있어요.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ld-list-img-box">
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/rail/list_facil_05_1.jpg" alt="오래된 간이역의 추억"></figure>
+                                        <figure><img src="http://img.ramadapt.co.kr/landing/rail/list_facil_05_2.jpg" alt="오래된 간이역의 추억"></figure>
+                                    </div>
+                                    <div class="ld-list-txt-box">
+                                        <p class="ld-list-tit">오래된 간이역의 추억</p>
+                                        <p class="ld-list-txt">
+                                            구) 도고온천역은 지금은 폐쇄된 간이역으로 지금은 아산레일바이크 !<br>
+                                            지난 시간을 추억하며 편안한 시간을 함께하세요. 
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="ld-btn-area">
+                        <div class="ld-btn-box">
+                            <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/rail/btn_single.jpg" alt="아산레일바이크 단품구매"></a>
+                            <a href="#none" class="btn-link"><img src="http://img.ramadapt.co.kr/m/landing/rail/btn_pakage.jpg" alt="아산레일바이크&숙박 패키지구매"></a>
                         </div>
                     </div>
                 </li>

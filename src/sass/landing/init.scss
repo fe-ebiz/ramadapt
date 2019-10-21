@@ -17,6 +17,7 @@ $dogo: #0179f3;
 $risom: #ff711c; 
 $spa: #009848; 
 $land: #932af5;
+$rail: #00a1ab;
 $pina: #e4295b;
 * {
     font-family: "Noto Sans KR", "Nanum Gothic", sans-serif; 
@@ -79,7 +80,7 @@ $pina: #e4295b;
             height: 139px;
             margin: 0 auto;
             text-align: center;
-            padding: 0 0 0 5px;
+            padding: 0 0 0 15px;
             &:first-child {
                 padding-left: 0;
             }
@@ -132,6 +133,7 @@ $pina: #e4295b;
         top: 68px;
         right: -200px;
         margin-top: 0;
+        transition: all 0.2s ease 0s;
         li {
             margin-top: 8px;
             line-height: 0;
@@ -176,9 +178,12 @@ $pina: #e4295b;
     
     &.on {
         position: fixed;
-        top: 0;
-        left: 50%;
+        top: 0; 
+        left: 50%; 
         margin-left: -500px;
+        .ld-bn-list { 
+            top: 125px;
+        } 
     }
 }
 
@@ -583,6 +588,41 @@ $pina: #e4295b;
                             p {
                                 &.ld-list-tit {
                                     color: $land;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    &.rail {
+        .ld-cont {
+            &:before {
+                background: url(http://img.ramadapt.co.kr/landing/rail/bg_wave.png) repeat-x;
+            }
+            
+            .ld-sub-tit {
+                .f-pt {
+                    color: $rail;
+                }
+            }
+            
+            /* all */
+            .ld-main-area {
+                background: $rail;
+            }
+
+            /* facil */
+            .ld-list-area {
+
+                .ld-list {
+                    li {
+                        .ld-list-txt-box {
+                            p {
+                                &.ld-list-tit {
+                                    color: $rail;
                                 }
                             }
                         }

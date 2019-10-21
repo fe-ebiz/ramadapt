@@ -8,6 +8,7 @@ $(function() {
 function tabFn() {
     $('.Landing .ld-tab-sect .ld-tab-list > li').on('click', function(){
         var idx = $(this).index(); 
+        var hdH = $('#header_ramada').height(); 
         
         $('.ld-toggle').each(function(index, item) {
             $(item).children('li').eq(idx).addClass('on').siblings().removeClass('on'); 
@@ -17,7 +18,7 @@ function tabFn() {
         
         $('html, body').stop().animate({
             //190710 수정
-            scrollTop : ($('#ld-cont-sect').offset().top -4)
+            scrollTop : ($('#ld-cont-sect').offset().top - (hdH-2))
             //scrollTop : $('#visual-sect').offset().top
         }, 0);
     });

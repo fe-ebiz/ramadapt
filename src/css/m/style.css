@@ -665,6 +665,10 @@ body {
     padding-top: 56px;
 	background: #fff;
 }
+
+#content #content { 
+    padding-top: 0;
+}
 /* .Main #content {
 	margin-bottom: 0;
 } */
@@ -700,7 +704,7 @@ body {
     background:#272d34;
 }
 #header_ramada.on { 
-    z-index: 99;
+    z-index: 102;
     position: fixed;
 }
 #util_box {
