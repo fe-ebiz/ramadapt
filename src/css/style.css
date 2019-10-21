@@ -1597,8 +1597,8 @@ body {
 .fz_16 {font-size: 16px !important;}
 .fz_18 {font-size: 18px !important;}
 /* 190628 고코링크 추가 */
-#footer .right_area .btn-goco {position: absolute; display: inline-block; left: 223px; margin-top: 5px;}
-#footer .right_area .btn-goco img {}
+/* #footer .right_area .btn-goco {position: absolute; display: inline-block; left: 223px; margin-top: 5px;}
+#footer .right_area .btn-goco img {} */
 #footer .right_area .row {
 	line-height: 1.6em;
 }
@@ -1630,7 +1630,7 @@ body {
 }
 
 /* footer 언어메뉴 */
-#footer .util-box {position: absolute; margin-top: 18px;}
+#footer .util-box {margin-top: 18px;}
 
 .Main #footer_v2 .address {
    color: #ffb0b0;
@@ -1640,6 +1640,63 @@ body {
    right: 0px;
    top: 0px;
 }
+
+/* family-site */
+.family-wrapper {
+    margin-top: 30px;
+}
+.family-wrapper .goco-cover,
+.family-wrapper .family-site {
+    display: inline-block;
+    vertical-align: middle;
+}
+.family-wrapper .family-site {
+    position: relative;
+    margin-left: 10px;
+    width: 130px;
+    box-sizing: border-box;
+    color: #252525;
+    cursor: pointer;
+}
+
+.family-wrapper .family-site-label,
+.family-wrapper .family-site .site {
+    width: 100%;
+    background-color: #ddd;
+    border: 1px solid #adadad;
+    box-sizing: border-box;
+}
+
+.family-wrapper .family-site-label {
+    display: block;
+    padding-left: 10px;
+    line-height: 22px;
+    height: 24px;
+}
+
+.family-wrapper .family-site .site {
+    z-index: 9999;
+    position: absolute;
+    padding-bottom: 10px;
+    left: 0;
+    bottom: 23px;
+}
+
+.family-wrapper .family-site .site .group-name {
+    margin-top: 10px;
+}
+.family-wrapper .family-site .site .group-name .fam_btn {
+    font-weight: 700;
+}
+
+.family-wrapper .family-site .site .fam_btn {
+    font-size: 14px;
+    padding-left: 10px;
+}
+.family-wrapper .family-site .site .fam_btn a {
+    color: #252525;
+}
+
 /* ----------------------------------------------------------------
  sub_visual
  -----------------------------------------------------------------*/
