@@ -1265,7 +1265,7 @@ html.mmenu-right.mmenu-opening .mmenu-page, html.mmenu-right.mmenu-opening #mmen
     vertical-align: middle;
  }
 /* 190628 고코링크 추가 */
- #footer_ramada .btn-goco {
+ /* #footer_ramada .btn-goco {
  	display: inline-block;
     margin: 0 0 8px 12px;
     vertical-align: middle;
@@ -1274,7 +1274,7 @@ html.mmenu-right.mmenu-opening .mmenu-page, html.mmenu-right.mmenu-opening #mmen
  	display: inline-block;
     width: 78px;
     vertical-align: middle;
- }
+ } */
  #footer_ramada .privacyBtn {
  	display: inline-block;
  	color: #6e6e6e;
@@ -1344,6 +1344,74 @@ html.mmenu-right.mmenu-opening .mmenu-page, html.mmenu-right.mmenu-opening #mmen
 	margin-bottom:18px;
 	text-align: center;
 } */
+
+/* family-site */
+.family-wrapper {
+    display: inline-block;
+    /* margin-top: 30px; */
+}
+.family-wrapper .goco-cover,
+.family-wrapper .family-site {
+    display: inline-block;
+    vertical-align: middle;
+}
+.family-wrapper .goco-cover {
+    margin-left: 5px;
+}
+.family-wrapper .goco-cover .btn-goco img {
+    width: 80px;
+}
+.family-wrapper .family-site {
+    position: relative;
+    margin-left: 5px;
+    width: 115px;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #252525;
+    cursor: pointer;
+}
+
+.family-wrapper .family-site-label,
+.family-wrapper .family-site .site {
+    width: 100%;
+    background-color: #ddd;
+    border: 1px solid #adadad;
+    box-sizing: border-box;
+}
+
+.family-wrapper .family-site-label {
+    display: block;
+    padding-left: 5px;
+    line-height: 22px;
+    height: 24px;
+}
+
+.family-wrapper .family-site .site {
+    z-index: 9999;
+    position: absolute;
+    padding-bottom: 5px;
+    left: 0;
+    bottom: 23px;
+}
+
+.family-wrapper .family-site .site .group-name {
+    margin-top: 5px;
+}
+.family-wrapper .family-site .site .group-name .fam_btn {
+    font-weight: 700;
+}
+
+.family-wrapper .family-site .site .fam_btn {
+    padding-left: 5px;
+    line-height: 1.5;
+}
+.family-wrapper .family-site .site .fam_btn a {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #252525;
+}
 /* ----------------------------------------------------------------
  visual_main
  -----------------------------------------------------------------*/

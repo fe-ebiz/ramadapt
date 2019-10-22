@@ -1658,6 +1658,7 @@ body {
     margin-left: 10px;
     width: 130px;
     box-sizing: border-box;
+    font-size: 13px;
     color: #252525;
     cursor: pointer;
 }
@@ -1697,6 +1698,10 @@ body {
     padding-left: 10px;
 }
 .family-wrapper .family-site .site .fam_btn a {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     color: #252525;
 }
 
