@@ -1645,11 +1645,9 @@ body {
 }
 
 /* family-site */
+#footer .btn-goco,
 .family-wrapper {
     margin-top: 30px;
-}
-.family-wrapper .goco-cover,
-.family-wrapper .family-site {
     display: inline-block;
     vertical-align: middle;
 }

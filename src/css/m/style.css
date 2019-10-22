@@ -1346,19 +1346,15 @@ html.mmenu-right.mmenu-opening .mmenu-page, html.mmenu-right.mmenu-opening #mmen
 } */
 
 /* family-site */
+#footer_ramada .btn-goco,
 .family-wrapper {
-    display: inline-block;
-    /* margin-top: 30px; */
-}
-.family-wrapper .goco-cover,
-.family-wrapper .family-site {
     display: inline-block;
     vertical-align: middle;
 }
-.family-wrapper .goco-cover {
+#footer_ramada .btn-goco {
     margin-left: 5px;
 }
-.family-wrapper .goco-cover .btn-goco img {
+#footer_ramada .btn-goco img {
     width: 80px;
 }
 .family-wrapper .family-site {
