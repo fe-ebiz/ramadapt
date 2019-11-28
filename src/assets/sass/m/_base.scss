@@ -1,0 +1,385 @@
+@charset 'UTF-8';
+
+body {
+    // font-size: 13px;
+    // font-family: 'Nanum Gothic', 'Malgun Gothic', '맑은고딕', Dotum, "돋움", Arial, Helvetica, sans-serif;
+    // line-height: 1.6em;
+    // letter-spacing: -0.5px;
+    // color: #6d6d6d;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.blind {
+    overflow: hidden;
+    display: block;
+    text-indent: -9999px;
+    zoom: 1;
+}
+
+.hide {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #5d5d5d;
+    outline: none !important;
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: underline;
+}
+
+.img {
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.tdn:active,
+.tdn:hover,
+.tdn:focus {
+    text-decoration: none !important;
+}
+
+.cblue {
+    color: #164984
+}
+
+.cgreen {
+    color: #0a5fab
+}
+
+.cmain {
+    color: #272d34
+}
+
+.cred {
+    color: #c51b1b !important;
+}
+
+.cyellow {
+    color: #ffba00 !important;
+}
+
+.c-yellow {
+    color: yellow !important;
+}
+
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+}
+
+body a:link,
+body a:visited {
+    color: inherit;
+}
+
+.sm_text {
+    color: #8d8d8d;
+    font-size: 11px;
+    line-height: 1.5em;
+}
+
+/* ----------------------------------------------------------------
+ bxSlider Classes
+ ----------------------------------------------------------------*/
+.bx-wrapper .bx-controls-direction a {
+    z-index: 100 !important;
+}
+
+/* ----------------------------------------------------------------
+ Helper Classes
+ -----------------------------------------------------------------*/
+.fl {
+    float: left !important;
+}
+
+.fr {
+    float: right !important;
+}
+
+.tl {
+    text-align: left !important;
+}
+
+.tr {
+    text-align: right !important;
+}
+
+.tc {
+    text-align: center !important;
+}
+
+.tfix {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.clearFix {
+    clear: both;
+}
+
+.clr:before,
+.clr:after,
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.clr:after,
+.group:after {
+    clear: both;
+}
+
+.clr,
+.group {
+    zoom: 1;
+}
+
+.centerThis {
+    margin: 0 13px;
+    position: relative;
+    display: block;
+}
+
+.hand {
+    cursor: hand;
+    cursor: pointer;
+}
+
+.mgt5 {
+    margin-top: 5px !important;
+}
+
+.mgt10 {
+    margin-top: 10px !important;
+}
+
+.mgt15 {
+    margin-top: 15px !important;
+}
+
+.mgt20 {
+    margin-top: 20px !important;
+}
+
+.mgt30 {
+    margin-top: 30px !important;
+}
+
+.mgt40 {
+    margin-top: 40px !important;
+}
+
+.mgt50 {
+    margin-top: 50px !important;
+}
+
+.mgt60 {
+    margin-top: 60px !important;
+}
+
+.mgt80 {
+    margin-top: 80px !important;
+}
+
+.mgb20 {
+    margin-bottom: 20px !important;
+}
+
+input,
+select,
+textarea {
+    font-family: nr, Arial, Helvetica, sans-serif;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    *overflow: hidden;
+}
+
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+    border: 0px;
+    border: 1px solid #dedede;
+}
+
+input[type="radio"] {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+    border: 0px;
+    border: 1px solid #dedede;
+}
+
+.input_type01 {
+    padding: 5px 8px;
+    height: 24px;
+    line-height: 24px;
+    color: #6d6d6d;
+    font-weight: bold;
+    border: 1px solid #dedede;
+    background: #fafafa;
+    display: inline-block;
+}
+
+.sel_type01 {
+    color: #6d6d6d;
+    font-weight: bold;
+    vertical-align: middle;
+    border: 1px solid #dedede;
+    background: #fafafa;
+    display: inline-block;
+    padding: 5px;
+    width: 100px;
+    height: auto;
+    border-radius: 0px;
+}
+
+.label_span span {
+    margin-right: 5px;
+}
+
+/* ----------------------------------------------------------------
+ button
+ -----------------------------------------------------------------*/
+.sm_btn,
+.md_btn,
+.big_btn,
+.large_btn {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.big_btn {
+    height: 35px;
+    line-height: 35px;
+    margin: 0;
+    padding: 0px 20px;
+    color: #ffffff;
+    background: #c51b1b;
+    font-size: 14px;
+    min-width: 40px;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+.md_btn {
+    height: 32px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0px 20px;
+    color: #ffffff;
+    background: #c51b1b;
+    font-size: 14px;
+    min-width: 40px;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+.large_btn {
+    width: 100%;
+    padding: 8px 0 10px 0;
+    background: #c51b1b;
+    color: #fff;
+    font-weight: normal;
+}
+
+.large_btn p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffff00;
+}
+
+.sm_btn:hover,
+.sm_btn:focus,
+.sm_btn:active,
+.md_btn:hover,
+.md_btn:focus,
+.md_btn:active,
+.big_btn:hover,
+.big_btn:focus,
+.big_btn:active {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.btn_gray {
+    background: #adadad;
+}
+
+.btn_red {
+    background: #c51b1b;
+    padding: 0 25px;
+}
+
+.btn_ff {
+    background: #ffffff;
+    border: 1px solid #70a1b9;
+    color: #0a5fab;
+}
+
+.btn_area {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.btn_area span {
+    padding: 0px 3px;
+}
+
+/*.mail {
+ padding-left: 25px;
+ background: url(http://img.ramadapt.co.kr/m/icon_mail.png) no-repeat left 3px;
+ background-size: 15px;
+ }*/
+.big_btn .mail {
+    background: url(http://img.ramadapt.co.kr/m/icon_btn.png) no-repeat 0 -79px;
+    padding-left: 30px;
+    display: inline-block;
+}

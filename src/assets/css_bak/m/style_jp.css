@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+.df_tb {
+	font-size: 13px;
+	th {
+		font-size: 13px;
+	}
+}
+#footer_ramada {
+	.right_area {
+		.row {
+			.s_1 {
+				display: block;
+			}
+		}
+		.row.fz_13 {
+			letter-spacing: -1.1px;
+		}
+	}
+}
+#visual_main {
+	.item_1 {
+		.text {
+			margin-top: -83px;
+		}
+	}
+}
+#main_event {
+	.evt-area {
+		.evt-box {
+			.evt-tit {
+				font-size: 13px;
+			}
+		}
+	}
+}
+.about {
+	dd {
+		word-break: break-all;
+	}
+}
+#company01 {
+	td {
+		text-align: left;
+	}
+	.text {
+		p {
+			letter-spacing: -0.5px;
+		}
+	}
+}
+.page_copy {
+	.room_info {
+		font-size: 17px;
+		word-break: break-all;
+	}
+}
+#pg_title {
+	h2 {
+		font-size: 22px;
+		letter-spacing: -2.5px;
+	}
+}
+@media (max-device-width: 320px) {
+	.df_tb {
+		font-size: 12px;
+		th {
+			font-size: 12px;
+		}
+	}
+	#main_event {
+		.centerThis {
+			margin: 0 11px;
+		}
+	}
+	.page_copy {
+		dt {
+			font-size: 20px;
+		}
+		dd {
+			font-size: 20px;
+		}
+		.room_info {
+			font-size: 16px;
+		}
+	}
+	#pg_title {
+		h2 {
+			font-size: 20px;
+		}
+	}
+}

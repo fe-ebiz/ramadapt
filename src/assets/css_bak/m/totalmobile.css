@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+/* 라마다 예약하기 메뉴 */
+.bk-menu-m {box-sizing: border-box;}
+.bk-menu-m li {float: left; width: 50%; text-align: center; background: #ea3433;}
+.bk-menu-m li:first-child {background: #c51b1b;}
+.bk-menu-m li a {display: block; height: 40px; font-size: 16px; line-height: 40px;}
+.bk-menu-m li:first-child a {border-right: 1px solid #a41c1c;}
+/* 한개일때 */
+.bk-menu-m.only {}
+.bk-menu-m.only li {float: none; width: 100%;}

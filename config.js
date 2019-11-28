@@ -26,34 +26,34 @@ module.exports = function() {
 
 		// Sass 경로
 		sass = {
-			src: source + '/sass/**/!(_)*.{scss,sass}',
-			parts: source + '/sass/**/_*.{scss,sass}',
+			src: source + '/assets/sass/**/!(_)*.{scss,sass}',
+			parts: source + '/assets/sass/**/_*.{scss,sass}',
 			dest      : development + '/static/css'
 		},
 
 		// Css 경로
 		css = {
-			src : source + '/css/**/*.css',
+			src : source + '/assets/css/**/*.css',
 			dest: development + '/static/css'
 		},
 
 		// JS 경로
 		js = {
-			src : source + '/js/**/*.js',
+			src : source + '/assets/js/**/*.js',
 			dest: development + '/static/js'
 		},
 
 		// Img 경로
 		img = {
 			// src : source + '/assets/img/**/*.{gif,jpg,png,ico}',
-			src: source + '/img/**/!(sprite)*/*',
-			src_sprite: source + '/img/**/sprite*/*',
+			src: source + '/assets/img/**/!(sprite)*/*',
+			src_sprite: source + '/assets/img/**/sprite*/*',
 			dest: development + '/img',
 		},
 
 		// etc 경로
 		etc = {
-			src: source + '/!(css|scss|js|img)/**',
+			src: source + '/assets/!(css|img|js|sass)*/**/*',
 			dest: development + '/static',
 		},
 

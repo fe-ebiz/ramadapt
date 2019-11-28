@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+.gnbDiv {
+    .gnbWrap {
+        .gnb {
+            left: auto;
+            right: 0;
+
+            .one {
+                width: 130px;
+            }
+
+            .two {
+                width: 170px;
+            }
+
+            .three {
+                width: 150px;
+            }
+
+            .five {
+                .oneDep {
+                    text-indent: 10px;
+                }
+            }
+        }
+
+        .evtTab {
+            right: -180px;
+        }
+    }
+}
+
+#footer {
+    padding: 30px 0 100px;
+
+    .left_area {
+        width: 500px;
+    }
+
+    .right_area {
+        width: 470px;
+        padding-left: 20px;
+    }
+}
+
+.Main {
+    #footer {
+        padding: 30px 0 100px;
+    }
+}
+
+#tour {
+    ul {
+        >li {
+            >p {
+                min-height: 90px;
+            }
+        }
+    }
+}
+
+#main_notice {
+    .suttle_usa {
+        padding-top: 30px;
+        clear: none;
+    }
+}
+
+#main_notice.type-2 {
+    .split-1 {
+        width: 590px;
+    }
+
+    .split-2 {
+        width: 380px;
+        float: right;
+    }
+}
+
+.Booking {
+    #rsv_sang {
+        #rsv_s_tab {
+            colgroup {
+                col {
+                    &:first-child {
+                        width: 620px;
+                    }
+
+                    &:first-child+col {
+                        width: 175px;
+                    }
+                }
+            }
+        }
+    }
+
+    .pdtSlt-sec2 {
+        .part-1 {
+            h3 {
+                font-size: 17px;
+            }
+
+            .dep-1 {
+                >li {
+                    .lbl {
+                        width: 70px;
+                        font-size: 14px;
+                    }
+
+                    .lbl.pl15 {
+                        width: 60px;
+                        padding-left: 20px;
+                    }
+
+                    select.type-2 {
+                        font-size: 13px;
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            .single-prc {
+                .pull-left {
+                    font-size: 14px;
+                }
+
+                .c-red {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .part-con {
+            .ul-1 {
+                li {
+                    .quan {
+                        vertical-align: middle;
+
+                        input.inp {
+                            float: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #rsv_s_list {
+        .pay-box {
+            padding-right: 7px;
+            text-align: center;
+
+            >.nth2 {
+                text-align: left;
+
+                .f-bd.s1 {
+                    font-size: 20px;
+                }
+
+                .ps {
+                    font-size: 11px;
+                }
+
+                s {
+                    font-size: 20px;
+
+                    >span {
+                        font-size: 14px;
+                    }
+                }
+
+                .c-red {
+                    font-size: 28px;
+
+                    .sm {
+                        font-size: 19px;
+                    }
+                }
+            }
+
+            >.nth3 {
+                a {
+                    width: 190px;
+                }
+            }
+        }
+    }
+
+    .sltCheck-sec {
+        .part-common {
+            min-height: 163px;
+        }
+    }
+
+    #wrapper1 {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+
+    #reser_check {
+        position: relative;
+
+        .receipt {
+            float: none;
+
+            .comment {
+                position: absolute;
+                display: block;
+                right: 13px;
+            }
+        }
+    }
+
+    .goods_box {
+        .room_check {
+            ul {
+                li {
+                    font-size: 13px;
+                }
+
+                li.left_check {
+                    width: 100px;
+                }
+            }
+        }
+    }
+
+    .check-inOut.utilization_package {
+        margin-top: 5px;
+    }
+
+    .payment_Btn {
+        margin-top: 30px;
+    }
+}

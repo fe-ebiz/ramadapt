@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+table {
+    font-size: 13px;
+}
+
+.df_tb {
+    th {
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+
+    td {
+        letter-spacing: 0;
+    }
+}
+
+.gnbDiv {
+    .gnbWrap {
+        .gnb {
+            ul {
+                li {
+                    min-width: 124px;
+                }
+
+                .two {
+                    width: 150px;
+                }
+            }
+        }
+    }
+}
+
+#lnb {
+    li {
+        font-size: 16px;
+    }
+}
+
+#footer {
+    padding: 30px 0 85px;
+
+    .address {
+        font-size: 13px;
+    }
+
+    .left_area {
+        width: 520px;
+    }
+
+    .right_area {
+        .row {
+            .s_1 {
+                display: block;
+            }
+        }
+    }
+}
+
+.Main {
+    #footer {
+        padding: 30px 0 85px;
+    }
+}
+
+.mainVisual {
+    h2 {
+        letter-spacing: -3.6px;
+    }
+
+    h3 {
+        letter-spacing: -2.5px;
+    }
+
+    .link {
+        line-height: 26px;
+    }
+}
+
+#main_event {
+    .evt-area {
+        .evt-box {
+            float: right;
+            margin-left: 25px;
+            padding-right: 15px;
+        }
+    }
+}
+
+#main_notice {
+    .cont_group {
+        .cont_title {
+            letter-spacing: -2px;
+        }
+    }
+}
+
+#company03 {
+    .text {
+        width: 415px;
+
+        p {
+            letter-spacing: -1px;
+
+            strong {
+                font-size: 19px;
+                letter-spacing: -1.4px;
+            }
+        }
+    }
+}
+
+.faci_info {
+    display: table;
+    table-layout: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 80px;
+    padding-left: 80px;
+    background: url("http://img.ramadapt.co.kr/bg_faci_info.gif") no-repeat 15px 13px;
+
+    p {
+        display: table-cell;
+        min-height: auto;
+        margin-left: 0;
+        padding-left: 0;
+        letter-spacing: -1.4px;
+        vertical-align: middle;
+    }
+}
+
+.ie8 {
+    #lnb {
+        li {
+            letter-spacing: -1px;
+        }
+    }
+
+    #footer {
+        .right_area {
+            .row.fz_13 {
+                letter-spacing: -1.3px;
+            }
+        }
+    }
+
+    .mainVisual {
+        h2 {
+            letter-spacing: -4px;
+        }
+
+        h3 {
+            letter-spacing: -3px;
+        }
+    }
+
+    #main_notice {
+        .cont_group {
+            .cont_title {
+                letter-spacing: -3px;
+            }
+        }
+    }
+
+    #company03 {
+        .text {
+            p {
+                strong {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .acco_info {
+        letter-spacing: -1.1px;
+    }
+}
+
+.safari {
+    body {
+        * {
+            font-family: "Tahoma", "MS PGothic";
+        }
+    }
+
+    .mainVisual {
+        h2 {
+            letter-spacing: -4px;
+        }
+
+        h3 {
+            letter-spacing: -3px;
+        }
+    }
+
+    #main_event {
+        .evt-area {
+            .evt-box {
+                .evt-tit {
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+
+    .faci_info {
+        min-height: auto;
+
+        p {
+            display: block;
+            padding: 15px 0;
+        }
+    }
+}
