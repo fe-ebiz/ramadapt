@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "description": "템플릿 엔진",
   "author": "joon <vxggangxv@naver.com>",
-  "scripts": {
-    "clone": "git clone https://github.com/gc-lodgment/inc-scss-template.git"
-  },
+  "browserslist": [
+    "last 2 version",
+    "> 0.5%",
+    "IE >= 9"
+  ],
   "dependencies": {
     "npm": "^6.5.0"
   },

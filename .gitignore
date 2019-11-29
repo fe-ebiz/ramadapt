@@ -1,5 +1,4 @@
 # etc
-gulpfile.js/
 _bak/
 _document/
 _draft/
@@ -8,7 +7,6 @@ _media/
 _tmp/
 img/
 dist/
-gulpfile.js
 .sass-cache/
 
 #fontFile
@@ -17,10 +15,6 @@ gulpfile.js
 *.woff2
 *.eot
 *.otf
-
-#sftpFile, zip����
-*.json
-*.zip
 
 # ImeageFile
 *.jpg

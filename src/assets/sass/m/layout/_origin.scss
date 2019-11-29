@@ -298,7 +298,7 @@ body {
 /* ----------------------------------------------------------------
  goto_area
  -----------------------------------------------------------------*/
-.goto_area { display;block; width:100%; }
+.goto_area { display: block; width:100%; }
 .goto_area:after { content:''; display:block; clear:both;}
 .goto_area li { float:left;  width:50%;  }
 .goto_area li a { display:inline-block;width:100%; height:45px; padding-top:20px; font-size:18px; text-align:center; color:#fff; background:#7f98af;}
@@ -1035,7 +1035,7 @@ body {
 	border: 1px solid #ededed;
 }
 /* 배너사이즈와 위치 */
-#s_banner_wrap {width:100%; height:; position: relative; margin:0px 0;}
+#s_banner_wrap {width:100%; position: relative; margin:0px 0;}
 #s_banner_wrap .bx-wrapper {margin-bottom: 5px;}
 
 .about {}
