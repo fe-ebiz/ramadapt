@@ -7,6 +7,7 @@ module.exports = function() {
 
 		// 템플릿 경로
 		template = {
+            srcAll : source + '/(template)*/**/*.html',
 			src  : source + '/template/**/!(_)*.html',
 			parts: source + '/template/**/_*.html',
 			dest : development + '/views',
@@ -26,8 +27,9 @@ module.exports = function() {
 
 		// Sass 경로
 		sass = {
-			src: source + '/assets/sass/**/*.{scss,sass}',
-			// parts: source + '/assets/sass/**/_*.{scss,sass}',
+            // src: source + '/assets/sass/**/*.{scss,sass}',
+            src : source + '/assets/sass/**/!(_)*.{scss,sass}',
+			parts: source + '/assets/sass/**/_*.{scss,sass}',
 			dest      : development + '/static/css'
 		},
 

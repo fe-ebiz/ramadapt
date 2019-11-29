@@ -1,233 +1,170 @@
 @charset 'UTF-8';
 
-#header {
-    z-index: 2;
-    width: 100% !important;
-    clear: both;
-    /*position: relative;*/
-    position: absolute !important;
-    top: 0;
-    height: 83px;
-    line-height: 1.6em;
-    letter-spacing: -0.5px;
+@import '../parts/common';
+
+.header {
+    $hd-ht: 100px;
+    height: $hd-ht;
+
+    .gnb {
+        /*background: #fff;
+        z-index: 2;
+        position: relative;
+        width: 100%;*/
+        z-index: 10;
+        position: absolute;
+        width: 100%;
+        height: $hd-ht;
+        transition: box-shadow .3s;
+
+        &.on {
+            //z-index: 10001;
+            z-index: 99999;
+            position: fixed;
+            background: #fff;
+            //box-shadow: 0 2px 2px rgba(0,0,0, .15);
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 3px;
+            background: #ea3433 url('http://img.ramadapt.co.kr/gnb_bor.jpg') center;
+        }
+
+        .group-f {
+            display: table;
+            @include size(100%, 97px);
+        }
+
+        .logo-box,
+        .nav {
+            position: relative;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .logo-box {
+            width: 570px;
+            padding-left: 10px;
+
+            >h1 {
+                margin: 0;
+                line-height: 1;
+            }
+
+            &.vid {
+                display: none;
+            }
+        }
+
+        .nav {
+            padding-right: 144px;
+
+            .menu {
+                font-size: 0;
+
+                >li {
+                    @include dp;
+                    font-size: 18px;
+
+                    >a {
+                        display: inline-block;
+                        color: inherit;
+                        padding: 0 15px;
+                        line-height: 97px;
+
+                        &:hover {
+                            color: $primary-color-dark;
+                        }
+                    }
+
+                    &:first-child {
+                        >a {
+                            padding-left: 0;
+                        }
+                    }
+
+                    .sub {
+                        display: none;
+                        z-index: 1;
+                        @include pos(absolute, 97px, 50%);
+                        margin-left: -90px;
+                        box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.39);
+
+                        >li {
+                            >a {
+                                display: block;
+                                width: 180px;
+                                line-height: 45px;
+                                background: #fff;
+                                text-align: center;
+                                font-size: 15px;
+                                transition: background-color 0.3s, color 0.3s;
+
+                                &:hover {
+                                    background-color: #2F2F2F;
+                                    color: #ffffff;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .sub {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.vid {
+        $hd-ht: 99px;
+        height: $hd-ht;
+
+        .gnb {
+            z-index: 99999;
+            height: $hd-ht;
+            background: none;
+
+            &:after {
+                height: 2px;
+            }
+
+            .nav {
+                .menu {
+                    .title {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .logo-box {
+            &.com {
+                display: none;
+            }
+
+            &.vid {
+                display: table-cell;
+            }
+        }
+    }
+
+    &.main {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
 }
 
-#header.on {
-    z-index: 115;
-    position: fixed !important;
-}
 
-#content {
-    padding-top: 100px;
-}
-
-#content #content {
-    padding-top: 0;
-}
-
-#Contents {
-    display: table;
-    width: 100%;
-}
-
-/* ----------------------------------------------------------------
- gnbDiv
- -----------------------------------------------------------------*/
-
-.gnbDiv {
-    min-width: 1000px;
-    width: 100%;
-    height: 83px;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background: #fff;
-}
-
-.gnbDiv:before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: #ea3433 url('http://img.ramadapt.co.kr/gnb_bor.jpg') no-repeat center bottom;
-}
-
-.gnbDiv .site {
-    position: absolute;
-    right: 0px;
-    top: 20px;
-}
-
-.gnbDiv a:hover,
-.gnbDiv a:hover,
-.gnbDiv a:active {
-    text-decoration: none;
-}
-
-.gnbDiv .gnbWrap {
-    position: relative;
-    z-index: 999;
-    height: 312px;
-    margin: 0 auto;
-    overflow: hidden;
-    width: 1000px;
-    z-index: 999;
-}
-
-.gnbDiv .gnbWrap h1 {
-    padding-top: 25px;
-}
-
-.gnbDiv .gnbWrap h1 a {
-    position: relative;
-    display: inline-block;
-}
-
-.gnbDiv .gnbWrap h1 .logo_tit {
-    position: absolute;
-    bottom: -20px;
-    left: 6px;
-    font-size: 13px;
-    color: #000;
-    letter-spacing: 7px;
-    white-space: nowrap;
-}
-
-.gnbDiv .gnbWrap .gnb {
-    position: absolute;
-    z-index: 999;
-    /*left: 145px;*/
-    top: 0px;
-    right: 0;
-    /* width: 100%; */
-    /* width: 863px; */
-}
-
-.gnbDiv .gnbWrap .gnb a {
-    display: block;
-}
-
-.gnbDiv .gnbWrap .gnb .oneDep {
-    box-sizing: border-box;
-    height: 83px;
-    /*padding-top: 35px;*/
-    padding: 35px 10px 0;
-    text-align: center;
-    letter-spacing: -1.2px;
-}
-
-.gnbDiv .gnbWrap .gnb ul {
-    overflow: hidden;
-    /*width: 100%;*/
-    float: right;
-    margin-top: 0px !important;
-    margin-right: 145px;
-}
-
-.gnbDiv .gnbWrap .gnb ul li {
-    float: left;
-    text-align: left;
-    min-width: 90px;
-    /*width: 110px*/
-    ;
-    text-indent: 0px;
-    /* width: 16.6%; */
-}
-
-/* .gnbDiv .gnbWrap .gnb ul li.one > a.oneDep {text-indent: 30px;} */
-/* .gnbDiv .gnbWrap .gnb ul li.two {width: 170px;} */
-/* .gnbDiv .gnbWrap .gnb ul li.two > a.oneDep {text-indent: 38px;} */
-/* .one {width:160px;}
-.three {width:160px;}
-.four {width:160px;}
-.five {width:160px;} */
-
-.gnbDiv .gnbWrap .gnb ul li a.oneDep {
-    display: block;
-    position: relative;
-    font-size: 16px;
-    color: #222;
-    font-weight: normal;
-    letter-spacing: 0;
-    /*text-indent: 15px;*/
-}
-
-.gnbDiv .gnbWrap .gnb ul li.on a.oneDep {
-    color: #c51b1b;
-    text-decoration: none;
-}
-
-.gnbDiv .gnbWrap .twoDep {
-    display: block;
-    padding: 12px 0 0 0;
-    border-left: 1px solid #e8eaeb;
-    position: relative;
-    visibility: visible;
-    height: 242px;
-    text-indent: 6px;
-}
-
-.gnbDiv .gnbWrap .gnb ul li.two .twoDep {
-    letter-spacing: -1.5px;
-}
-
-.gnbDiv .gnbWrap .gnb ul li.three .twoDep,
-.gnbDiv .gnbWrap .twoDep.last {
-    border-right: 1px solid #e8eaeb;
-}
-
-.gnbDiv .gnbWrap .twoDep.last {
-    border-left: 0;
-}
-
-.gnbDiv .gnbWrap li.on .twoDep a.off:hover {
-    background: #c51b1b;
-    color: #fff;
-}
-
-.gnbDiv .gnbWrap li .twoDep a.on {
-    background: #c51b1b;
-    color: #fff;
-    vertical-align: top;
-}
-
-.gnbDiv .gnbWrap li .twoDep a {
-    color: #666;
-    font-size: 12px;
-    line-height: 27px;
-    letter-spacing: -0.7pt;
-}
-
-.twoDbg {
-    border-top: 1px solid #ccc;
-    background: #fff;
-    border-bottom: 2px solid #ccc;
-    position: absolute;
-    top: 83px;
-    left: 0;
-    height: 227px;
-    width: 100%;
-    z-index: 90;
-}
-
-.gnbDiv .gnbWrap li.on .guideBg {
-    position: absolute;
-    top: 71px;
-    left: -219px;
-    display: block;
-    z-index: 900;
-}
-
-.guideBg {
-    display: none;
-    position: relative;
-    width: 300px;
-}
+// 해더 이벤트 영역
 
 #header .evtTab {
     position: absolute;

@@ -1,7 +1,9 @@
 @charset 'UTF-8';
 
-@import url('http://static.go.co.kr/css/faq-v1.1.css');
+// @import url('http://static.go.co.kr/css/faq-v1.1.css');
 @import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+
+
 
 /* ----------------------------------------------------------------
  table
@@ -1807,7 +1809,11 @@
 .rWing .btn-wing {margin-top: 4px;}
 .rWing .btn-wing:first-child {margin-top: 0;}
 /* 메인 wing */
-.Main .rWing {top: 108px; margin-left: 620px; width: 120px;}
+.Main .rWing {display: none; top: 108px; margin-left: 620px; width: 120px;}
+.Main .rWing.active {
+    display: block;
+    top: 108px;
+}
 /* 예약 wing */
 .Booking .rWing {top: 240px; transition: all 1s ease 0s;}
 .Booking .rWing.on {top: 175px;}

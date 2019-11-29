@@ -45,7 +45,7 @@ function template() {
 		.pipe(browserSync.stream({ match: '**/*.html' }));
 };
 function templateAll() {
-	return src(config.template.src)
+	return src([config.template.src, config.template.parts])
 		.pipe(fileinclude({
 			prefix: '@@',
 			basepath: '@file'
@@ -67,7 +67,7 @@ function templateM() {
 		.pipe(browserSync.stream({ match: '**/*.html' }));
 };
 function templateMAll() {
-	return src(config.template.src_m)
+	return src([config.template.src_m, config.template.parts_m])
 		.pipe(fileinclude({
 			prefix: '@@',
 			basepath: '@file'
@@ -81,6 +81,13 @@ function templateMAll() {
 // return src(config.sass.src, {since: lastRun(sass), sourcemaps: true})
 function sassDev() {
 	return src(config.sass.src, {sourcemaps: true})
+		.pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
+		.pipe(autoprefixer())
+		.pipe(dest(config.sass.dest, {sourcemaps: true}))
+		.pipe(browserSync.stream({ match: '**/*.css' }));
+};
+function sassDevAll() {
+	return src([config.sass.src, config.sass.parts], {sourcemaps: true})
 		.pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
 		.pipe(autoprefixer())
 		.pipe(dest(config.sass.dest, {sourcemaps: true}))
@@ -135,6 +142,7 @@ function watching(cb) {
 	watch([config.template.src_m], templateM);
 	watch([config.template.parts_m], templateMAll);
 	watch(config.sass.src, sassDev)
+	watch(config.sass.parts, sassDevAll)
 	watch(config.css.src, css)
 	watch(config.js.src, js)
 	watch(config.img.src, img);

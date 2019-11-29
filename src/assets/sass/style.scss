@@ -1,7 +1,9 @@
 @charset 'UTF-8';
 
-@import 'src/assets/sass/reset';
-@import 'src/assets/sass/base';
-@import 'src/assets/sass/layout/main';
-@import 'src/assets/sass/layout/header';
-@import 'src/assets/sass/layout/footer';
+@import './reset';
+@import './base';
+@import './layout/origin';
+@import './layout/footer';
+// @import './layout/header_bak';
+@import './layout/header';
+@import './main/init';
