@@ -68,8 +68,19 @@
 }
 
 // 커스텀 믹스인
-@mixin center($w: 1200px) {
+@mixin center($w: null, $h: null) {
+    position: relative;
     width: $w;
+    height: $h;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin center-block($w: null, $h: null) {
+    position: relative;
+    display: block;
+    width: $w;
+    height: $h;
     margin-left: auto;
     margin-right: auto;
 }
@@ -81,7 +92,25 @@
 
 @mixin dp($type: inline-block) {
     position: relative;
-    display: inline-block;
+    display: $type;
+}
+
+@mixin to {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin bdr($color: transparent, $wd: 1px, $type: solid) {
+    border: $wd $type $color;
+}
+
+@mixin bdr-r($tl: 4px, $tr: 4px, $bl: 4px, $br: 4px) {
+    border-radius: $tl $tr $bl $br;
+}
+
+@mixin bdr-rs($n: 4px) {
+    border-radius: $n;
 }
 
 @mixin va($type: middle) {
@@ -90,7 +119,68 @@
     vertical-align: $type;
 }
 
-@mixin float($type: left) {
+@mixin centerMiddle($wd: null) {
+    position: absolute;
+    width: $wd;
+    height: $wd;
+    top: 50%;
+    left: 50%;
+    margin-top: -$wd/2;
+    margin-left: -$wd/2;
+}
+
+@mixin va-box($type: middle) {
+    position: relative;
+
+    >* {
+        position: relative;
+        display: inline-block;
+        vertical-align: $type;
+    }
+}
+
+@mixin va-bef($ht: null, $fz: 16px) {
+    position: relative;
+    height: $ht;
+    font-size: 0;
+
+    >* {
+        font-size: $fz;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: $ht;
+    }
+
+}
+
+@mixin va-icon($ht: null) {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    height: $ht;
+
+    >* {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: '';
+        height: 100%;
+    }
+}
+
+@mixin flt($type: left) {
     position: relative;
     float: $type;
 }
@@ -104,11 +194,48 @@
     appearance: none;
     padding: 0;
     margin: 0;
-    background: none;
     border: none;
     border-radius: 0;
     box-shadow: none;
     outline: none;
+}
+
+@mixin ap-reset($bg: transparent, $bd: none) {
+    margin: 0;
+    padding: 0;
+    background-color: $bg;
+    border: $bd;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+@mixin ft($s: 13px, $c: null, $w: null, $fm: null, $lh: null) {
+    font-size: $s;
+    color: $c;
+    font-weight: $w;
+    font-family: $fm;
+    line-height: $lh;
+}
+
+@mixin ft-lh($s: 13px, $lh: 1.43) {
+    font-size: $s;
+    line-height: $lh;
+}
+
+@mixin zidx($z: 1, $type: relative) {
+    z-index: $z;
+    position: $type;
+}
+
+@mixin sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
 }
 
 @mixin fst-pt0 {

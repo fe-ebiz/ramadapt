@@ -14,6 +14,7 @@
         z-index: 10;
         position: absolute;
         width: 100%;
+        min-width: 1480px;
         height: $hd-ht;
         transition: box-shadow .3s;
 
@@ -25,10 +26,12 @@
             //box-shadow: 0 2px 2px rgba(0,0,0, .15);
         }
 
-        &:after {
+        &:before {
             content: '';
             display: block;
-            position: relative;
+            position: absolute;
+            left: 0;
+            bottom: 0;
             width: 100%;
             height: 3px;
             background: #ea3433 url('http://img.ramadapt.co.kr/gnb_bor.jpg') center;
@@ -39,7 +42,7 @@
             @include size(100%, 97px);
         }
 
-        .logo-box,
+        // .logo-box,
         .nav {
             position: relative;
             display: table-cell;
@@ -47,24 +50,26 @@
         }
 
         .logo-box {
-            width: 570px;
+            // width: 570px;
+            z-index: 1;
+            @include va-bef(97px);
+            @include pos(absolute, 0, 0);
             padding-left: 10px;
+            margin: 0;
 
-            >h1 {
-                margin: 0;
+            .logo {
                 line-height: 1;
             }
 
-            &.vid {
+            .logo-img.vid {
                 display: none;
             }
         }
 
         .nav {
-            padding-right: 144px;
-
             .menu {
                 font-size: 0;
+                text-align: center;
 
                 >li {
                     @include dp;
@@ -75,9 +80,11 @@
                         color: inherit;
                         padding: 0 15px;
                         line-height: 97px;
+                        cursor: pointer;
+                        // color: #fff;
 
                         &:hover {
-                            color: $primary-color-dark;
+                            // color: $primary-color-dark;
                         }
                     }
 
@@ -91,21 +98,24 @@
                         display: none;
                         z-index: 1;
                         @include pos(absolute, 97px, 50%);
-                        margin-left: -90px;
+                        margin-left: -75px;
                         box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.39);
 
                         >li {
                             >a {
                                 display: block;
-                                width: 180px;
-                                line-height: 45px;
+                                width: 150px;
+                                padding: 0 12px;
                                 background: #fff;
-                                text-align: center;
-                                font-size: 15px;
+                                box-sizing: border-box;
+                                line-height: 35px;
+                                // text-align: center;
+                                font-size: 14px;
                                 transition: background-color 0.3s, color 0.3s;
 
                                 &:hover {
-                                    background-color: #2F2F2F;
+                                    // background-color: #2F2F2F;
+                                    background-color: #c51b1b;
                                     color: #ffffff;
                                 }
                             }
@@ -123,7 +133,7 @@
     }
 
     &.vid {
-        $hd-ht: 99px;
+        $hd-ht: 100px;
         height: $hd-ht;
 
         .gnb {
@@ -132,7 +142,7 @@
             background: none;
 
             &:after {
-                height: 2px;
+                height: 3px;
             }
 
             .nav {
@@ -145,11 +155,11 @@
         }
 
         .logo-box {
-            &.com {
+            .logo-img.com {
                 display: none;
             }
 
-            &.vid {
+            .logo-img.vid {
                 display: table-cell;
             }
         }
@@ -163,17 +173,155 @@
     }
 }
 
+// 이벤트 탭 영역
+.header {
+    // height: 100px;
+
+    .evtTab {
+        position: absolute;
+        right: 0px;
+        top: 32px;
+
+        .faq-a {
+            position: relative;
+            display: inline-block;
+            border: 1px solid #5f5f5f;
+            background: #fff;
+            font-size: 13px;
+            text-align: center;
+            line-height: 1.1;
+            padding: 5px 5px;
+            word-break: keep-all;
+            font-weight: 300;
+            letter-spacing: -1px;
+        }
+    }
+
+
+    .until-area {
+        z-index: 110;
+        position: absolute;
+        top: 9px;
+        right: 144px;
+
+        .evtTab {
+            position: relative;
+            float: left;
+            // display: inline-block;
+            top: auto;
+            right: auto;
+            margin-right: 15px;
+        }
+
+        .util-box {
+            float: left;
+            margin-right: 25px;
+            position: relative;
+            overflow: hidden;
+            height: 26px;
+
+            .util-menu {
+                position: relative;
+                box-sizing: border-box;
+                width: 140px;
+                margin-top: -1px;
+                padding-top: 32px;
+                background: #ddd;
+
+                li {
+                    width: 100%;
+                    border-top: 1px solid #ccc;
+
+                    a {
+                        position: relative;
+                        display: block;
+                        height: 32px;
+                        padding-left: 22px;
+                        line-height: 32px;
+                        color: #333;
+
+                        &:before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            width: 1px;
+                            height: 1px;
+                            top: 50%;
+                            left: 14px;
+                            background: #333;
+                        }
+                    }
+                }
+
+                .on {
+                    display: block;
+                    position: absolute;
+                    top: -1px;
+                    left: 0;
+
+                    a {
+                        height: 30px;
+                        padding-left: 30px;
+                        line-height: 30px;
+
+                        &:before {
+                            width: 15px;
+                            height: 15px;
+                            left: 10px;
+                            margin-top: -8px;
+                            background: url(http://img.ramadapt.co.kr/ico_lan.png) no-repeat center center;
+                            background-position: 14px auto;
+                        }
+                    }
+                }
+            }
+
+            .util-menu.ic-bArrow {
+                &:after {
+                    position: absolute;
+                    top: 6px;
+                    right: 14px;
+                    border-color: #171717;
+                }
+            }
+        }
+
+    }
+}
+
+.util-box.on {
+    .util-menu.ic-bArrow {
+        &:after {
+            top: 13px;
+            -webkit-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+    }
+
+    // .util-menu {
+    //     .on {
+    //         a {
+    //             height: 32px;
+    //             line-height: 32px;
+    //         }
+    //     }
+    // }
+}
+
+
 
 // 해더 이벤트 영역
 
-#header .evtTab {
+.header-2 .evtTab {
     position: absolute;
     /*right: -165px;*/
     right: 0px;
     top: 32px;
 }
 
-#header .evtTab .faq-a {
+.header-2 .evtTab .faq-a {
     /* position: absolute; */
     position: relative;
     display: inline-block;
@@ -191,7 +339,7 @@
     letter-spacing: -1px;
 }
 
-#header .util {
+.header-2 .util {
     z-index: 99999;
     height: 0px;
     display: block;
@@ -202,7 +350,7 @@
     font-size: 11px;
 }
 
-#header .util li {
+.header-2 .util li {
     float: left;
     display: inline-block;
     padding: 0px 12px;
@@ -211,29 +359,29 @@
     border-right: 1px #a41c1c solid;
 }
 
-#header .util li:first-child {
+.header-2 .util li:first-child {
     border-left: 0px;
     padding-left: 15px;
     background: #c51b1b;
 }
 
-#header .util .last {
+.header-2 .util .last {
     padding-right: 15px;
     border-right: none;
 }
 
-#header .util a {
+.header-2 .util a {
     color: #FFFFFF;
 }
 
 /* header type-2 */
-#header.header-2,
+.header-2,
 .header-2 .gnbDiv,
 .header-2 .gnbDiv .gnbWrap .gnb ul li .oneDep {
     height: 100px;
 }
 
-#header.header-2 {}
+.header-2 {}
 
 .header-2 .twoDbg {
     z-index: 87;
@@ -288,7 +436,7 @@
     right: 144px;
 }
 
-#header.header-2 .until-area .evtTab {
+.header-2 .until-area .evtTab {
     position: relative;
     float: left;
     display: inline-block;
@@ -297,7 +445,7 @@
     margin-right: 15px;
 }
 
-#header.header-2 .until-area .evtTab .faq-a {}
+.header-2 .until-area .evtTab .faq-a {}
 
 .header-2 .until-area .util-box {
     float: left;
@@ -305,13 +453,13 @@
 }
 
 /* footer 공용 부분 / 언어메뉴 */
-.util-box {
+.header-2 .until-area .util-box {
     position: relative;
     overflow: hidden;
     height: 26px;
 }
 
-.util-box .util-menu {
+.header-2 .until-area .util-box .util-menu {
     position: relative;
     box-sizing: border-box;
     width: 140px;
@@ -321,19 +469,19 @@
 }
 
 /* 131 */
-.util-box .util-menu.ic-bArrow:after {
+.header-2 .until-area .util-box .util-menu.ic-bArrow:after {
     position: absolute;
     top: 6px;
     right: 14px;
     border-color: #171717;
 }
 
-.util-box .util-menu li {
+.header-2 .until-area .util-box .util-menu li {
     width: 100%;
     border-top: 1px solid #ccc;
 }
 
-.util-box .util-menu li a {
+.header-2 .until-area .util-box .util-menu li a {
     position: relative;
     display: block;
     height: 32px;
@@ -342,7 +490,7 @@
     color: #333;
 }
 
-.util-box .util-menu li a:before {
+.header-2 .until-area .util-box .util-menu li a:before {
     content: '';
     display: block;
     position: absolute;
@@ -353,20 +501,20 @@
     background: #333;
 }
 
-.util-box .util-menu .on {
+.header-2 .until-area .util-box .util-menu .on {
     display: block;
     position: absolute;
     top: -1px;
     left: 0;
 }
 
-.util-box .util-menu .on a {
+.header-2 .until-area .util-box .util-menu .on a {
     height: 26px;
     padding-left: 30px;
     line-height: 26px;
 }
 
-.util-box .util-menu .on a:before {
+.header-2 .until-area .util-box .util-menu .on a:before {
     width: 15px;
     height: 15px;
     left: 10px;
@@ -375,9 +523,9 @@
     background-position: 14px auto;
 }
 
-.util-box.on {}
+.header-2 .until-area .util-box.on {}
 
-.util-box.on .util-menu.ic-bArrow:after {
+.header-2 .until-area .util-box.on .util-menu.ic-bArrow:after {
     top: 13px;
     -webkit-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
@@ -385,18 +533,7 @@
     transform: rotate(135deg);
 }
 
-.util-box.on .util-menu .on a {
+.header-2 .until-area .util-box.on .util-menu .on a {
     height: 32px;
     line-height: 32px;
-}
-
-.ie8 .util-box .util-menu.ic-bArrow:after {
-    top: 2px;
-    border: 0;
-    color: #333;
-}
-
-.ie8 .util-box.on .util-menu.ic-bArrow:after {
-    content: "▲";
-    top: 5px;
 }

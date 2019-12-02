@@ -13,8 +13,11 @@
             z-index: 99991;
             position: relative;
             box-sizing: border-box;
+            // width: 100%;
+            // height: 100%;
             width: 100%;
-            height: 100%;
+            min-width: 1480px;
+            height: 1080px;
             background: #fff;
         }
 
@@ -108,14 +111,6 @@
 
         .vid-txt-box.end {
             opacity: 1;
-        }
-
-        .vid-area.pc .vid-box .vidPc {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
         }
 
         /* 날씨 정보 영역 */

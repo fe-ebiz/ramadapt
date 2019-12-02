@@ -1,31 +1,24 @@
 @@include('./include/_head.html', {
-"page": ""
+    "page": ""
 })
-<script type="text/javascript" src="/static/js/m/main/init.js"></script>
-</head>
 
+</head>
 <body class="Main">
     <div id="page">
         @@include('./include/_header.html')
 
         <div id="content">
-            <div class="main">
-                <div class="vid-wrap">
-                    <div class="vid-bg"></div>
-                    <section class="vid-area m">
-                        <!-- <video playsinline webkit-playsinline autoplay muted class="vid-m" id="video" onended="videoFn.end()" poster="(http://img.ramadapt.co.kr/main/visual.jpg"> -->
-                        <video playsinline webkit-playsinline autoplay muted class="vid-m" id="video" onended="videoFn.end()">
-                            <source src="/static/files/media/mobile.mp4" type="video/mp4">
-                            IE 8 이하는 비디오가 나오지 않습니다. IE 버전을 업데이트 하시길 바랍니다.
-                        </video>
-                    </section>
-                    <div class="vid-txt-box">
-                        <a href="javascript:;" class="vid-txt"><img src="http://img.ramadapt.co.kr/main/visual_logo.png" alt="강릉씨베이호텔 자세한 정보 보기" /></a>
+            <div id="visual_main">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    <div class="item item_1 tc">
+                        <img src="http://img.ramadapt.co.kr/1.jpg" class="itemBg">
+                        <h2 class="text">Welcome To <br> RAMADA ENCORE <br> HOTEL</h2>
                     </div>
+                    <!--//.item-->
                 </div>
-                <!-- //.vid-wrap -->
+                <!--//#owl-demo-->
             </div>
-            <!--//#visual-->
+            <!--//#visual_main-->
 
 
             <ul class="goto_area">

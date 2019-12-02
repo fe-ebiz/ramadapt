@@ -1,54 +1,131 @@
 @charset 'UTF-8';
+@import '../parts/common';
 
 /* ----------------------------------------------------------------
  header
  -----------------------------------------------------------------*/
-#header_ramada {
-    z-index: 2;
-    position: absolute;
+.header {
+    $hd-ht: 56px;
+    z-index: 999;
+    // position: absolute;
     width: 100%;
-    background: #272d34;
+    height: $hd-ht;
+    // background-color: #272d34;
+    background-color: #fff;
+
+    &.main {
+        @include pos(absolute, 0, 0);
+    }
+
+    #util_box.gnb {
+        color: #fff;
+        text-align: center;
+        // line-height: 42px;
+        width: 100%;
+        height: $hd-ht;
+        position: relative;
+
+        // a.menu_btn {
+        //     background: left center no-repeat transparent;
+        //     background-image: url(http://img.ramadapt.co.kr/m/nav.png);
+        //     background-size: 78%;
+        //     -webkit-background-size: 78%;
+        //     display: block;
+        //     width: 46px;
+        //     height: 46px;
+        //     position: absolute;
+        //     top: 5px;
+        //     left: 13px;
+        // }
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: #ea3433 url('http://img.ramadapt.co.kr/m/gnb_bor.jpg') center;
+        }
+
+        .menu_btn {
+            @include va-bef($hd-ht - 2);
+            position: absolute;
+            top: 0px;
+            bottom: 0;
+            left: 5px;
+            // padding: 5px;
+            // box-sizing: border-box;
+            cursor: pointer;
+
+            .bar {
+                display: block;
+                background: #666;
+                width: 20px;
+                height: 2px;
+                margin: 4px 5px;
+            }
+        }
+
+        .logo {
+            // display: inline-block;
+            @include va-bef($hd-ht);
+
+            .logo-img {
+                width: 110px;
+                display: none;
+
+                &.vid {
+                    display: none;
+                }
+
+                &.com {
+                    display: inline-block;
+                }
+            }
+        }
+
+
+        &.on {
+            z-index: 99999;
+            position: fixed;
+            background: #fff;
+        }
+    }
+
+    &.vid {
+        background-color: transparent;
+
+
+        #util_box.gnb {
+            .logo {
+                .logo-img.com {
+                    display: none;
+                }
+
+                .logo-img.vid {
+                    display: inline-block;
+                }
+
+            }
+
+            .menu_btn {
+                .bar {
+                    background-color: #fff;
+                }
+            }
+
+        }
+
+    }
 }
 
-#header_ramada.on {
-    z-index: 102;
-    position: fixed;
-}
 
-#util_box {
-    color: #fff;
-    text-align: center;
-    line-height: 42px;
-    /*height: 58px;*/
-    height: 56px;
-    position: relative;
-}
-
-#util_box a.menu_btn {
-    background: left center no-repeat transparent;
-    background-image: url(http://img.ramadapt.co.kr/m/nav.png);
-    background-size: 78%;
-    -webkit-background-size: 78%;
-    display: block;
-    width: 46px;
-    height: 46px;
-    position: absolute;
-    top: 5px;
-    left: 13px;
-}
-
-#util_box .logo {
-    display: inline-block;
-}
-
-#util_box .logo img {
-    width: 110px;
-    padding-top: 10px;
-}
-
-/*#page { max-width:800px; margin:0 auto }*/
-#page nav {
-    display: none;
+#page {
+    nav {
+        display: none;
+    }
 }
 
 .evtFaqBtn {
@@ -66,15 +143,14 @@
     text-align: center;
     text-indent: -2px;
     line-height: 1em;
-    /* display: none; */
-}
 
-.evtFaqBtn img {
-    position: relative;
-    vertical-align: middle;
-    top: -1px;
-    width: 16px;
-    margin-right: 1px;
+    img {
+        position: relative;
+        vertical-align: middle;
+        top: -1px;
+        width: 16px;
+        margin-right: 1px;
+    }
 }
 
 .util {
@@ -83,87 +159,107 @@
     display: block;
     position: relative;
     font-size: 15px;
+
+    li {
+        float: left;
+        display: inline-block;
+        padding: 3px 15px;
+        background: url(http://img.ramadapt.co.kr/m/gray_line.gif) no-repeat left center;
+        background: #c51b1b;
+        border-right: 1px #a41c1c solid;
+
+        &:first-child {
+            border-left: 0px;
+            padding-left: 20px;
+            background: #c51b1b;
+        }
+    }
+
+    .last {
+        padding-right: 20px;
+        border-right: none;
+    }
+
+    a {
+        color: #FFFFFF;
+    }
 }
 
-.util li {
-    float: left;
-    display: inline-block;
-    padding: 3px 15px;
-    background: url(http://img.ramadapt.co.kr/m/gray_line.gif) no-repeat left center;
-    background: #c51b1b;
-    border-right: 1px #a41c1c solid;
+.util-menu {
+    li {
+        float: left;
+        width: 25%;
+        text-align: center;
+        background: #ddd;
+
+        a {
+            display: block;
+            height: 30px;
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: -0.7px;
+            line-height: 30px;
+            color: #333;
+            border-left: 1px solid #ccc;
+        }
+
+        &:first-child {
+            a {
+                border-left: 0;
+            }
+        }
+    }
 }
-
-.util li:first-child {
-    border-left: 0px;
-    padding-left: 20px;
-    background: #c51b1b;
-}
-
-.util .last {
-    padding-right: 20px;
-    border-right: none;
-}
-
-.util a {
-    color: #FFFFFF;
-}
-
-/* 190226 util 변경 */
-.util-menu {}
-
-.util-menu li {
-    float: left;
-    width: 25%;
-    text-align: center;
-    background: #ddd;
-}
-
-.util-menu li a {
-    display: block;
-    height: 30px;
-    /*padding: 0 15px;*/
-    font-size: 13px;
-    font-weight: 300;
-    letter-spacing: -0.7px;
-    line-height: 30px;
-    color: #333;
-    border-left: 1px solid #ccc;
-}
-
-.util-menu li:first-child a {
-    border-left: 0;
-}
-
-.util-menu .last {}
 
 .util-menu+.bk-menu-m {
     margin-top: 12px;
 }
 
-
-
-/* ----------------------------------------------------------------
- nav
- -----------------------------------------------------------------*/
-/*
- Menu
- - positioning and sizing
- */
-html.mmenu-opened,
-html.mmenu-opened body {
+html.mmenu-opened {
     height: 100%;
     width: 100%;
     overflow: hidden;
-}
 
-html.mmenu-opened body {
-    position: relative;
+    body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .mmenu.mmenu-opened {
+        display: block;
+    }
+
+    .mmenu-page {
+        background-color: inherit;
+        min-height: 100%;
+        position: absolute;
+        z-index: 1;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: #ffffff;
+        -webkit-transition: left 0.5s ease, right 0.5s ease, margin 0.5s ease;
+        -moz-transition: left 0.5s ease, right 0.5s ease, margin 0.5s ease;
+        transition: left 0.5s ease, right 0.5s ease, margin 0.5s ease;
+    }
+
+    #mmenu-blocker {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        -webkit-transition: left 0.5s ease, right 0.5s ease, margin 0.5s ease;
+        -moz-transition: left 0.5s ease, right 0.5s ease, margin 0.5s ease;
+        transition: left 0.5s ease, right 0.5s ease, margin 0.5s ease;
+    }
 }
 
 .mmenu {
     display: none;
-    /*width: 100%;*/
     width: 80%;
     height: 100%;
     position: absolute;
@@ -175,126 +271,113 @@ html.mmenu-opened body {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     background: #2f343a;
-}
 
-.mmenu .mmenu-hidden {
-    display: none;
-}
-
-html.mmenu-opened .mmenu.mmenu-opened {
-    display: block;
-}
-
-html.mmenu-opened .mmenu-page {
-    background-color: inherit;
-    min-height: 100%;
-    position: absolute;
-    z-index: 1;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    /*border-left: 1px solid #dedede;*/
-    background: #ffffff;
+    .mmenu-hidden {
+        display: none;
+    }
 }
 
 #mmenu-blocker {
     display: none;
 }
 
-html.mmenu-opened #mmenu-blocker {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 2;
+html.mmenu-left.mmenu-opened {
+    .mmenu-page {
+        margin-left: 0px;
+        left: 0%;
+    }
+
+    #mmenu-blocker {
+        margin-left: 0px;
+        left: 0%;
+    }
 }
 
-html.mmenu-opened .mmenu-page,
-html.mmenu-opened #mmenu-blocker {
-    -webkit-transition: left 0.5s ease, right 0.5s ease, margin 0.5s ease;
-    -moz-transition: left 0.5s ease, right 0.5s ease, margin 0.5s ease;
-    transition: left 0.5s ease, right 0.5s ease, margin 0.5s ease;
+html.mmenu-left.mmenu-opening {
+    .mmenu-page {
+        margin-left: -20%;
+        left: 100%;
+    }
+
+    #mmenu-blocker {
+        margin-left: -20%;
+        left: 100%;
+    }
 }
 
-html.mmenu-left.mmenu-opened .mmenu-page,
-html.mmenu-left.mmenu-opened #mmenu-blocker {
-    margin-left: 0px;
-    left: 0%;
+html.mmenu-right.mmenu-opened {
+    .mmenu-page {
+        margin-right: 0px;
+        right: 0%;
+    }
+
+    #mmenu-blocker {
+        margin-right: 0px;
+        right: 0%;
+    }
 }
 
-html.mmenu-left.mmenu-opening .mmenu-page,
-html.mmenu-left.mmenu-opening #mmenu-blocker {
-    /*margin-left: -65px;*/
-    margin-left: -20%;
-    left: 100%;
+html.mmenu-right.mmenu-opening {
+    .mmenu-page {
+        margin-right: -65px;
+        right: 100%;
+    }
+
+    #mmenu-blocker {
+        margin-right: -65px;
+        right: 100%;
+    }
 }
 
-html.mmenu-right.mmenu-opened .mmenu-page,
-html.mmenu-right.mmenu-opened #mmenu-blocker {
-    margin-right: 0px;
-    right: 0%;
-}
-
-html.mmenu-right.mmenu-opening .mmenu-page,
-html.mmenu-right.mmenu-opening #mmenu-blocker {
-    margin-right: -65px;
-    right: 100%;
-}
-
-/* ----------------------------------------------------------------
- menu_list
- -----------------------------------------------------------------*/
 .menu_list {
-
     background: #23262b;
-}
 
-.menu_list .sm_btn {
-    background: #44494e;
-    border: 1px solid #3c4148;
-    font-weight: normal;
-}
+    .sm_btn {
+        background: #44494e;
+        border: 1px solid #3c4148;
+        font-weight: normal;
+    }
 
-.menu_list .info {
-    color: #dbdbdb;
-    padding: 13px 12px;
-    position: relative;
-}
+    .info {
+        color: #dbdbdb;
+        padding: 13px 12px;
+        position: relative;
 
-.menu_list .info span {
-    display: inline-block;
-    float: left;
-    display: inline-block;
-}
+        span {
+            display: inline-block;
+            float: left;
+            display: inline-block;
+        }
 
-.menu_list .info .opt {
-    right: 13px;
-    background: no-repeat transparent;
-    background-image: url(http://img.ramadapt.co.kr/m/option.html);
-    background-size: 100%;
-    -webkit-background-size: 100%;
-    width: 20px;
-    height: 20px;
-    margin-left: 20px;
-}
+        .opt {
+            right: 13px;
+            background: no-repeat transparent;
+            background-image: url(http://img.ramadapt.co.kr/m/option.html);
+            background-size: 100%;
+            -webkit-background-size: 100%;
+            width: 20px;
+            height: 20px;
+            margin-left: 20px;
+        }
 
-.menu_list .info strong {
-    font-size: 16px;
-    color: #ffffff;
-}
+        strong {
+            font-size: 16px;
+            color: #ffffff;
+        }
+    }
 
-.menu_list .tt {
-    color: #ffffff;
-    padding: 10px;
-    padding-top: 37px;
-    font-weight: normal;
-    background: #23262b;
-    border-bottom: 1px solid #3c4148;
-}
+    .tt {
+        color: #ffffff;
+        padding: 10px;
+        padding-top: 37px;
+        font-weight: normal;
+        background: #23262b;
+        border-bottom: 1px solid #3c4148;
 
-.menu_list .tt:first-child {
-    padding-top: 20px;
+        &:first-child {
+            padding-top: 20px;
+        }
+    }
 }
 
 .menu_head {
@@ -304,14 +387,14 @@ html.mmenu-right.mmenu-opening #mmenu-blocker {
     background: #2f343a;
     border-bottom: 1px solid #3c4148;
     color: #dbdbdb;
-}
 
-.menu_head a {
-    color: #dbdbdb;
-}
+    a {
+        color: #dbdbdb;
+    }
 
-.menu_head .sm_btn {
-    padding: 0px 4px;
+    .sm_btn {
+        padding: 0px 4px;
+    }
 }
 
 .menu_body {
@@ -319,29 +402,29 @@ html.mmenu-right.mmenu-opening #mmenu-blocker {
     background: #44494e;
     padding: 7px 13px 10px 13px;
     color: #dbdbdb;
-}
 
-.menu_body li {
-    padding: 5px 0px;
-    font-size: 14px;
-}
+    li {
+        padding: 5px 0px;
+        font-size: 14px;
 
-.menu_body a {
-    display: block;
-    color: #dbdbdb;
-    text-decoration: none;
-}
+        h3 {
+            font-size: 13px;
 
-.menu_body li h3 {
-    font-size: 13px;
-}
+            span {
+                font-size: 11px;
+            }
+        }
+    }
 
-.menu_body li h3 span {
-    font-size: 11px;
-}
+    a {
+        display: block;
+        color: #dbdbdb;
+        text-decoration: none;
+    }
 
-.menu_body ol {
-    display: none;
-    padding: 5px;
-    padding-bottom: 0px;
+    ol {
+        display: none;
+        padding: 5px;
+        padding-bottom: 0px;
+    }
 }

@@ -33,7 +33,7 @@ function vidWH(){
 	
     //텍스트 클릭시 이동
     $('.vid-wrap').find('.vid-txt').on('click', function(){
-		var mainRestTop =	$("#main_event").offset().top,
+		var mainRestTop =	$(".goto_area").offset().top,
             gnbH =	$(".gnb").height();
         var allVar = mainRestTop-gnbH;
         

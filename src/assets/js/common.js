@@ -6,49 +6,49 @@ var oneNum = -1;
 var twoNum = -1;
 jQuery(document).ready(function() {
 	//gnb
-	if (oneNum != -1)
-		activeSub();
-	jQuery(".gnb ul").children("li").each(function(q) {
-		jQuery(this).mouseenter(function() {
-			if (oneNum != -1) {
-				jQuery(".gnb ul").children("li").eq(oneNum).removeClass("on");
-			}
-			jQuery('.twoDbg').addClass("on");
-			jQuery(".gnbDiv").stop().animate({
-				'height' : 312
-			}, 400, "easeOutCubic");
-			jQuery(this).addClass("on");
-		}).focusin(function() {
-			jQuery(this).mouseenter();
-		})
+	// if (oneNum != -1)
+	// 	activeSub();
+	// jQuery(".gnb ul").children("li").each(function(q) {
+	// 	jQuery(this).mouseenter(function() {
+	// 		if (oneNum != -1) {
+	// 			jQuery(".gnb ul").children("li").eq(oneNum).removeClass("on");
+	// 		}
+	// 		jQuery('.twoDbg').addClass("on");
+	// 		jQuery(".gnbDiv").stop().animate({
+	// 			'height' : 312
+	// 		}, 400, "easeOutCubic");
+	// 		jQuery(this).addClass("on");
+	// 	}).focusin(function() {
+	// 		jQuery(this).mouseenter();
+	// 	})
 
-		jQuery(this).mouseleave(function() {
-			jQuery(this).removeClass("on");
-            //header 높이값으로 gnbdiv 높이 지정
-            var gnbDivH = jQuery("#header").height();
-			jQuery(".gnbDiv").stop().animate({
-				'height' : gnbDivH, //83
-			}, 400, "easeOutCubic", function(){});
-			jQuery('.twoDbg').removeClass("on");
+	// 	jQuery(this).mouseleave(function() {
+	// 		jQuery(this).removeClass("on");
+    //         //header 높이값으로 gnbdiv 높이 지정
+    //         var gnbDivH = jQuery("#header").height();
+	// 		jQuery(".gnbDiv").stop().animate({
+	// 			'height' : gnbDivH, //83
+	// 		}, 400, "easeOutCubic", function(){});
+	// 		jQuery('.twoDbg').removeClass("on");
 
-			if (oneNum != -1) {
-				activeSub()
-			}
-		}).focusout(function() {
-			jQuery(this).mouseleave();
-		})
+	// 		if (oneNum != -1) {
+	// 			activeSub()
+	// 		}
+	// 	}).focusout(function() {
+	// 		jQuery(this).mouseleave();
+	// 	})
 
-		jQuery(this).find(".twoDep").find("a").each(function() {
-			jQuery(this).mouseover(function() {
-			})
+	// 	jQuery(this).find(".twoDep").find("a").each(function() {
+	// 		jQuery(this).mouseover(function() {
+	// 		})
 
-			jQuery(this).mouseout(function() {
-			})
-		})
-	})
+	// 		jQuery(this).mouseout(function() {
+	// 		})
+	// 	})
+	// })
     
     
-    //언어메뉴 클릭
+    // //언어메뉴 클릭
     jQuery('.util-box .util-menu a').on('click', function(){
         var untilB = jQuery(this).parents('.util-box');
         jQuery(this).parents('li').addClass('on').siblings().removeClass('on');
@@ -119,7 +119,7 @@ function scrollFunc () {
                 mainRestH = $('#main_event').height()
                 mainTop = $('.vid-wrap').height(),
                 rWing = $('.rWing');
-            var mainMg = 40, mrMg = 6, mrMgM = 15;
+            var mainMg = 40, mrMg = 50, mrMgM = 15;
 
             //메인
             if ( scr <= (mainTop-(gnbTop+mrMg)) ) { 

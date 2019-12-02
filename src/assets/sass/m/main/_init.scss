@@ -1,2 +1,138 @@
 @charset 'utf-8';
 @import '../parts/common';
+
+#content {
+    // margin-bottom:20px;
+    // padding-top: 56px;
+    // background: #fff;
+}
+
+#content #content {
+    padding-top: 0;
+}
+
+/* .Main #content {
+	margin-bottom: 0;
+} */
+
+#content {
+    .main {
+        // @include pos(absolute, 0, 0);
+        // @include sizes(100%);
+
+        .vid-wrap {
+            //cursor: pointer;
+            overflow: hidden;
+            z-index: 991;
+            position: relative;
+            box-sizing: border-box;
+            // width: 100%;
+            // height: 100%;
+            width: 100%;
+            height: 1080px;
+            background: #fff;
+        }
+
+        .vid-bg {
+            z-index: 996;
+            position: relative;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            background: url(http://img.ramadapt.co.kr/main/bg_main_re.png) repeat;
+        }
+
+        .vid-area {
+            z-index: 994;
+            position: absolute;
+            // position: relative;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .vid-txt-box {
+            z-index: 997;
+            position: absolute;
+            box-sizing: border-box;
+            display: table;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            text-align: center;
+            margin: 0 auto;
+            //margin-top: -210px;
+            text-align: center;
+        }
+
+        .vid-txt-box .vid-txt {
+            position: relative;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .vid-txt-box .vid-txt img {
+            position: relative;
+            max-width: 280px;
+            width: 75%;
+        }
+
+        .vid-area.m {
+            display: none;
+        }
+
+        .vid-area.m {
+            display: block;
+            top: 0;
+            background: url(http://img.ramadapt.co.kr/main/visual.jpg) no-repeat center;
+            background-size: cover;
+        }
+
+        .vid-area.m .vid-box {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            margin: 0;
+            //padding-bottom: 56.25%; 
+        }
+
+        .vid-area.m .vid-box .vid-m {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .vid-txt-box {
+            opacity: 0;
+            transition: all 1s ease 0s;
+        }
+
+        /*.vid-txt-box .vid-txt {
+        margin-top: 45px;
+    }*/
+
+        .vid-txt-box.on {
+            opacity: 1;
+        }
+
+        .vid-txt-box.end {
+            opacity: 1;
+        }
+
+        .vid-area.pc .vid-box .vidPc {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

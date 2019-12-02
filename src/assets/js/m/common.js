@@ -44,7 +44,8 @@ jQuery(document).ready(function() {
 	})
     
     
-    headerFunc();
+    // headerFunc();
+    scrollFunc();
 })
 function activeSub() {
 	jQuery(".gnb ul").children("li").eq(oneNum).addClass("on");
@@ -52,7 +53,7 @@ function activeSub() {
 
 //header scroll function
 function headerFunc() {
-	var hd	= $("#header_ramada"),
+	var hd	= $(".header"),
 		hdTop  = hd.height();
     
 	$(window).scroll(function() {
@@ -63,6 +64,66 @@ function headerFunc() {
         } else if ( scr > hdTop ) {
             hd.addClass('on');
         } 
+	});
+}
+
+function scrollFunc () {
+	var gnb	= $(".gnb"),
+        header	= $(".header"),
+        evtPop	= $('.event_pop'),
+		btnTop	= $("#btnTop"),
+		top		= $(".main").outerHeight(),
+		gnbTop  = gnb.height(),
+        windowWid = $(window).width();
+    var winHt, mainRestH, mainTop;
+    
+	$(window).scroll(function() {
+		var scr = $(window).scrollTop();
+		// console.log(scr);
+		// console.log(top); 
+		// 상단 해더 고정 배경 클래스 추가
+        //console.log(windowWid);
+        
+        //메인일때
+        if( $('.Main').length ) {
+            //console.log('vid');
+            var winHt = $(window).height(),
+                mainRestH = $('.goto_area').height()
+                mainTop = $('.vid-wrap').height(),
+                rWing = $('.rWing');
+            var mainMg = 40, mrMg = 50, mrMgM = 15;
+
+            //메인
+            if ( scr <= (mainTop-(gnbTop+mrMg)) ) { 
+                //console.log('off');
+                gnb.removeClass('on');
+                header.addClass('vid'); 
+                rWing.removeClass('active');
+            } else if ( scr > (mainTop-(gnbTop+mrMg)) ) {
+                // console.log('header remove vid');
+                gnb.addClass('on');
+                header.removeClass('vid');
+                rWing.addClass('active');
+            } 
+            
+        }else {
+            if ( scr <= gnbTop ) {
+                gnb.removeClass('on');
+            } else if ( scr > gnbTop ) {
+                //console.log('on_non');
+                gnb.addClass('on');
+            } 
+        }
+        
+		// top 버튼 display
+		if ( scr > top ) {
+			btnTop.fadeIn();
+		} else {
+			btnTop.fadeOut();
+		}
+	});
+	btnTop.on('click', function() {
+		$('html, body').stop().animate({scrollTop: '0'}, 500);
 	});
 }
 

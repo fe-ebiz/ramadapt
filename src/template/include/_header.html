@@ -1,22 +1,18 @@
 @@include('../include/_faq.html')
 
 <!-- 메인 + 영상이 있을경우 vid 멀티클래스 추가 -->
-<!-- <header class="header vid main"> -->
+<!-- <header id="rn_header" class="header vid main"> -->
 <header id="rn_header" class="header">
 
     <div class="gnb">
         <div class="group-f">
             <!-- 190910 logo 추가 수정 -->
-            <a href="/views/svc/index.html" class="logo-box com">
-                <h1>
-                    <img src="http://img.seabay.co.kr/svc/img/symbol/top_logo.png" alt="강릉씨베이호텔" class="logo">
-                </h1>
-            </a>
-            <a href="/views/svc/index.html" class="logo-box vid">
-                <h1>
-                    <img src="http://img.seabay.co.kr/svc/img/symbol/top_logo_w.png" alt="강릉씨베이호텔" class="logo">
-                </h1>
-            </a>
+            <h1 class="logo-box">
+                <a href="/views/" class="logo">
+                    <img src="http://img.ramadapt.co.kr/logo.png" alt="라마다평택호텔" class="logo-img com">
+                    <img src="http://img.ramadapt.co.kr/logo_w.png" alt="라마다평택호텔" class="logo-img vid">
+                </a>
+            </h1>
 
             <nav class="cf nav">
                 <span class="sr-only">전체 메뉴</span>
@@ -26,59 +22,105 @@
                         <li>
                             <a class="title">호텔소개</a>
                             <ul class="sub">
-                                <li><a href="/views/svc/main/about/index.html">씨베이호텔 소개</a></li>
-                                <li><a href="/views/svc/main/factsheet/index.html">호텔시설 개요</a></li>
-                                <li><a href="/views/svc/main/map/index.html">오시는 길</a></li>
-                                <li><a href="/views/svc/brd/lists/notice.html">공지사항</a></li>
-                                <li><a href="https://www.gn.go.kr/tour/index.do" target="_blank">주변관광지 안내</a></li>
+                                <li>
+                                    <a href="intro_1.html" class="off">소개</a>
+                                </li>
+                                <li>
+                                    <a href="intro_2.html" class="off">인사말</a>
+                                </li>
+                                <li>
+                                    <a href="intro_6.html" class="off">고객사 안내</a>
+                                </li>
+                                <li>
+                                    <a href="intro_4.html" class="off">찾아오시는길</a>
+                                </li>
+                                <li>
+                                    <a href="intro_5.html" class="off">주변관광지 안내</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
                             <a href="#none" class="title">객실안내</a>
-                            <!-- 190719 메뉴 수정 -->
                             <ul class="sub">
-                                <li><a href="/views/svc/rooms/detail_new/superior_db.html">수페리어 더블</a></li>
-                                <li><a href="/views/svc/rooms/detail_new/dx_hollywood.html">디럭스 헐리우드</a></li>
-                                <li><a href="/views/svc/rooms/detail_new/dx_korea.html">디럭스 한실</a></li>
-                                <li><a href="/views/svc/rooms/detail_new/dx_double.html">디럭스 더블</a></li>
-                                <li><a href="/views/svc/rooms/detail_new/dx_double.html">디럭스 자쿠지</a></li>
-                                <li><a href="/views/svc/rooms/detail_new/dx_familytwin.html">디럭스 패밀리트윈</a></li>
-                                <li><a href="/views/svc/rooms/detail_new/dx_quadkids.html">디럭스 쿼드키즈</a></li>
-                                <li><a href="/views/svc/rooms/detail_new/premier_familytwin.html">프리미어 패밀리트윈</a></li>
-                                <li><a href="/views/svc/rooms/detail_new/royalsuite.html">로얄스위트</a></li>
+                                <li>
+                                    <a href="gallery_1.html" class="off">디럭스 더블</a>
+                                </li>
+                                <li>
+                                    <a href="gallery_2.html" class="off">디럭스 트윈</a>
+                                </li>
+                                <li>
+                                    <a href="gallery_5.html" class="off">디럭스 수퍼더블</a>
+                                </li>
+                                <li>
+                                    <a href="gallery_3.html" class="off">트리플룸</a>
+                                </li>
+                                <li>
+                                    <a href="gallery_4.html" class="off">스위트</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
                             <a class="title">다이닝</a>
                             <ul class="sub">
-                                <li><a href="/views/svc/restaurant/valueplate.html">밸류플레이트</a></li>
-                                <li><a href="/views/svc/restaurant/lobbybar.html">BAR 59</a></li>
-                                <li><a href="/views/svc/restaurant/swimmingbar.html">스위밍 BAR</a></li>
+                                <li>
+                                    <a href="facil_1.html" class="off">레스토랑</a>
+                                </li>
+                                <li>
+                                    <a href="facil_7.html" class="off">야외테라스</a>
+                                </li>
+                                <!-- 룸서비스 주석처리 -->
+                                <!--<li><a href="facil_5.html" class="off">룸서비스</a></li>-->
                             </ul>
                         </li>
                         <li>
                             <a class="title">연회&amp;부대시설</a>
                             <ul class="sub">
-                                <li><a href="/views/svc/facilities/banquethall.html">연회장</a></li>
-                                <li><a href="/views/svc/facilities/swimmingpool.html">패밀리 풀</a></li>
-                                <li><a href="/views/svc/facilities/swimmingpool_infinite.html">인피니티 풀</a></li>
-                                <li><a href="/views/svc/facilities/businesscorner.html">비즈니스코너</a></li>
-                                <li><a href="/views/svc/facilities/heavenlypark.html">하늘공원</a></li>
+                                <li>
+                                    <a href="facil_3.html" class="off">컨퍼런스룸</a>
+                                </li>
+                                <li>
+                                    <a href="facil_9.html" class="off">비지니스 룸</a>
+                                </li>
+                                <li>
+                                    <a href="facil_2.html" class="off">휘트니스</a>
+                                </li>
+                                <li>
+                                    <a href="facil_10.html" class="off">가상오피스</a>
+                                </li>
+                                <li>
+                                    <a href="facil_6.html" class="off">펫호텔</a>
+                                </li>
+                                <li>
+                                    <a href="facil_8.html" class="off">세탁실</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="/views/svc/group/index.html" class="title">단체문의</a>
+                            <a href="group.html" class="title">단체문의</a>
                         </li>
                         <li>
-                            <a href="/views/svc/rent/index.html" class="title">장기/단기 숙박</a>
+                            <a href="rent.html" class="title">장기/단기 숙박</a>
                         </li>
                         <li>
-                            <a href="/views/svc/event/index.html" class="title">이벤트/축제</a>
+                            <a href="event.html" class="title">이벤트/축제</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <div class="bk-menu ocean">
+            <div class="until-area clr">
+                <span class="evtTab">
+                    <a class="faq-a" id="faq-a" href="#">무료숙박 이벤트 당첨안내</a>
+                </span>
+                <div class="util-box">
+                    <ul class="util-menu ic-bArrow">
+                        <li class="on"><a href="#none">한국어</a></li>
+                        <li class=""><a href="#none">English</a></li>
+                        <li class=""><a href="#none">中國語</a></li>
+                        <li class=""><a href="#none">日本語</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bk-menu">
                 <a href="/reserve" class="btn-bk">예약하기</a>
                 <ul class="bk-list">
                     <li class="item item-1 fst"><a href="/reserve">객실예약</a></li>
