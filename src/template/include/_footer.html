@@ -85,21 +85,20 @@
                 <br>(주중/주말 06시 ~ 02시)
             </div>
             <!-- 190226 언어메뉴 추가 -->
-            <div class="util-box">
+            <!-- <div class="util-box">
                 <ul class="util-menu ic-bArrow">
                     <li class="on"><a href="#none">한국어</a></li>
                     <li class=""><a href="#none">English</a></li>
                     <li class=""><a href="#none">中國語</a></li>
                     <li class=""><a href="#none">日本語</a></li>
                 </ul>
-            </div>
+            </div> -->
 
             <a href="https://www.go.co.kr/home/view/?p_no=G0d1FWof" class="btn-goco" target="_blank"><img src="http://img.ramadapt.co.kr/logo_f_goco.png" alt="고코투어"></a>
 
-            <!-- 191021 패밀리 사이트 추가 -->
             <div id="family-wrapper" class="family-wrapper">
                 <div class="family-site">
-                    <span class="family-site-label">패밀리사이트&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▲</span>
+                    <span class="family-site-label" onclick="$(this).next().toggle()">패밀리사이트&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▲</span>
                     <ul class="site" style="display: none">
                         <li class="group-name">
                             <div class="fam_btn">[호텔/리조트]</div>
@@ -122,11 +121,6 @@
                         </li>
                     </ul>
                 </div>
-                <script>
-                    $('#family-wrapper .family-site-label').on('click', function () {
-                        $(this).next().toggle();
-                    });
-                </script>
             </div>
         </div>
     </div>

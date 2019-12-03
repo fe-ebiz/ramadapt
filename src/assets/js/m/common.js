@@ -43,7 +43,6 @@ jQuery(document).ready(function() {
 		})
 	})
     
-    
     // headerFunc();
     scrollFunc();
 })
@@ -96,22 +95,21 @@ function scrollFunc () {
             //메인
             if ( scr <= (mainTop-(gnbTop+mrMg)) ) { 
                 //console.log('off');
-                gnb.removeClass('on');
+                // gnb.removeClass('on');
                 header.addClass('vid'); 
                 rWing.removeClass('active');
             } else if ( scr > (mainTop-(gnbTop+mrMg)) ) {
                 // console.log('header remove vid');
-                gnb.addClass('on');
+                // gnb.addClass('on');
                 header.removeClass('vid');
                 rWing.addClass('active');
             } 
             
         }else {
             if ( scr <= gnbTop ) {
-                gnb.removeClass('on');
+                // gnb.removeClass('on');
             } else if ( scr > gnbTop ) {
-                //console.log('on_non');
-                gnb.addClass('on');
+                // gnb.addClass('on');
             } 
         }
         

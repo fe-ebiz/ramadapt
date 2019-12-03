@@ -10,7 +10,7 @@
         .vid-wrap {
             //cursor: pointer;
             overflow: hidden;
-            z-index: 99991;
+            z-index: 991;
             position: relative;
             box-sizing: border-box;
             // width: 100%;
@@ -19,103 +19,87 @@
             min-width: 1480px;
             height: 1080px;
             background: #fff;
+
+            .vid-bg {
+                z-index: 996;
+                position: relative;
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+                background: url(http://img.ramadapt.co.kr/main/bg_main_re.png) repeat;
+            }
+
+            .vid-area {
+                z-index: 994;
+                position: absolute;
+                // position: relative;
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+
+                .video {
+                    // position: absolute;
+                    // top: 0;
+                    // left: 0;
+                    width: 100%;
+                    // height: 100%;
+                }
+
+                &.m {
+                    display: none;
+                }
+
+                &.pc {
+                    display: block;
+                    top: 0;
+                    background: url(http://img.ramadapt.co.kr/main/visual.jpg) no-repeat center;
+                    background-size: cover;
+                }
+            }
+
+
+            .vid-txt-box {
+                z-index: 997;
+                position: absolute;
+                box-sizing: border-box;
+                display: table;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                text-align: center;
+                margin: 0 auto;
+                //margin-top: -210px;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 1s ease 0s;
+
+                &.active,
+                &.on,
+                &.end {
+                    opacity: 1;
+                }
+
+                .vid-txt {
+                    position: relative;
+                    display: table-cell;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+
+                .vid-txt img {
+                    position: relative;
+                    top: 50px;
+                }
+            }
         }
 
-        .vid-bg {
-            z-index: 99996;
-            position: relative;
-            box-sizing: border-box;
-            width: 100%;
-            height: 100%;
-            background: url(http://img.ramadapt.co.kr/main/bg_main_re.png) repeat;
-        }
-
-        .vid-area {
-            z-index: 99994;
-            position: absolute;
-            // position: relative;
-            box-sizing: border-box;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-        }
-
-        .vid-txt-box {
-            z-index: 99997;
-            position: absolute;
-            box-sizing: border-box;
-            display: table;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            text-align: center;
-            margin: 0 auto;
-            //margin-top: -210px;
-            text-align: center;
-        }
-
-        .vid-txt-box .vid-txt {
-            position: relative;
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
-        }
-
-        .vid-txt-box .vid-txt img {
-            position: relative;
-        }
-
-        .vid-area.m {
-            display: none;
-        }
-
-        .vid-area.pc {
-            display: block;
-            top: 0;
-            background: url(http://img.ramadapt.co.kr/main/visual.jpg) no-repeat center;
-            background-size: cover;
-        }
-
-        .vid-area.pc .vid-box {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-            top: 0px;
-            margin: 0;
-            //padding-bottom: 56.25%; 
-        }
-
-        .vid-area.pc .vid-box .vidPc {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .vid-txt-box {
-            opacity: 0;
-            transition: all 1s ease 0s;
-        }
-
-        /*.vid-txt-box .vid-txt {
-        margin-top: 45px;
-    }*/
-
-        .vid-txt-box.on {
-            opacity: 1;
-        }
-
-        .vid-txt-box.end {
-            opacity: 1;
-        }
 
         /* 날씨 정보 영역 */
         .weather {
-            z-index: 99992;
+            z-index: 992;
             position: absolute;
             width: 1140px;
             top: 180px;
@@ -123,87 +107,82 @@
             margin-left: -510px;
             line-height: 1.2;
             text-align: left;
-        }
 
-        .weather.on {
-            z-index: 99;
-        }
-
-        .weather .area {
-            position: absolute;
-            right: 5px;
-            /* height: 96px;*/
-            box-sizing: border-box;
-        }
-
-        .weather .area [class*=s-] {
-            display: block;
-            color: #fff;
-            font-size: 17px;
-        }
-
-        .weather .area .inner {
-            position: relative;
-            float: right;
-        }
-
-        .weather .area img {
-            position: relative;
-            float: right;
-        }
-
-        .weather .area .s-1 {
-            line-height: 1;
-        }
-
-        .weather .area .s-2 {
-            margin-top: 3px;
-            font-weight: 700;
-        }
-
-        .weather .area .s-2 .t-1 {
-            position: relative;
-            top: -1px;
-        }
-
-        .weather .area .s-3 {
-            font-size: 27px;
-        }
-
-        .weather .area .s-4 {
-            font-size: 14px !important;
-            font-weight: 700;
-            padding-left: 3px;
-        }
-
-        .weather .area .s-4>* {
-            vertical-align: middle;
-        }
-
-        .weather .area .s-4 img {
-            position: relative !important;
-            float: none !important;
-        }
-
-        .weather .area .s-3 .big {
-            font-size: 40px;
-        }
-
-        .weather .area .s-3 .c {
-            font-family: "Noto Sans KR";
-        }
-
-        .weather.vid {
             opacity: 0;
-            transition: all 1s ease 0s;
-        }
+            transition: opacity 1s ease 0s;
 
-        .weather.vid.active {
-            opacity: 1;
-        }
+            &.on {}
 
-        .weather.vid.end {
-            opacity: 1;
+            &.active,
+            &.end {
+                z-index: 998;
+                opacity: 1;
+            }
+
+            .area {
+                position: absolute;
+                right: 5px;
+                /* height: 96px;*/
+                box-sizing: border-box;
+
+                [class*=s-] {
+                    display: block;
+                    color: #fff;
+                    font-size: 17px;
+                }
+
+                .inner {
+                    position: relative;
+                    float: right;
+                }
+
+                img {
+                    position: relative;
+                    float: right;
+                }
+
+                .s-1 {
+                    line-height: 1;
+                }
+
+                .s-2 {
+                    margin-top: 3px;
+                    font-weight: 700;
+                }
+
+                .s-2 .t-1 {
+                    position: relative;
+                    top: -1px;
+                }
+
+                .s-3 {
+                    font-size: 27px;
+                }
+
+                .s-4 {
+                    font-size: 14px !important;
+                    font-weight: 700;
+                    padding-left: 3px;
+                }
+
+                .s-4>* {
+                    vertical-align: middle;
+                }
+
+                .s-4 img {
+                    position: relative !important;
+                    float: none !important;
+                }
+
+                .s-3 .big {
+                    font-size: 40px;
+                }
+
+                .s-3 .c {
+                    font-family: "Noto Sans KR";
+                }
+            }
+
         }
     }
 }

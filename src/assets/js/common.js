@@ -53,13 +53,13 @@ jQuery(document).ready(function() {
         var untilB = jQuery(this).parents('.util-box');
         jQuery(this).parents('li').addClass('on').siblings().removeClass('on');
         if( untilB.hasClass('on') ){
-            console.log('on')
+            // console.log('on')
             untilB.stop().animate({
                 'height' : 26
             }, 400, "easeOutCubic");
             untilB.removeClass('on');
         }else{
-            console.log('on2')
+            // console.log('on2')
             untilB.addClass('on');
             untilB.stop().animate({
                 'height' : 131
@@ -126,12 +126,12 @@ function scrollFunc () {
                 //console.log('off');
                 gnb.removeClass('on');
                 header.addClass('vid'); 
-                rWing.removeClass('active');
+                // rWing.removeClass('active');
             } else if ( scr > (mainTop-(gnbTop+mrMg)) ) {
                 //console.log('on');
                 gnb.addClass('on');
                 header.removeClass('vid');
-                rWing.addClass('active');
+                // rWing.addClass('active');
             } 
             
         }else {
@@ -432,7 +432,7 @@ function toggleOn(itm, type) {
  * 예약
  * --------------*/
 $(function () {
-    if( $('body').hasClass('Booking') ){
+    if( $('body.Booking').length ){
         rsvtBnScr();
 
         $(window).scroll(function() {

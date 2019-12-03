@@ -6,6 +6,7 @@ body {
     line-height: 1.6em;
     letter-spacing: -0.5px;
     color: #6d6d6d;
+    min-width: 1480px;
 }
 
 .sr-only {
@@ -107,6 +108,109 @@ a:focus {
     color: #272d34;
     font-size: 16px;
     font-weight: bold
+}
+
+/* a태그 아이콘 X버튼*/
+.a-i-x,
+.a-i-x2 {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: 10px;
+}
+
+.a-i-x:before,
+.a-i-x:after,
+.a-i-x2:before,
+.a-i-x2:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background: #555;
+}
+
+.a-i-x2:before,
+.a-i-x2:after {
+    width: 20px;
+    height: 1px;
+}
+
+.a-i-x:before,
+.a-i-2:before {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.a-i-x:after,
+.a-i-x2:after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* rArrow, lArrow 버튼 */
+.ic-lArrow:after,
+.ic-rArrow:after,
+.ic-bArrow:after {
+    position: relative;
+    top: -2px;
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: 1px solid #898989;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.ic-lArrow:after {
+    border-right: 0;
+    border-bottom: 0;
+    left: 2px;
+}
+
+.ic-rArrow:after {
+    border-top: 0;
+    border-left: 0;
+    right: 2px;
+}
+
+.ic-bArrow:after {
+    border-top: 0;
+    border-right: 0;
+    top: 2px;
+    width: 8px;
+    height: 8px;
+}
+
+.ie8 .ic-lArrow:after,
+.ie8 .ic-rArrow:after {
+    width: auto;
+    height: auto;
+    border: 0;
+    left: 0;
+    right: 0;
+}
+
+.ie8 .ic-lArrow:after {
+    content: "◀";
+}
+
+.ie8 .ic-rArrow:after {
+    content: "▶";
+}
+
+.ie8 .ic-bArrow:after {
+    content: "▼";
 }
 
 /* ----------------------------------------------------------------
