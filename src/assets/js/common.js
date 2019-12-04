@@ -72,7 +72,7 @@ jQuery(document).ready(function() {
 
     });
     
-    headerFunc();
+    if (!$('body.Main').length) {headerFunc();}
     scrollFunc();
 })
 function activeSub() {
@@ -127,11 +127,13 @@ function scrollFunc () {
                 gnb.removeClass('on');
                 header.addClass('vid'); 
                 // rWing.removeClass('active');
+                rWing.removeClass('on');
             } else if ( scr > (mainTop-(gnbTop+mrMg)) ) {
                 //console.log('on');
                 gnb.addClass('on');
                 header.removeClass('vid');
                 // rWing.addClass('active');
+                rWing.addClass('on');
             } 
             
         }else {
