@@ -113,9 +113,10 @@
 
             &.on {}
 
+            &:hover,
             &.active,
             &.end {
-                z-index: 998;
+                // z-index: 998;
                 opacity: 1;
             }
 

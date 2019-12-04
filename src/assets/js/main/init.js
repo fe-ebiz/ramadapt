@@ -20,6 +20,16 @@ $(document).on('ready', function () {
     // }
 });
 
+function isVideoHoverEl(flag) {
+    if (flag) {
+        $('#Contents .rWing').addClass('active');    
+        $('#content .main').find('.vid-txt-box, .weather').addClass('active');
+    } else {
+        $('#Contents .rWing').removeClass('active');    
+        $('#content .main').find('.vid-txt-box, .weather').removeClass('active');
+    }
+}
+
 function vidWH(){ 
     var winWd = $(window).width(),
         winHt = $(window).height(),
@@ -48,14 +58,12 @@ function vidWH(){
         });
     }
 
-    main.find('.vid-wrap').hover(function(){
-        main.find('.vid-txt-box, .weather').addClass('active');
-        $('#Contents .rWing').addClass('active');
+    $('#content .main .vid-wrap, #content .main .weather, #Contents .rWing').hover(function(){
+        isVideoHoverEl(true);
     }, function(){
-        main.find('.vid-txt-box, .weather').removeClass('active');
-        $('#Contents .rWing').removeClass('active');
+        isVideoHoverEl(false);
     });
-	
+
     //텍스트 클릭시 이동
     $('.vid-wrap').find('.vid-txt').on('click', function(){
 		var mainRestTop =	$("#main_event").offset().top,
@@ -94,11 +102,9 @@ var videoFn = {
         // this.data().video.play();
         // this.data().video.currentTime = 31;
         // $('#content .main').find('.vid-wrap').addClass('active');
-        $('#content .main').find('.vid-txt-box, .weather').addClass('active');
-        $('#Contents .rWing').addClass('active');
+        isVideoHoverEl(true);
         setTimeout(function() {
-            $('#content .main').find('.vid-txt-box, .weather').removeClass('active');
-            $('#Contents .rWing').removeClass('active');
+            isVideoHoverEl(false);
         }, 1500);
     },
     stop: function() {
@@ -109,10 +115,8 @@ var videoFn = {
         var main = $('#content .main');
         this.stop();
         this.data().video.style.display = 'none';
-        main.find('.vid-wrap').unbind('mouseenter mouseleave');
-        main.find('.vid-wrap').removeClass('active');
-        main.find('.vid-txt-box, .weather').addClass('active');
-        $('#Contents .rWing').addClass('active');
+        $('#content .main .vid-wrap, #content .main .weather, #Contents .rWing').unbind('mouseenter mouseleave');
+        isVideoHoverEl(true);
     },
     init: function() {
         // this.fullScreen();
