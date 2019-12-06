@@ -201,7 +201,7 @@
 .family-wrapper .family-site {
     position: relative;
     margin-left: 10px;
-    width: 130px;
+    width: 140px;
     box-sizing: border-box;
     font-size: 13px;
     color: #252525;
@@ -226,13 +226,13 @@
 .family-wrapper .family-site .site {
     z-index: 9999;
     position: absolute;
-    padding-bottom: 10px;
+    padding: 10px 0;
     left: 0;
     bottom: 23px;
 }
 
 .family-wrapper .family-site .site .group-name {
-    margin-top: 10px;
+    // margin-top: 10px;
 }
 
 .family-wrapper .family-site .site .group-name .fam_btn {
@@ -240,7 +240,7 @@
 }
 
 .family-wrapper .family-site .site .fam_btn {
-    font-size: 14px;
+    // font-size: 14px;
     padding-left: 10px;
 }
 

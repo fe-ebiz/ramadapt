@@ -188,13 +188,13 @@
 .family-wrapper .family-site .site {
     z-index: 9999;
     position: absolute;
-    padding-bottom: 5px;
+    padding: 5px 0;
     left: 0;
     bottom: 23px;
 }
 
 .family-wrapper .family-site .site .group-name {
-    margin-top: 5px;
+    // margin-top: 5px;
 }
 
 .family-wrapper .family-site .site .group-name .fam_btn {
