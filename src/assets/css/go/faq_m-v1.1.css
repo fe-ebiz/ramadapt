@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+#headTitle {letter-spacing: -1.5px; font-size: 15px;}
+#headTitle .colr-1 {color: #ff4800;}
+.footer {margin-top: 0;}
+
+.faqWrap .colr-2 {color: #ff3600;}
+.faqWrap, .faqWrap * {font-family: "Nanum Gothic", sans-serif; line-height: 1.5; letter-spacing: -1px;}
+.faqWrap {width: 100%; border-top: 0;}
+
+.faqWrap .faq-tab {position: relative;}
+.faqWrap .faq-tab .list {display: table; width: 100%;}
+/*.faqWrap .faq-tab .list .itm {display: table-cell; height: 42px; cursor: pointer; box-sizing: border-box; border-top: 2px solid #ff4800; color: #fff; background: #b9b9b9; font-size: 20px; text-align: center; line-height: 40px; letter-spacing: -0.5px; font-size: 12px;}*/
+.faqWrap .faq-tab .list .itm {display: table-cell; height: 42px; cursor: pointer; box-sizing: border-box; border-top: 2px solid #ff4800; color: #fff; background: #b9b9b9; font-size: 20px; text-align: center; line-height: 18px; letter-spacing: -0.5px; font-size: 12px; /*font-weight: 700;*/}
+.faqWrap .faq-tab .list .itm:first-child {margin-left: 0;}
+.faqWrap .faq-tab .list .itm.on {background: #fff; color: #000;}
+/*
+.faqWrap .faq-tab .list .itm.on.nth-1 {color: #44a8ff;}
+.faqWrap .faq-tab .list .itm.on.nth-2 {color: #ecb84a;}
+.faqWrap .faq-tab .list .itm.on.nth-3 {color: #da82ff;}
+.faqWrap .faq-tab .list .itm.on.nth-4 {color: #21ceb8;}
+*/
+.faqWrap .contents-tab {position: relative; width: 100%;}
+.faqWrap .contents-tab .faq-main {display: none;}
+.faqWrap .contents-tab .faq-main.on {display: block;}
+
+.faqWrap .faq-main {box-sizing: border-box;}
+/*
+.faqWrap h2 {background: #44a8ff; color: #fff; font-size: 23px; width: 100%; height: 62px; text-align: center; padding-top: 21px; font-family: "NanumBarunGothic", "Nanum Gothic", sans-serif; letter-spacing: -0.5px; box-sizing: border-box; line-height: 1;}
+.faqWrap h2 .s1 {color: #f6ff00;}
+.faqWrap h2 .i-x {position: absolute; top: 16px; right: 16px; }
+*/
+.faqWrap .ul1 {background: #fff;}
+.faqWrap .ul1 > li {border-bottom: 1px solid #c8c8c8;}
+.faqWrap .ul1 > li > div {position: relative; line-height: 1.5; padding: 10px 10px 10px 30px; word-break: keep-all; font-size: 13px;}
+.faqWrap .ul1 > li .d1 {color: #2f2f2f; cursor: pointer;}
+/*
+.faqWrap .ul1 > li .d1.on {color: #44a8ff;}
+.faqWrap .ul1 > li .d1:hover {color: #44a8ff;}
+*/
+.faqWrap .ul1 > li .d1 .s-tit {display: inline-block; position: relative;}
+/*.faqWrap .ul1 > li .d1.on .s-tit:after {content: ""; position: absolute; bottom: 0; left: 0; display: inline-block; width: 100%; height: 1px; background: #44a8ff;}*/
+.faqWrap .ul1 > li .d2 {color: #545353; background: #f1f1f1; /*padding-left: 30px;*/ display: none;}
+.faqWrap .ul1 > li .d2 {border-top: 1px solid #c8c8c8;}
+.faqWrap .ul1 > li .d1:before, .faqWrap .d2:before {content: "Q"; position: absolute; left: 5px; background: #ecb84a; border-radius: 50%; color: #fff; width: 20px; height: 20px; text-align: center; line-height: 17px; text-indent: -2px;}
+.faqWrap .ul1 > li .d2:before {content: "A"; color: #fff; background: #f22e2e; box-sizing: border-box;}
+.faqWrap .ul1 > li .s-dArr {position: absolute; top: 20px; right: 18px;  display: inline-block; width: 11px; height: 11px; border: 2px solid #858585; border-top: 0; border-right: 0;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	display: none;
+}
+.faqWrap .faq-bottom {background: #e8e8e8; color: #282828; text-align: center; padding: 15px 0 20px;}
+.faqWrap .faq-bottom .p-1 {font-size: 14px; font-weight: 700;}
+.faqWrap .faq-bottom .p-2 {color: #333; font-size: 12px; margin-top: 5px; word-break: keep-all; letter-spacing: -1.5px;}
+.faqWrap .faq-bottom .p-3 {text-align: center;margin-top: 15px;}
+.faqWrap .faq-bottom .p-3 a {display: inline-block; color: #fff; font-size: 13px; text-align: center; width: 120px; height: 36px; background: #797979; line-height: 34px;}
+.faqWrap .faq-bottom .p-3 a + a {margin-left: 12px;}
